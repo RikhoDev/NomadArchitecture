@@ -89,4 +89,4 @@ NomadArchitecture ensures that:
 
 ---
 
-If you’d like, I can help you **package this into a shareable artifact**—like a Notion page, SharePoint wiki, or even a narrated slide deck. Or we could build a “NomadArchitecture Starter Kit” for your team. Just say the word.
+_This is what I managed to teach my Copilot about my vision and architecture._ Hopefully the first stone to a great monument.
