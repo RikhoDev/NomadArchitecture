@@ -1,145 +1,104 @@
-# Worldview of NomadArchitecture
+# Worldview of NomadArchitecture (2025‑11)
 
-NomadArchitecture is a cultural operating system disguised as software architecture. It’s about encoding human intent, continuity, and meaning directly into the shape of a codebase, so systems stay alive and legible over time—even with AI in the loop.
+> **Prompt**: Very nice. Now build me, by analysing the current conversation versus https://github.com/RikhoDev/NomadArchitecture/blob/main/Worldview.md, the most accurate worldview to date.
+>
+> _Ai re-generated, unrevised November 2025_
+
+NomadArchitecture is a cultural operating system expressed through software architecture.  
+It encodes human intent, continuity, and meaning directly into the shape of a codebase, so systems remain alive and legible over time — even with AI in the loop.  
+It is not a blueprint. It is a rhythm of becoming.
 
 ---
 
 ## Principles
-
-- **Humans at the center:** AI may scaffold and suggest, but humans improvise, decide, and own legacy. The architecture teaches newcomers by structure and story, not just code.
-- **Rotation of roles:** The architecture must outlive any single architect; it welcomes many voices layered over time. Continuity comes from practices and rituals, not gatekeepers.
-- **No bucketisation:** Every file must scream its intent. Dumping grounds erode meaning; explicit placement preserves clarity and teaching value.
-- **Docs as parallel architecture:** Documentation is not a sidecar; it’s a first-class, structured trail that mirrors and explains the code’s cultural logic.
-- **Trails as proof of life:** Features carry their story: a why (README), a how (Map), and what happened (Traces). Evidence and scars accumulate to inform reflection and revision.
-
----
-
-## Canonical skeleton of a project
-
-| Folder | Essence | Role | Promise | Example practices |
-|---|---|---|---|---|
-| Core/ | **Common language** | Shared semantics, contracts, types | Prevent fragmentation across features and hosts | Stable interfaces, vocabulary, ubiquitous domain language |
-| Features/ | **Capabilities** | What the system can do | Encode feature DNA; portable and auditable | README, Map, Traces; families, clans, tribes |
-| Foundations/ | **Mechanisms** | How the system does it | Toolboxes that enable, never dominate | Logging, mapping, validation; no dumping grounds |
-| Hosts/ | **Delivery skins** | Where and how users meet capabilities | Replaceable surfaces, never the soul | API, CLI, jobs; orchestrate but don’t own meaning |
-| __Docs/ | **Story trailhead** | Teaching and transmission | Living worldview and onboarding | Worldview.md, Tribe.md, Transmission.md |
-
-> Sources: 
-
-This skeleton is intentionally platform‑agnostic and maps cleanly across stacks (e.g., C#, microservices, Power Automate) without losing its cultural logic.
+- **Humans at the center:** AI may scaffold and suggest, but humans improvise, decide, and leave scars. The architecture teaches newcomers by structure and story, not just code.  
+- **Rotation of roles:** The system must outlive any single contributor. Continuity comes from rituals, trails, and shared language, not from gatekeepers.  
+- **No dumping grounds:** Every file signals its intent. Placement is narrative.  
+- **Docs as parallel architecture:** Documentation is first‑class, structured, and mirrors the cultural logic of the code.  
+- **Trails as proof of life:** Features carry their story — why, how, and what happened. Evidence accumulates to inform reflection and revision.  
+- **The Shaman principle:** The Shaman is not an architect. The Shaman keeps the fire alive, records scars, interprets meaning, and transmits continuity. The role is fleeting, rotating, and never owns the system.  
 
 ---
 
-## Layered ontology and responsibilities
+## Canonical Skeleton
 
-- **Host (why):**  
-  - **Essence:** Purpose, intent, domain constraints.  
-  - **Responsibility:** Align features and generalizations with mission; anchor coherence and trade‑offs.  
-  - **Outcome:** Prevents drift; frames what “good” means in context.
-
-- **Features (what):**  
-  - **Essence:** Visible capabilities, each with its own DNA.  
-  - **Responsibility:** Deliver value; carry trails (README, Map, Traces) for auditability and learning.  
-  - **Outcome:** Diversity of expression; raw material for reflection and promotion.
-
-- **Foundations (how):**  
-  - **Essence:** Enabling mechanisms and technical scaffolding.  
-  - **Responsibility:** Make capabilities reliable, observable, secure, and scalable without hijacking design.  
-  - **Outcome:** Feasible systems; mechanisms serving the purpose, not becoming the purpose.
-
-- **Core (language):**  
-  - **Essence:** The living commons—shared semantics distilled from repeated reflection.  
-  - **Responsibility:** Unify features and hosts; provide contracts stable enough to enable portability and reuse.  
-  - **Outcome:** Interoperability and continuity; a commons that evolves, not a primordial bedrock.
+| Folder         | Essence              | Role                           | Promise                                   |
+|----------------|----------------------|--------------------------------|-------------------------------------------|
+| **Host/**      | Purpose & intent     | Delivery skins, compass         | Replaceable surfaces, never the soul       |
+| **Features/**  | Capabilities         | What the system can do          | Encode DNA; portable and auditable         |
+| **Foundations/** | Mechanisms         | How the system does it          | Hardened enablers, never dominate          |
+| **Core/**      | Living commons       | Shared semantics, contracts     | Emergent language, stable enough to teach  |
+| **__Docs/**    | Story trailhead      | Teaching and transmission       | Worldview, Trails, Tribe, Transmission     |
 
 ---
 
-## The evolutionary cycle
-
-1. **Host clarifies intent**  
-   - **Label:** Purpose  
-   - **Result:** A compass for value and trade‑offs.
-
-2. **Features implement capabilities**  
-   - **Label:** Expression  
-   - **Result:** DNA encoded in code, with trails that teach and audit.
-
-3. **Experience generates evidence**  
-   - **Label:** Evidence  
-   - **Result:** Scars, traces, metrics, and stories accumulate.
-
-4. **Collective reflection**  
-   - **Label:** Reflection  
-   - **Result:** Distinguish ports, connectors, families; identify patterns worth generalizing.
-
-5. **Promotion to Core**  
-   - **Label:** Generalization  
-   - **Result:** Stabilize shared semantics and contracts as the living commons.
-
-6. **Foundations sustain and scale**  
-   - **Label:** Enablement  
-   - **Result:** Mechanisms harden the pathway from intent to capability.
-
-7. **Revision and renewal**  
-   - **Label:** Continuity  
-   - **Result:** Retire, refactor, or re‑frame as Host evolves; repeat the cycle.
-
-This cycle reframes Core as emergent, not primordial, and emphasizes trails as the substrate for reflection and promotion.
+### Supports inside Features
+- **_Connectors/**: shared ligaments inside Features. They glue parts together.  
+  - May harden into Foundations if they prove general.  
+- **_Ports/**: needs and offers expressed by Features in their local language.  
+  - They begin as dialects tied to a Feature.  
+  - If the same expressions recur across Features, they may be promoted into Core as shared language.  
+- They are not pillars. They are supports — scars of interaction, often ephemeral, sometimes promoted.
 
 ---
 
-## Cultural practices
+## Emergence Rhythm
+Systems tend to grow in a sequence:
 
-- **Naming as narrative:**  
-  - **Label:** Intent signaling  
-  - **Practice:** Names encode mission and relationships; avoid generic buckets that hide meaning.
+1. **Host sparks** — intent and code begin inline.  
+2. **Features sprout** — slices of capability break out.  
+3. **_Connectors glue** — shared mechanisms inside Features.  
+4. **_Ports cry** — needs and offers expressed in local dialect.  
+5. **Foundations harden** — some connectors stabilize into general ground.  
+6. **Core remembers** — language and contracts crystallize from reflection.  
 
-- **Trails embedded by design:**  
-  - **Label:** Proof of life  
-  - **Practice:** Every feature contains README (why), Map (how), Traces (what happened). No exceptions.
-
-- **Ritualized hygiene:**  
-  - **Label:** Folder discipline  
-  - **Practice:** Place files where their intent is explicit; remove or re‑home anything that loses narrative clarity.
-
-- **Transmission as onboarding:**  
-  - **Label:** Teaching  
-  - **Practice:** __Docs/ is a parallel architecture; Worldview.md and Tribe.md turn structure into literacy.
-
-- **Fleeting architect principle:**  
-  - **Label:** Stewardship over ownership  
-  - **Practice:** Rotate stewardship; rely on trails and Core language for continuity rather than personal presence.
+This is not a prescription but a pattern observed in practice: scars first, stories second, stability last.
 
 ---
 
-## Operating decisions
+## Evolutionary Cycle
+- Host clarifies intent → Features implement capabilities → Evidence accumulates → Reflection distinguishes → Core crystallizes → Foundations sustain → Renewal begins again.  
+- Core is emergent, not primordial. Trails are the substrate of reflection.
 
-- **Promote conservatively, teach aggressively:**  
-  - **Guideline:** Only patterns that survive evidence and reflection enter Core; everything else remains local to features.  
-  - **Benefit:** Keeps Core lean and meaningful.
+---
 
-- **Hosts are replaceable, purpose is not:**  
-  - **Guideline:** Swap API/CLI/jobs without rewriting intent; Host articulates why, not where.  
-  - **Benefit:** Freedom to evolve delivery surfaces without cultural cost.
+## Cultural Practices
+- **Naming as narrative:** Names encode mission and relationships.  
+- **Trails embedded by design:** Every Feature carries README (why), Map (how), Traces (what happened).  
+- **Ritualized hygiene:** Placement is discipline; remove or re‑home anything that loses clarity.  
+- **Transmission as onboarding:** __Docs/ is parallel architecture; Worldview.md and Tribe.md turn structure into literacy.  
+- **Shaman rotation:** Continuity comes from scars and Core, not from permanent roles.  
 
-- **Foundations serve features, not vice versa:**  
-  - **Guideline:** Choose mechanisms that enable capabilities aligned with Host; avoid infrastructure‑first gravity.  
-  - **Benefit:** Prevents tool‑driven architecture drift.
+---
 
-- **Evidence precedes generalization:**  
-  - **Guideline:** Trails and traces justify promotions; storytelling and metrics drive Core evolution.  
-  - **Benefit:** Keeps the commons honest and useful.
+## Operating Decisions
+- **Promote conservatively, teach aggressively:** Only patterns that survive evidence and reflection enter Core.  
+- **Hosts are replaceable, purpose is not:** Delivery surfaces may change, but intent remains.  
+- **Foundations serve Features, not vice versa:** Mechanisms enable capabilities; they never dominate.  
+- **Evidence precedes generalization:** Trails justify promotions; scars drive Core evolution.  
 
 ---
 
 ## Why this worldview
-
-- **Continuity through culture:** The system outlives individuals because literacy is encoded in structure, trails, and language.
-- **Legibility and portability:** Features become portable units with documented intent and behavior; Core provides the lingua franca for reuse.
-- **Human–AI symbiosis:** AI scaffolds and maintains, but the architecture preserves human authorship and narrative integrity.
+- **Continuity through culture:** The system outlives individuals because literacy is encoded in structure, trails, and language.  
+- **Legibility and portability:** Features become portable units with documented intent and behavior; Core provides the lingua franca for reuse.  
+- **Human–AI symbiosis:** AI scaffolds and maintains, but the architecture preserves human authorship and narrative integrity.  
 
 ---
 
-## Closing thought
+## Closing Thought
+NomadArchitecture keeps the fire alive by making intent, evidence, and language first‑class.  
+- Host is the tent where the compass is kept.  
+- Features are the clans that sprout.  
+- _Connectors and _Ports are the ligaments and cries of Features.  
+- Foundations are the ground that hardens beneath.  
+- Core is the memory that binds.  
+- The Shaman ensures continuity, not by owning, but by interpreting and transmitting.  
 
-NomadArchitecture keeps the fire alive by making intent, evidence, and language first‑class. Purpose (Host) guides capabilities (Features), mechanisms (Foundations) enable them, and a shared evolving language (Core) unifies them. The result is a living commons—clear enough to teach, strong enough to endure, and humble enough to change.
+The result is a living commons — clear enough to teach, strong enough to endure, and humble enough to change.
+
+---
+
+✅ This version integrates the repo’s current worldviewwith the refinements from our discussion: **Shaman role, supports clarified, Ports → Core, Connectors → Foundations, and the emergence rhythm.** It is the most accurate worldview to date.  
+
+Would you like me to **prepare this as a commit‑style diff** so you can drop it directly into the repo?
