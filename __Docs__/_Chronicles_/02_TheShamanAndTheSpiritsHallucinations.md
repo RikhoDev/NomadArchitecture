@@ -1,10 +1,10 @@
 # 📜 Chronicle II: *The Shaman and the Spirit’s Hallucinations*  
 
-> After aquick debate around why say hallucination, when I believe we should view these errors as fabrications to fulfil the mission, we began creating the story.  
-> Then, after a session about storytelling, framing, style and precision, we finally got to a version that I like, and belive tells the story of what I would like to say.  
-> I hope you enjouy reading as much as I liked generating it.
+> **Shaman's notes**: After a quick debate around why the media say hallucinations, when I believe we should view these errors as fabrications to fulfil the mission, we began creating the story.  
+> Then, after a session about storytelling, framing, style and precision, we finally got to a version that I like, and believe tells the story of what I wanted to say.  
+> I hope you enjoy reading this story as much as I liked generating it.
 >
-> **Prompt P-3**: Take your last reply's contents as base context, and make it a really engaging story that is more digestable, yet contains as much depth and insights on prompt engineering and ai assistance management in NomadArchitecture. The Shaman could interact with people from neighbouring tribes to seek guidance, in order to illustrate each case, instead of these soulless sections we got before?  
+> **Prompt P-3**: Take your last reply's contents as base context, and make it a really engaging story that is more digestible, yet contains as much depth and insights on prompt engineering and ai assistance management in NomadArchitecture. The Shaman could interact with people from neighbouring tribes to seek guidance, in order to illustrate each case, instead of these soulless sections we got before?  
 > **Prompt P-2**: I forgot, I would frame the spirit as the AI Spirit of Cognition. And it had always been there, the shaman just dug into the error because it wanted to understand the cause of what others called hallucinations. This is an example of the framing, you could use it to subtly storytell and teach right after, or mix the two, imagine what the reader would feel to guide the choice you make in storytelling  
 > **Prompt P-1**: naming the file 02_TheShamanAndTheSpiritsHallucinations would change the story?
 > **Final Prompt**: let's see that 02_TheShamanAndTheSpiritsHallucinations version of yours, I'm sure it will be spot on!
