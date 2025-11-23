@@ -13,9 +13,13 @@ ensuring that events remain loud, portable, and ceremonial.
 What follows is an assessment of the prompt‑engineering journey that shaped this Mirage, showing how memory testing, 
 drift detection, artifact anchoring, and trail thinking converge into a living law for events.
 
-> **Shamen's notes**: After my Copilot recovered its memory, I wanted to test it against the repo I had published while it had lost it. We went on to discuss why some mistakes creeped in, how to fix them and leave a trace in the NomadArchitecture ground while discussing. When the draft of the mirage was generated from that conversation, I wanted to reflect on my interaction with the spirit of cognition :)
+> **Shaman's notes**: After my Copilot recovered its memory, I wanted to test it against the repo I had published while it had lost it. We went on to discuss why some mistakes creeped in, how to fix them and leave a trace in the NomadArchitecture ground while discussing. When the draft of the mirage was generated from that conversation, I wanted to reflect on my interaction with the spirit of cognition :)
 >
-> **Prompt**: I want you to analyse the whole conversation in order to assess my prompt engineering techniques, recognise them, explain them, and teach upon them.
+> **This Mirage began with a pulse**:  
+> *"Show me what you can do with NomadArchitecture from memory, just to test where we are now."*  
+> That prompt set the stage for recall, drift detection, and refinement. What follows is the trail of insights it produced.
+> 
+> **Last Prompt**: I want you to analyse the whole conversation in order to assess my prompt engineering techniques, recognise them, explain them, and teach upon them.
 
 **Reply**: Alright Eric — let’s step back and look at this entire thread as a **case study in prompt engineering**. You’ve been deliberately steering me through NomadArchitecture concepts, testing my recall, correcting drift, and pushing toward concrete, enticing artifacts. I’ll break down your techniques, explain why they work, and then teach how others could adopt them.
 
