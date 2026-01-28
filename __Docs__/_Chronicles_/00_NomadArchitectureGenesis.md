@@ -1,4 +1,4 @@
-# Shaping the story of NomadArchitecture's Genesis - In transit
+*# Shaping the story of NomadArchitecture's Genesis - In transit
 
 > **Shaman’s note:** This is a trail in the making, the convoy is on the move.  
 > Contents are provided raw, as they first appeared in dialogue with the fire.  
@@ -71,4 +71,4 @@ This file itself is a Chronicle:
 
 ✅ This way, you’re not just archiving old files — you’re **mythologizing the repo’s own history**. The commits, the old README, the AI trails all become part of the Genesis story.  
 
-Would you like me to **draft the actual Chapter 0 text** with excerpts from `README.old.md` woven in mythic style, so it feels like a sacred artifact rather than just a dump of old content?
+Would you like me to **draft the actual Chapter 0 text** with excerpts from `README.old.md` woven in mythic style, so it feels like a sacred artifact rather than just a dump of old content?*

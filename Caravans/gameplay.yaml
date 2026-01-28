@@ -1,0 +1,7 @@
+name: gameplay
+summary: Caravan manifest for gameplay-related convoys used by NomadGameEngine tests
+connectors:
+  - connector: RaylibInputConvoy
+README: |
+  Minimal caravan manifest used by tests and examples. This file declares the
+  convoy connectors that participate in the `gameplay` caravan.
