@@ -53,9 +53,7 @@ Chronicles are written as **chapters**, each in its own file:
 ## Table of Contents
 
 - [Chapter I — The First Shaman](01_FirstShaman.md)  
-- [Chapter II — The First Convoy](02_FirstConvoy.md)  
-- [Chapter III — The Hosts and Their Masks](03_HostsAndMasks.md)  
-- [Chapter IV — The Rituals of Naming](04_RitualsOfNaming.md)  
+- [Chapter II — The Shaman and The Spirit's Hallucinations](02_TheShamanAndTheSpiritsHallucinations.md)  
 
 ---
 
