@@ -85,7 +85,12 @@ But this is still early work. These ideas are being tested, refined, and sometim
 2. Read [__Docs/Worldview.md](./__Docs/Worldview.md) for the philosophy.  
 3. Check [__Docs/Transmission.md](./__Docs/Transmission.md) for onboarding.  
 4. Explore `Features/` to see examples.  
-5. Try the [example project](./examples/) to see it in action. A MinimalHost example is included in `examples/MinimalHost` — run `pwsh .\examples\MinimalHost\host.ps1 -Name Alice` to see a sample trace.  
+5. Try the [example project](./examples/) to see it in action and explore different host setups.  
+
+---
+
+## 📌 v1.1 Note
+If you want the latest idea for “canon refresh” snapshot and what changed, start at [V1.1.md](./V1.1.md).
 
 ---
 
