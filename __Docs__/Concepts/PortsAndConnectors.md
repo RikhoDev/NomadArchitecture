@@ -1,4 +1,4 @@
-﻿# _Ports & _Connectors  
+# _Ports & _Connectors  
 ### Mechanical Boundaries & Integration Surfaces in NomadArchitecture
 
 ---
@@ -157,11 +157,11 @@ They give Features:
 
 ### 5.1 `_Ports` define the contract  
 
-â€œWhat the Feature needs mechanically.â€
+"What the Feature needs mechanically."
 
 ### 5.2 `_Connectors` provide the integration surface  
 
-â€œHow the Feature plugs into the world.â€
+"How the Feature plugs into the world."
 
 ### 5.3 Features depend only on `_Ports`  
 
