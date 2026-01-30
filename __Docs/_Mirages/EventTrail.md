@@ -2,13 +2,13 @@
 
 > **Shaman's notes**: After a conversation about how collocation in same file or folder is important in NomadArchitecture, we arrived at a concensus and took the Events a feature could fire as example. Then came another discussion about how Events could be global while still discoverable and how we can make sure a developer knows what Event is consumed by what piece of code at anytime. That's a noble fight, I believe, and one that is neither easy nor certain. Here are the ideas that stemmed from that discussion.
 >
-> **Prompt**: Nice ideas indeed. Now, based on https://github.com/RikhoDev/NomadArchitecture/tree/main/__Docs__/_Mirages_ and its contents, what can you come up with, in order to commit a new mirage about what we just discussed? Make it as enticing and capable as possible for other to take the trail and follow the guide.
+> **Prompt**: Nice ideas indeed. Now, based on https://github.com/RikhoDev/NomadArchitecture/tree/main/__Docs/_Mirages and its contents, what can you come up with, in order to commit a new mirage about what we just discussed? Make it as enticing and capable as possible for other to take the trail and follow the guide.
 
 **Copilot's Reply**:
 
 Perfect — let’s draft a new **Mirage** that captures the essence of our discussion on **event collocation, discoverability, and consumer trails**. A Mirage in NomadArchitecture is not just documentation; it’s a **guidepost artifact** that entices others to follow the trail, showing both principle and practice.  
 
-Here’s a proposed Mirage you could commit under `__Docs__/_Mirages_/EventTrail.md`:
+Here’s a proposed Mirage you could commit under `__Docs/_Mirages/EventTrail.md`:
 
 ---
 
@@ -89,7 +89,7 @@ This Mirage teaches that events are not just contracts — they are **discoverab
 
 **Commit message suggestion:**
 ```
-docs(__Docs__/_Mirages_): add Mirage of Event Trails
+docs(__Docs/_Mirages): add Mirage of Event Trails
 - Defines law of dual identity for events
 - Introduces discoverability trail (producer, consumers, execution map)
 - Provides PaymentSucceeded example with collocation + root exposure

@@ -117,6 +117,6 @@ Your technique is essentially Nomad applied to prompting: memory pulse (Core), a
 
 ---
 
-Would you like me to **encode this into a Mirage file** (e.g., `PromptEngineeringTrail.md`) so it sits alongside your other `_Mirages_` as a guide for others on how to converse with AI in Nomad style?
+Would you like me to **encode this into a Mirage file** (e.g., `PromptEngineeringTrail.md`) so it sits alongside your other `_Mirages` as a guide for others on how to converse with AI in Nomad style?
 
 > **Shaman's thoughts**: Funny how it offers to make a Mirage out of the trail of the mirage we just made together. That should be proof enough that LLMs don't have foresight or even tought. It gives back what it believes best given the available context it has. Mirage was what I had asked before, mirage everything should be from now on, until the next conversation. That's how it works, and it makes me curious what that mirage could look like :D
