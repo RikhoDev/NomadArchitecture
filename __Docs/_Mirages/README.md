@@ -57,6 +57,7 @@ evidence: [brief note on what makes this an experiment]
 - [FeatureSovereigntyBindings.md](FeatureSovereigntyBindings.md) — experimental governance bindings
 - [ScaleThePattern.md](ScaleThePattern.md) — scaling NomadArchitecture across systems
 - [TrailsCanBecomeProjectsOfTheirOwn.md](TrailsCanBecomeProjectsOfTheirOwn.md) — trails as standalone artifacts
+- [DataAsIdempotentTesting.md](DataAsIdempotentTesting.md) — captured data as replayable, CI-enforced evidence
 - [AI-Platform/](AI-Platform/) — speculative AI platform concepts
 - [TimeCapsules/](TimeCapsules/) — preserved snapshots and reflections
 

@@ -32,6 +32,12 @@ This documentation is ordered by **cognitive readiness**, not by folder depth.
 
 ---
 
+## Practices (Evidence)
+
+- [Concepts/DataAsIdempotentTesting.md](Concepts/DataAsIdempotentTesting.md) — captured traces as CI-enforced evidence
+
+---
+
 ## Explore the Structure
 
 - [Concepts](Concepts) — patterns, lenses, system grammar
@@ -45,6 +51,7 @@ This documentation is ordered by **cognitive readiness**, not by folder depth.
 - [`_Mirages/WhatNomadArchitectureActuallyIs.md`](_Mirages/WhatNomadArchitectureActuallyIs.md) — identity synthesis (read AFTER Transmission)
 - [`_Mirages/CognitiveSafetyPatterns.md`](_Mirages/CognitiveSafetyPatterns.md) — speculative safety mechanisms
 - [`_Mirages/FeaturesAsDialects.md`](_Mirages/FeaturesAsDialects.md) — team topology lens
+- [`_Mirages/DataAsIdempotentTesting.md`](_Mirages/DataAsIdempotentTesting.md) — captured data as replayable evidence
 
 ---
 

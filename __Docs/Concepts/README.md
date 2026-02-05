@@ -6,8 +6,17 @@
 
 ## Core Concepts
 
-- [TheFivePillarsAndTheLoop.md](TheFivePillarsAndTheLoop.md) — the system explained- [ThePoliticalSystem.md](ThePoliticalSystem.md) — sovereignty as governance- [AnthropologicalModel.md](AnthropologicalModel.md) — civilization lens
+- [TheFivePillarsAndTheLoop.md](TheFivePillarsAndTheLoop.md) — the system explained
+- [ThePoliticalSystem.md](ThePoliticalSystem.md) — sovereignty as governance
+- [AnthropologicalModel.md](AnthropologicalModel.md) — civilization lens
 - [TheArchitectureOfTransmission.md](TheArchitectureOfTransmission.md) — curator’s map of Transmission
+
+---
+
+## Practices (Evidence)
+
+- [DataAsIdempotentTesting.md](DataAsIdempotentTesting.md) — captured traces as CI-enforced evidence
+- [ReplayStrictnessAsPolicyDial.md](ReplayStrictnessAsPolicyDial.md) — replay intensity as governance (smoke → deep)
 
 ---
 
