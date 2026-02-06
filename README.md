@@ -165,58 +165,43 @@ This is not grammar. It’s a visibility practice — so the most important fold
 
 ---
 
-## Ports & Connectors (The Fractal Core)
+## Ports & Connectors (The Fractal Core) — a living pair 🪝
 
-One recurring pattern in the implementation repos is:
+Ports and Connectors are not mere folder names; they are a paired discipline that keeps a Feature sovereign and discoverable.
 
-- `_Ports/` = contracts (what must be true at this level)
-- `_Connectors/` = integrations/implementations (how it becomes real at this level)
+- **_Ports/** — *living contracts*: interfaces, DTOs, configuration and canonical state types that define what a Feature is and offers. Ports are the feature's public place to live and must include doc comments that state stability and intended consumers.
+- **_Connectors/** — *host-facing adapters*: minimal, documented shims, DI helpers, and implementations that connect Ports to runtime infrastructure. Keep heavy logic internal to the feature; connectors are thin, intentional surfaces for hosts.
 
-**The real power:** These appear at *every* governance level, and they serve as that level's Core and Foundations.
+Principles we follow:
 
-**How it works:**
+- **Pairing** — every public Port should have a Connector (or an explicitly whitelisted justification). Ports without connectors leak intent: infra or UI will creep into business code.
+- **Connectors as gates** — Connectors may also act as *controlled plugouts* to grant scoped access to internal APIs. Access must be earned: document the rationale, name an owner, include tests, and add a whitelist entry or formal approval for such connectors.
+- **Minimal surface** — expose only what you intend to be stable and consumed.
+- **Discoverability** — public APIs must "scream" intent through placement, naming, and doc comments.
 
-A **standalone Feature** declares its ports (e.g., `ICamera`). Internal subsystems can't use internals directly—they must go through the port.
+Practical rules & exceptions:
 
-When **Feature A and Feature B need to interact**, they don't communicate directly. Instead, they form a **Family** — which is itself a Feature, with its own `_Ports/` and `_Connectors/`.
+- **Allowed exceptions** must be whitelisted and justified (examples: cross-feature domain types promoted to Core, DTOs used by serializers, test helpers, examples/archived code). We keep exceptions explicit in `.feature-public-whitelist.json` with a short reason and approver.
+- **DI / bootstrap helpers** belong in `_Connectors/` (e.g., `IServiceCollection` extension methods) so hosts can opt-in explicitly.
 
-```text
-Features/
-├── Camera/                    ← standalone feature
-│   ├── _Ports/                ← Camera's contracts
-│   └── _Connectors/           ← Camera's implementations
-│
-├── RenderingFamily/           ← a family (meta-feature)
-│   ├── _Ports/                ← family's external contracts
-│   ├── _Connectors/           ← family's external connectors
-│   ├── Viewport/              ← child feature
-│   │   ├── _Ports/            ← viewport's internal ports
-│   │   └── _Connectors/       ← viewport's implementations
-│   └── Frustum/               ← child feature
-│       ├── _Ports/
-│       └── _Connectors/
-```
+Migration recipe (safe path):
 
-**The fractal principle:**
+1. Add a minimal interface or contract to `_Ports/` describing only what consumers need.
+2. Make the implementation `internal` (or move it into the feature's internals) and implement the interface.
+3. Add a `_Connectors/` shim for DI convenience / host glue and document its intent.
+4. Add unit tests that exercise behavior through the Port contract and update the whitelist only if a genuine exception is necessary.
 
-- Viewport and Frustum don't depend on each other directly
-- They both depend on the **Family's _Ports/** (the family is their living Core)
-- The Family's _Connectors/ manage their relationship (the family is their living Foundations)
-- The Family itself is opaque to the rest of the system (only its _Ports/ are visible)
+Examples & outcomes:
 
-**Why this matters:**
+- A Feature declares `IThing` (Port). The host provides `ThingConnector` (Connector) and registers it during bootstrap. Tests exercise `IThing` with fakes, and the implementation remains free to change.
+- Families (Feature groups) follow the same pattern: a Family's `_Ports/` are the public contract for its children; its `_Connectors/` manage relationships between children.
 
-This maps to nomadic structure: individuals (features) → families (feature groups) → clans (feature collections) → tribes (full repos). At each level, the governance structure (_Ports/ and `_Connectors/`) emerges naturally.
+Enforcement (how we make this practical):
 
-**The payoff:**
+- **Analyzer + test**: we plan a Roslyn analyzer and a reflective test that flag public types declared under `src/Features/**` that are outside `_Ports/`/`_Connectors/` unless whitelisted.
+- **PR checklist**: adding a public type requires doc comments, a connector skeleton or whitelist entry, and tests that validate usage through Ports.
 
-- Coupling is honest (goes through declared ports at each level)
-- Families can evolve internally without disturbing the codebase
-- New relationships form by creating families (not by tangling internals)
-- Testing is surgical (mock the family's ports, test the children)
-- The structure scales because the principle is recursive
-
-This is not decoration. It's governance made visible.
+This pairing is not pedantry — it keeps the repo honest, migratable, and easy to teach. Ports are where Features live; Connectors are how the world plugs in.
 
 ---
 
