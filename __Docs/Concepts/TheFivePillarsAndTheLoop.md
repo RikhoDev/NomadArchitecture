@@ -136,6 +136,9 @@ Feature/
 - **Honesty:** The structure says what it is.
 
 At the Feature level: `_Ports/` is the Feature's Core, `_Connectors/` are its integrations.  
+
+**Collocation (practical rule):** Private types should live with their implementers; family-shared vocabulary stays at the feature root until it earns a phase home; boundary language belongs in `_Ports/` (or, when proven common, in `Core/`).
+
 At the workspace level (an open question): Could the same pattern scale? Documentation contracts instead of code interfaces?
 
 ---

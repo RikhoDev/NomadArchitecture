@@ -52,6 +52,7 @@ This documentation is ordered by **cognitive readiness**, not by folder depth.
 - [`_Mirages/CognitiveSafetyPatterns.md`](_Mirages/CognitiveSafetyPatterns.md) — speculative safety mechanisms
 - [`_Mirages/FeaturesAsDialects.md`](_Mirages/FeaturesAsDialects.md) — team topology lens
 - [`_Mirages/DataAsIdempotentTesting.md`](_Mirages/DataAsIdempotentTesting.md) — captured data as replayable evidence
+- [`_Mirages/20260211-FeatureFamilies-RecursivePortsAndConnectors.md`](_Mirages/20260211-FeatureFamilies-RecursivePortsAndConnectors.md) — recursive Ports & Connectors inside a Feature; structure-as-storytelling guardrails (no buckets, make intent explicit)
 
 ---
 

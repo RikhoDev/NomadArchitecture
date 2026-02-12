@@ -15,6 +15,8 @@ It is not a blueprint. It is a rhythm of becoming.
 - **Humans at the center:** AI may scaffold and suggest, but humans improvise, decide, and leave scars. The architecture teaches newcomers by structure and story, not just code.  
 - **Rotation of roles:** The system must outlive any single contributor. Continuity comes from rituals, trails, and shared language, not from gatekeepers.  
 - **No dumping grounds:** Every file signals its intent. Placement is narrative.  
+- **Collocation:** Private language belongs with its implementers; family-shared vocabulary lives at the feature root until it earns a phase home. Boundary/shared types belong in `_Ports/` (or promoted to `Core/`).  
+- **Promotion to Core requires evidence:** A type or contract should only move to `Core/` after multiple independent consumers (features or hosts) use it with consistent semantics, its usage is documented in a Chronicle, and it has test coverage proving its stability. See `__Docs/Transmission/PromotionToCore.md` for the playbook and the required artifacts.  
 - **Docs as parallel architecture:** Documentation is first‑class, structured, and mirrors the cultural logic of the code.  
 - **Trails as proof of life:** Features carry their story — why, how, and what happened. Evidence accumulates to inform reflection and revision.  
 - **The Shaman principle:** The Shaman is not an architect. The Shaman keeps the fire alive, records scars, interprets meaning, and transmits continuity. The role is fleeting, rotating, and never owns the system.  

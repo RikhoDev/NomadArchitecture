@@ -58,6 +58,7 @@ evidence: [brief note on what makes this an experiment]
 - [ScaleThePattern.md](ScaleThePattern.md) — scaling NomadArchitecture across systems
 - [TrailsCanBecomeProjectsOfTheirOwn.md](TrailsCanBecomeProjectsOfTheirOwn.md) — trails as standalone artifacts
 - [DataAsIdempotentTesting.md](DataAsIdempotentTesting.md) — captured data as replayable, CI-enforced evidence
+- [20260211-FeatureFamilies-RecursivePortsAndConnectors.md](20260211-FeatureFamilies-RecursivePortsAndConnectors.md) — feature internals that outgrow flat folders; connectors as frontier passages; structure must scream intent (no “Internal/”, no buckets, avoid “World”)
 - [AI-Platform/](AI-Platform/) — speculative AI platform concepts
 - [TimeCapsules/](TimeCapsules/) — preserved snapshots and reflections
 
