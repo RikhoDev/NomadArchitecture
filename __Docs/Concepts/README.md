@@ -23,7 +23,7 @@
 ## Feature‑Level Grammar
 
 - [Features](Features) — feature anatomy patterns
-- [Features/_Ports](Features/_Ports)
+- [Features/_Contracts](Features/_Contracts)
 - [Features/_Connectors](Features/_Connectors)
 
 ---

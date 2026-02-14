@@ -13,7 +13,7 @@ When Feature A silently depends on Feature B, and Feature B silently depends on 
 
 **A Feature can:**
 
-- Have its own `_Ports/` and `_Connectors/`
+- Have its own `_Contracts/` and `_Connectors/`
 - Tell its own story (README, Map, Traces)
 - Evolve independently
 

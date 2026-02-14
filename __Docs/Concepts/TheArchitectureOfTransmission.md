@@ -81,7 +81,7 @@ Treating them as mere folders breaks the worldview.
 **Purpose:** Make structure honest and sovereignty possible.
 
 **Canonical content:**
-- `_Ports/` = contracts
+- `_Contracts/` = contracts
 - `_Connectors/` = integrations
 - The pattern recurs at every meaningful scale
 

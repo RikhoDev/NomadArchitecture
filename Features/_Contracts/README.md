@@ -1,11 +1,11 @@
-# _Ports  
+# _Contracts  
 ### The Feature's Mechanical Boundary
 
 ---
 
 ## Purpose
 
-`_Ports` define **what the Feature needs mechanically**.  
+`_Contracts` define **what the Feature needs mechanically**.  
 They are pure contracts — nothing more.
 
 ---
@@ -35,11 +35,11 @@ They are pure contracts — nothing more.
 
 ## Rules
 
-- A Feature depends only on its own `_Ports`.  
-- `_Ports` must be stable and environment-agnostic.  
-- `_Ports` must not reference Foundations or Hosts.  
-- `_Ports` must not contain domain logic.  
-- `_Ports` must scream intent.  
+- A Feature depends only on its own `_Contracts`.  
+- `_Contracts` must be stable and environment-agnostic.  
+- `_Contracts` must not reference Foundations or Hosts.  
+- `_Contracts` must not contain domain logic.  
+- `_Contracts` must scream intent.  
 
 ---
 
@@ -62,4 +62,4 @@ public interface IMovementIntegrator
 - [ ] Does it express a mechanical boundary?  
 - [ ] Does it belong to this Feature's dialect?  
 
-If all answers are yes, it belongs in `_Ports`.
+If all answers are yes, it belongs in `_Contracts`.

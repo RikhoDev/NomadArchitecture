@@ -40,7 +40,7 @@ Features/
     InitiatePayment.cs       # collocated definition of PaymentSucceeded
     PaymentEvents.cs         # root contract exposure
     README.md                # Trail: lists consumers
-    _Ports/
+    _Contracts/
     _Connectors/
 
   Notifications/

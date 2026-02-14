@@ -41,7 +41,7 @@ Core is the smallest set of rules that everything else depends on.
 ### Features/ — Sovereign Capabilities
 
 Features are self-contained units of capability. Each one:
-- Has its own `_Ports/` (contracts it defines).
+- Has its own `_Contracts/` (contracts it defines).
 - Has its own `_Connectors/` (how it integrates with the world).
 - Tells its own story (README, Map, Traces).
 
@@ -121,7 +121,7 @@ One pattern recurs at every scale:
 
 ```
 Feature/
-├── _Ports/          ← Contracts (what must be true)
+├── _Contracts/          ← Contracts (what must be true)
 │   ├── ICamera.cs
 │   └── IRenderPipeline.cs
 └── _Connectors/     ← Integrations (how it becomes real)
@@ -135,9 +135,9 @@ Feature/
 - **Autonomy:** Features can evolve their internals without affecting others.
 - **Honesty:** The structure says what it is.
 
-At the Feature level: `_Ports/` is the Feature's Core, `_Connectors/` are its integrations.  
+At the Feature level: `_Contracts/` is the Feature's Core, `_Connectors/` are its integrations.  
 
-**Collocation (practical rule):** Private types should live with their implementers; family-shared vocabulary stays at the feature root until it earns a phase home; boundary language belongs in `_Ports/` (or, when proven common, in `Core/`).
+**Collocation (practical rule):** Private types should live with their implementers; family-shared vocabulary stays at the feature root until it earns a phase home; boundary language belongs in `_Contracts/` (or, when proven common, in `Core/`).
 
 At the workspace level (an open question): Could the same pattern scale? Documentation contracts instead of code interfaces?
 
@@ -261,7 +261,7 @@ If these bets are wrong, the system will accumulate friction and collapse. That'
 
 ## The Question You're Probably Asking
 
-**"Have I nailed software codebases with _Ports/, _Connectors/, and five pillars — one for invariants, one for story, one for capabilities, one for foundations, one for delivery?"**
+**"Have I nailed software codebases with _Contracts/, _Connectors/, and five pillars — one for invariants, one for story, one for capabilities, one for foundations, one for delivery?"**
 
 Yes. The loop is complete:
 

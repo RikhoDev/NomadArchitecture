@@ -78,7 +78,7 @@ This avoids forcing teams into a single dialect before they are ready — and pr
 Another way to see Foundations is as **translation actors**:
 
 - They speak **technical dialects** (vendor SDKs, infra backends, protocols).
-- They also speak **Core / _Ports language** (the contracts Features rely on).
+- They also speak **Core / _Contracts language** (the contracts Features rely on).
 - Their job is to make the technical world usable **globally** without leaking it into Features.
 
 Under this lens, Foundations are not merely “shared utilities.” They are **interpreters** that allow the system to scale without each Feature learning every technical dialect.

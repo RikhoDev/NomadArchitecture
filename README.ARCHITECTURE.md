@@ -43,7 +43,7 @@ One pattern recurs throughout implementation repos:
 
 ```
 Feature/
-├── _Ports/          ← Contracts (what must be true)
+├── _Contracts/          ← Contracts (what must be true)
 │   ├── ICamera.cs
 │   └── IRenderPipeline.cs
 └── _Connectors/     ← Integrations (how it becomes real)
@@ -58,7 +58,7 @@ Feature/
 - Honesty: the structure says what it is
 
 **Why this pattern matters at every scale:**
-At the feature level, _Ports/ is the feature's core and _Connectors/ are its integrations.
+At the feature level, _Contracts/ is the feature's core and _Connectors/ are its integrations.
 At the workspace level (a living question — see mirages), the same pattern could scale: documentation contracts instead of code interfaces.
 
 ---
@@ -80,7 +80,7 @@ Names are promises. If you add a folder, you're making a claim about what it is.
 
 ### 2. Sovereignty Principle
 Features are sovereign domains. They can:
-- Have their own _Ports/ and _Connectors/
+- Have their own _Contracts/ and _Connectors/
 - Own their README (explain themselves)
 - Own their Traces (proof of execution)
 
@@ -131,7 +131,7 @@ They harden only when stability is worth the cost, and they stay swappable throu
 **Guardrails that keep the balance:**
 - **Adapter layer**: Technology‑facing, not domain‑facing (LLM clients, storage, observability, serialization, threading)
 - **Multiple consumers**: Only hardened when at least two features independently need it
-- **Swappable by seams**: Always expose contracts (_Ports) so implementations can change without reshaping features
+- **Swappable by seams**: Always expose contracts (_Contracts) so implementations can change without reshaping features
 - **Grown from _Connectors**: Promotion path is _Connector (inside Feature) → hardened Foundations (shared across Features)
 
 This prevents Foundations from becoming a dumping ground while letting genuine shared supports crystallize.
@@ -146,7 +146,7 @@ When you add something new, ask:
 → Extremely rare. Validate hard. This changes what Core must orchestrate.
 
 **Is this a new Feature?**
-→ Give it _Ports/, _Connectors/, README, and Traces.
+→ Give it _Contracts/, _Connectors/, README, and Traces.
 → Does it couple to other features? If yes, extract the shared contract into Core.
 
 **Is this a new Host?**
@@ -157,7 +157,7 @@ When you add something new, ask:
 → Only if at least two features are independently discovering they need it.
 → Keep contracts minimal and tech-facing (logging, observability, serialization, memory, threading).
 → Domain logic belongs in Core or Features, not Foundations.
-→ Always provide seams (_Ports) so implementations can be swapped.
+→ Always provide seams (_Contracts) so implementations can be swapped.
 → Move a _Connector to Foundations only when it's hardened and multiple features depend on it.
 
 **Is this a new Concept or Chronicle or Mirage?**
@@ -251,7 +251,7 @@ If you're being asked to extend or understand a NomadArchitecture codebase:
 
 There is an open question: Does the Port/Connector pattern want to scale to the workspace level?
 
-Could NomadArchitecture's own __Docs/_Ports/ be the "Core" of a workspace, with multiple implementation repos (NomadGameEngine, NomadAI, etc.) each declaring what they fulfill?
+Could NomadArchitecture's own __Docs/_Contracts/ be the "Core" of a workspace, with multiple implementation repos (NomadGameEngine, NomadAI, etc.) each declaring what they fulfill?
 
 This is not answered. It lives in [__Docs/_Mirages/ScaleThePattern.md](./__Docs/_Mirages/ScaleThePattern.md) as a living question.
 

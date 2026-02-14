@@ -67,13 +67,13 @@ After:
 | Debris | Types | Belongs In |
 |--------|-------|------------|
 | Config creep | `GameConfig` (with `GameName = "Snake"`), `VehiclePhysicsConfig`, `ShadowConfig`, `CameraConfig`, `InputConfig`, `VehicleInputConfig` | Each Feature owns its own config |
-| Feature ports | `ObjectGenerationPorts.cs` (`ISpawner`, `IObjectPopulator`, `IScenePopulationContext`) | `Features/_Ports/` |
+| Feature ports | `ObjectGenerationPorts.cs` (`ISpawner`, `IObjectPopulator`, `IScenePopulationContext`) | `Features/_Contracts/` |
 | Concrete ECS | `World.cs` (concrete `ConcurrentDictionary` container) | `Foundations/ECS` or stays as pragmatic exception |
 
 **The upgrade:**
 1. Move `GameConfig` nested configs to their Features. `GameConfig` itself becomes a thin shell or disappears.
 2. Move `VehicleInputConfig` to `Features/Input/` or `Features/Gameplay/VehiclePhysics/`.
-3. Move `ObjectGenerationPorts` to `Features/_Ports/ObjectGeneration/`.
+3. Move `ObjectGenerationPorts` to `Features/_Contracts/ObjectGeneration/`.
 4. Decide: is `World.cs` a contract or an implementation? If implementation, extract `IWorld` interface into Core, move implementation to Foundations.
 
 **After cleanup, Core would hold ~12 types in ~8 files.** Genuinely minimal.

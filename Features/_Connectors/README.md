@@ -23,7 +23,7 @@ They are the Feature's:
 
 ## What belongs here
 
-- default implementations of `_Ports`  
+- default implementations of `_Contracts`  
 - adapters to Foundations  
 - adapters to Hosts  
 - HTTP route maps  

@@ -13,7 +13,7 @@ The Ports & Connectors pattern emerged from that pain:
 
 ```text
 Feature/
-├── _Ports/          ← Contracts (what must be true)
+├── _Contracts/          ← Contracts (what must be true)
 │   ├── ICamera.cs
 │   └── IRenderPipeline.cs
 └── _Connectors/     ← Integrations (how it becomes real)
@@ -40,7 +40,7 @@ Feature/
 This pattern recurs at every scale in NomadArchitecture.
 
 **Why this layer matters:**  
-You'll use `_Ports/` and `_Connectors/` everywhere — Features, Foundations, even (potentially) at workspace scale.  
+You'll use `_Contracts/` and `_Connectors/` everywhere — Features, Foundations, even (potentially) at workspace scale.  
 It's the mechanical core that makes sovereignty possible.
 
 **When you'll need it:**  
