@@ -22,7 +22,7 @@ A pattern extension for NomadArchitecture: **Feature Families**.
 This mirage is also a clarification: a **Feature is a bounded capability**.
 
 - The capability is the feature's internal engine (domain logic, invariants, tuning, algorithms).
-- `_Ports/` and `_Connectors/` are **frontier passages**: contracts + adapters that allow the Host and neighbors to interact without seeing or depending on internals.
+- `_Contracts/` and `_Connectors/` are **frontier passages**: contracts + adapters that allow the Host and neighbors to interact without seeing or depending on internals.
 
 When a Feature's internal complexity grows beyond what a flat folder can communicate — multiple distinct algorithms, cross-cutting concerns, separate configuration surfaces — it needs internal structure. A Feature Family applies the Ports & Connectors pattern recursively: the family's frontier passages remain at the edge, while the capability is structured behind the boundary as named, sovereign sub-features. One connector often plays a wiring role by composing those sub-features into a pipeline.
 
@@ -38,7 +38,7 @@ A healthy Feature looks like this (capability first, frontier second, intent exp
 KinematicMovement/
 ├── KinematicEngine.cs               ← the capability (the engine)
 ├── KinematicConfig.cs               ← feature-owned tuning (not automatically public)
-├── _Ports/
+├── _Contracts/
 │   └── IKinematicStep.cs            ← hourglass neck: what the Host is allowed to do
 ├── _Connectors/
 │   └── KinematicMovement.cs         ← frontier passage: port implementation + wiring
@@ -47,7 +47,7 @@ KinematicMovement/
 
 Structure screams intent. A newcomer can read the folder and know what the feature does.
 
-Important: `_Ports/` and `_Connectors/` are not “where the capability is.” They are the boundary: the passages that let a Host/neighbor speak to the feature without seeing its internals. The feature is the capability engine and the vocabulary it owns.
+Important: `_Contracts/` and `_Connectors/` are not “where the capability is.” They are the boundary: the passages that let a Host/neighbor speak to the feature without seeing its internals. The feature is the capability engine and the vocabulary it owns.
 
 Naming guardrails (structure is storytelling):
 
@@ -72,7 +72,7 @@ But some features — physics engines, rendering pipelines, networking stacks �
 
 ```
 PhysicsVNext/                      ← 20+ files, one flat folder
-├── _Ports/
+├── _Contracts/
 ├── _Connectors/
 ├── Broadphase.cs                  ← What phase? What depends on what?
 ├── Narrowphase.cs                 ← How does this relate to ContactManifold?
@@ -105,7 +105,7 @@ A **Feature Family** applies the Ports & Connectors pattern one level deeper:
 
 ```
 PhysicsVNext/                          ← The Family
-├── _Ports/                            ← Family-level API (what consumers see)
+├── _Contracts/                            ← Family-level API (what consumers see)
 │   ├── IPhysicsWorldVNext.cs
 │   ├── IPhysicsDebugViewVNext.cs
 │   └── IPhysicsQueryVNext.cs
@@ -152,7 +152,7 @@ Now the structure screams again. A newcomer can:
 - See the pipeline stages as folders
 - Understand what each sub-feature does from its name
 - Find related files together
-- Know where vocabulary lives: boundary language in `_Ports/` (or Core), private shared-within-family language collocated at root or inside the owning phase
+- Know where vocabulary lives: boundary language in `_Contracts/` (or Core), private shared-within-family language collocated at root or inside the owning phase
 - Know that `_Connectors/PhysicsVNextWorld.cs` is the wiring passage (not “the capability”)
 
 ---
@@ -161,7 +161,7 @@ Now the structure screams again. A newcomer can:
 
 ### Axiom 1: A Feature Family is a Feature whose internal domain logic is itself structured as sovereign sub-features
 
-The family presents a unified API through its own `_Ports/`. Consumers never see sub-features. The family boundary is the contract.
+The family presents a unified API through its own `_Contracts/`. Consumers never see sub-features. The family boundary is the contract.
 
 ### Axiom 2: The family's Connectors are frontier passages; one often provides pipeline wiring
 
@@ -171,14 +171,14 @@ Just as a Host wires Features, a family connector composes sub-features. It may 
 
 Sub-features must share a vocabulary — identity types (BodyId, ShapeId), state types (BodyState), result types (PhysicsStepResult) — but that vocabulary remains **feature-owned** and follows **collocation**.
 
-- If a type must cross the family boundary, it belongs in `_Ports/` (or in higher-level Ports/Core).
+- If a type must cross the family boundary, it belongs in `_Contracts/` (or in higher-level Ports/Core).
 - If a type is private to one implementation, collocate it in the same file.
 - If a type is private to the family and used across phases, keep it at the family root (near the capability engine) until it earns a phase home.
 - If a type is primarily owned by one phase, place it in that phase folder next to the code that uses/implements it.
 
 ### Axiom 4: Sub-features may have their own Ports if substitution is meaningful
 
-A physics broadphase could be an AABB sweep, a spatial hash, or a BVH tree. If the algorithm is genuinely substitutable, the sub-feature earns its own `_Ports/` (and possibly `_Connectors/`). If it's single-implementation, the concrete type is the contract — no interface needed. Avoid internal ceremony that turns the family into a bureaucracy.
+A physics broadphase could be an AABB sweep, a spatial hash, or a BVH tree. If the algorithm is genuinely substitutable, the sub-feature earns its own `_Contracts/` (and possibly `_Connectors/`). If it's single-implementation, the concrete type is the contract — no interface needed. Avoid internal ceremony that turns the family into a bureaucracy.
 
 ### Axiom 5: Stop nesting when sub-features fit in one reader's head
 
@@ -224,11 +224,11 @@ Until that complexity is real and present, clans are speculation. **Chase what t
 
 | Concept | Workspace Level | Family Level |
 |---------|----------------|--------------|
-| Shared contracts | `Core/` | `_Ports/` types (if crossing boundary); otherwise private vocabulary at family root |
+| Shared contracts | `Core/` | `_Contracts/` types (if crossing boundary); otherwise private vocabulary at family root |
 | Autonomous capability | `Features/` folder | Sub-feature folder |
 | Integration surface | `_Connectors/` (boundary adapters) | `_Connectors/` (boundary adapters; one may be micro-Host wiring) |
 | Wiring point | `Hosts/` | Family wiring passage in `_Connectors/` |
-| Consumer API | Feature `_Ports/` | Family `_Ports/` |
+| Consumer API | Feature `_Contracts/` | Family `_Contracts/` |
 
 The same principles, the same mechanics, the same underscore conventions. Feature Families are not an extension of NomadArchitecture — they are NomadArchitecture recognizing its own fractal nature.
 
@@ -248,7 +248,7 @@ The pattern emerged from real need, not from prediction.
 ## What This Mirage Does NOT Cover
 
 - **Clan mechanics** (family of families) — speculative, not yet needed
-- **Sub-feature Ports protocol** — when and how sub-features expose their own `_Ports/` is left to judgment
+- **Sub-feature Ports protocol** — when and how sub-features expose their own `_Contracts/` is left to judgment
 - **Config composition** — whether the family config decomposes into sub-configs or stays flat with grouped sections is an implementation decision, not a structural axiom
 - **Compiler-enforced boundaries** — whether you split features into separate assemblies or use analyzers to prevent boundary leaks is a separate governance choice
 - **Cross-family communication** — families communicate with other features through the same Core contracts as regular features

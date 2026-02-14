@@ -21,7 +21,7 @@ Pick one Feature from [NomadGameEngine](https://github.com/RikhoDev/NomadGameEng
 Understand it **completely**:
 
 - Read its README (why it exists)
-- Walk its `_Ports/` (what contracts it exposes)
+- Walk its `_Contracts/` (what contracts it exposes)
 - Explore its `_Connectors/` (how it integrates)
 - Trace its implementation (how it works)
 
@@ -43,7 +43,7 @@ This is lineage. You are inheriting it.
 
 Choose one:
 
-- **Create a Feature** — README → `_Ports/` → `_Connectors/` → Traces
+- **Create a Feature** — README → `_Contracts/` → `_Connectors/` → Traces
 - **Write a Mirage** — propose something speculative, mark it `status: non-canon`
 - **Add a Chronicle entry** — document a decision you made and why
 - **Refactor a Connector** — improve an integration, document the reasoning

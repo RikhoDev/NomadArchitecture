@@ -169,7 +169,7 @@ This is not grammar. It’s a visibility practice — so the most important fold
 
 Ports and Connectors are not mere folder names; they are a paired discipline that keeps a Feature sovereign and discoverable.
 
-- **_Ports/** — *living contracts*: interfaces, DTOs, configuration and canonical state types that define what a Feature is and offers. Ports are the feature's public place to live and must include doc comments that state stability and intended consumers.
+- **_Contracts/** — *living contracts*: interfaces, DTOs, configuration and canonical state types that define what a Feature is and offers. Ports are the feature's public place to live and must include doc comments that state stability and intended consumers.
 - **_Connectors/** — *host-facing adapters*: minimal, documented shims, DI helpers, and implementations that connect Ports to runtime infrastructure. Keep heavy logic internal to the feature; connectors are thin, intentional surfaces for hosts.
 
 Principles we follow:
@@ -186,7 +186,7 @@ Practical rules & exceptions:
 
 Migration recipe (safe path):
 
-1. Add a minimal interface or contract to `_Ports/` describing only what consumers need.
+1. Add a minimal interface or contract to `_Contracts/` describing only what consumers need.
 2. Make the implementation `internal` (or move it into the feature's internals) and implement the interface.
 3. Add a `_Connectors/` shim for DI convenience / host glue and document its intent.
 4. Add unit tests that exercise behavior through the Port contract and update the whitelist only if a genuine exception is necessary.
@@ -194,11 +194,11 @@ Migration recipe (safe path):
 Examples & outcomes:
 
 - A Feature declares `IThing` (Port). The host provides `ThingConnector` (Connector) and registers it during bootstrap. Tests exercise `IThing` with fakes, and the implementation remains free to change.
-- Families (Feature groups) follow the same pattern: a Family's `_Ports/` are the public contract for its children; its `_Connectors/` manage relationships between children.
+- Families (Feature groups) follow the same pattern: a Family's `_Contracts/` are the public contract for its children; its `_Connectors/` manage relationships between children.
 
 Enforcement (how we make this practical):
 
-- **Analyzer + test**: we plan a Roslyn analyzer and a reflective test that flag public types declared under `src/Features/**` that are outside `_Ports/`/`_Connectors/` unless whitelisted.
+- **Analyzer + test**: we plan a Roslyn analyzer and a reflective test that flag public types declared under `src/Features/**` that are outside `_Contracts/`/`_Connectors/` unless whitelisted.
 - **PR checklist**: adding a public type requires doc comments, a connector skeleton or whitelist entry, and tests that validate usage through Ports.
 
 This pairing is not pedantry — it keeps the repo honest, migratable, and easy to teach. Ports are where Features live; Connectors are how the world plugs in.

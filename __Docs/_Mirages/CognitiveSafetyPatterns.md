@@ -99,7 +99,7 @@ Workspace/
 Feature/
 ├── README.md       (myth)
 ├── Map.md          (structure)
-├── _Ports/         (contracts)
+├── _Contracts/         (contracts)
 ├── _Connectors/    (integrations)
 └── Traces/         (proof)
 ```
@@ -222,7 +222,7 @@ Cognitive benefit:
 ### What It Might Be
 
 Ceremonies as deliberate **cognitive speed bumps**:
-- Creating a Feature requires README → _Ports/ → _Connectors/ → Traces
+- Creating a Feature requires README → _Contracts/ → _Connectors/ → Traces
 - Promoting a Mirage requires proof + documentation
 - Overriding a Connector requires documenting why
 

@@ -9,7 +9,7 @@ They reinforce culture.
 
 **NomadArchitecture ceremonies:**
 
-- Creating a Feature (README → `_Ports`/ → `_Connectors`/ → Traces)
+- Creating a Feature (README → `_Contracts`/ → `_Connectors`/ → Traces)
 - Promoting a Mirage (prove it → document decision → move to canon)
 - Overriding a Connector (Host overrides Feature default → document why)
 - Adding a Trail entry (record why, not just what changed)

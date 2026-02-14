@@ -28,14 +28,14 @@ The first worldview trail revealed the emergence rhythm. This second trail recor
    - Decision: Shaman canonized as cultural role of continuity and transmission.
 
 4. **Ontology clarification**  
-   - Prompt: “_Connectors and _Ports are not pillars.”  
+   - Prompt: “_Connectors and _Contracts are not pillars.”  
    - Decision: Pillars = Host, Features, Foundations, Core, __Docs.  
-   - Supports = _Connectors and _Ports, local to Features.
+   - Supports = _Connectors and _Contracts, local to Features.
 
 5. **Promotion paths**  
    - Prompt: “Ports → Core when core enough.”  
    - Decision:  
-     - _Ports: local dialect → Core language if recurring.  
+     - _Contracts: local dialect → Core language if recurring.  
      - _Connectors: local glue → Foundations if generalized.
 
 6. **Boundaries**  
@@ -55,11 +55,11 @@ The first worldview trail revealed the emergence rhythm. This second trail recor
   - “Nomad way… not just an insert.”  
   - “Remain humble and factual.”  
   - “Use Shaman instead of Architect.”  
-  - “_Connectors and _Ports are inside Features… not pillars.”  
+  - “_Connectors and _Contracts are inside Features… not pillars.”  
   - “Local language first, then could become Core language when core enough.”  
   - “Infrastructure as a Feature… counternature.”  
 - **Corrections made:**  
-  - Removed _Connectors/_Ports from Canonical Skeleton pillars.  
+  - Removed _Connectors/_Contracts from Canonical Skeleton pillars.  
   - Added “Supports inside Features” section.  
   - Clarified promotion routes.  
   - Rewrote Closing Thought with Shaman role.  
@@ -80,7 +80,7 @@ The first worldview trail revealed the emergence rhythm. This second trail recor
 ## 🌍 Closing Thought
 This Trail records the scar of rewriting the worldview:  
 - **Pillars**: Host, Features, Foundations, Core, __Docs.  
-- **Supports**: _Connectors and _Ports, local to Features, promotable.  
+- **Supports**: _Connectors and _Contracts, local to Features, promotable.  
 - **Role**: Shaman, not Architect, keeps the fire alive.  
 - **Tone**: Humble, factual, third person.  
 

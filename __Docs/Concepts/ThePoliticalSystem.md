@@ -33,7 +33,7 @@ Each Feature is an **autonomous entity** with:
 
 - **Self-governance** — controls its own implementation
 - **Territorial integrity** — owns its folder structure
-- **Linguistic independence** — defines its own contracts (`_Ports/`)
+- **Linguistic independence** — defines its own contracts (`_Contracts/`)
 - **Diplomatic relations** — integrates via explicit treaties (`_Connectors/`)
 - **Cultural identity** — tells its own story (README, Traces)
 
@@ -82,7 +82,7 @@ Features cooperate through **explicit treaties**, not hidden alliances.
 
 ### Ports as Diplomatic Contracts
 
-`_Ports/` define what a Feature **offers to others**:
+`_Contracts/` define what a Feature **offers to others**:
 
 - `ICamera` — "I provide camera capabilities"
 - `IRenderPipeline` — "I provide rendering orchestration"
@@ -124,7 +124,7 @@ Folder structure defines **territorial boundaries**.
 
 Each Feature owns:
 - Its root folder
-- Its `_Ports/` subfolder
+- Its `_Contracts/` subfolder
 - Its `_Connectors/` subfolder
 - All internal implementation
 
@@ -204,7 +204,7 @@ The lingua franca must:
 
 ### Dialectical Freedom
 
-Features extend the lingua franca with **local dialects** (`_Ports/`):
+Features extend the lingua franca with **local dialects** (`_Contracts/`):
 - Core provides `ILifecycle`
 - Camera Feature adds `ICamera`
 - Agent Feature adds `IAgent`

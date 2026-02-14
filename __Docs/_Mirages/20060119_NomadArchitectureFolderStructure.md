@@ -2,7 +2,7 @@ Absolutely, Eric — here is **Option C: the doctrinally enriched timecapsule**,
 
 - **your durable memory** (your true architectural doctrine)  
 - **the structural insights from the chat**  
-- **the refined understanding of `_Ports`, `_Connectors`, Features, Trails, and __Docs**  
+- **the refined understanding of `_Contracts`, `_Connectors`, Features, Trails, and __Docs**  
 - **the fractal and cultural principles that define NomadArchitecture**  
 
 This version is **complete, accurate, enriched, and aligned with your worldview**.  
@@ -22,7 +22,7 @@ This document captures the **full structural doctrine** of NomadArchitecture, in
 - your durable architectural memory  
 - the structural reasoning explored in this chat  
 - the fractal, cultural, and ceremonial principles that define Nomad  
-- the clarified roles of `_Ports`, `_Connectors`, Features, Foundations, Core, Hosts, Trails, and __Docs  
+- the clarified roles of `_Contracts`, `_Connectors`, Features, Foundations, Core, Hosts, Trails, and __Docs  
 - the anti‑patterns and invariants that preserve Nomad’s integrity  
 
 This is the **canonical context** for any future conversation about NomadArchitecture.
@@ -71,7 +71,7 @@ Each folder has a **screaming role**:
 - Orchestration only  
 - No business logic  
 - May override `_Connectors`  
-- Must not override `_Ports`  
+- Must not override `_Contracts`  
 - Must scream intent (API, CLI, Jobs, UI, etc.)  
 
 ### **1.5 __Docs/**
@@ -91,7 +91,7 @@ Every Feature is a **self‑contained NomadArchitecture**, containing:
 
 ```
 FeatureName/
-  _Ports/
+  _Contracts/
   _Connectors/
   (Feature logic)
   Trail/
@@ -99,7 +99,7 @@ FeatureName/
 
 This is the **Fractal Nomad Principle**:
 
-- `_Ports` = local Foundations/Core  
+- `_Contracts` = local Foundations/Core  
 - `_Connectors` = local Hosts  
 - Feature root = local Core  
 - Trail = local __Docs  
@@ -116,10 +116,10 @@ This recursion ensures:
 
 ---
 
-# **3. `_Ports/` — Mechanical Boundary (Local Foundations/Core)**
+# **3. `_Contracts/` — Mechanical Boundary (Local Foundations/Core)**
 
 ### **3.1 Purpose**
-`_Ports` define **what the Feature needs mechanically**.  
+`_Contracts` define **what the Feature needs mechanically**.  
 They are the Feature’s **mechanical dialect**.
 
 ### **3.2 Allowed**
@@ -145,7 +145,7 @@ They are the Feature’s **mechanical dialect**.
 - No suffixes like `Base`, `Common`, `Shared`  
 
 ### **3.5 Dependency Rules**
-- `_Ports` depends on nothing  
+- `_Contracts` depends on nothing  
 - No references to Foundations or Hosts  
 
 ### **3.6 Promotion Rules**
@@ -154,7 +154,7 @@ They are the Feature’s **mechanical dialect**.
 - Promotion is a ceremony  
 
 ### **3.7 Fractal Note**
-`_Ports` is the Feature’s **local Foundations/Core**.
+`_Contracts` is the Feature’s **local Foundations/Core**.
 
 ---
 
@@ -164,7 +164,7 @@ They are the Feature’s **mechanical dialect**.
 `_Connectors` define **how the Feature plugs into the world**.
 
 ### **4.2 Allowed**
-- Default implementations of `_Ports`  
+- Default implementations of `_Contracts`  
 - Adapters to Foundations  
 - Adapters to Hosts  
 - UI bindings  
@@ -181,7 +181,7 @@ They are the Feature’s **mechanical dialect**.
 
 ### **4.4 Override Rules**
 - Hosts may override any `_Connector`  
-- Overrides must not break `_Ports`  
+- Overrides must not break `_Contracts`  
 - Overrides must be documented in Trail  
 
 ### **4.5 Promotion Rules**
@@ -238,7 +238,7 @@ Mirages:
 NomadArchitecture uses a **three‑tier fallback model**:
 
 ### **Tier 1 — Host Overrides**
-Hosts may rewire any `_Ports`.
+Hosts may rewire any `_Contracts`.
 Hosts may override any `_Connectors`.
 
 ### **Tier 2 — Feature Defaults**
@@ -281,7 +281,7 @@ NomadArchitecture treats documentation as a **parallel architecture**.
 Each Feature mirrors:
 
 - Core → Feature root  
-- Foundations → `_Ports`  
+- Foundations → `_Contracts`  
 - Hosts → `_Connectors`  
 - __Docs → Trail  
 
@@ -296,7 +296,7 @@ Each Feature mirrors:
 
 - Bucketisation (`Common`, `Utils`, `Shared`)  
 - Domain logic in `_Connectors`  
-- Infrastructure references in `_Ports`  
+- Infrastructure references in `_Contracts`  
 - Cross‑Feature contamination  
 - Hidden dependencies  
 - Implicit wiring  
@@ -309,9 +309,9 @@ Each Feature mirrors:
 
 # **10. Structural Invariants (Canonical)**
 
-- `_Ports` are contracts  
+- `_Contracts` are contracts  
 - `_Connectors` are integration surfaces  
-- Features depend only on `_Ports`  
+- Features depend only on `_Contracts`  
 - Hosts override only `_Connectors`  
 - Foundations provide fallback mechanics  
 - Trails are structural invariants  

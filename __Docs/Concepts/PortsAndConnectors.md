@@ -1,11 +1,11 @@
-﻿# _Ports & _Connectors  
+# _Contracts & _Connectors  
 ### Mechanical Boundaries & Integration Surfaces in NomadArchitecture
 
 ---
 
 ## 1. Purpose of This Document
 
-This chapter teaches the architectural role of `_Ports` and `_Connectors` in NomadArchitecture.  
+This chapter teaches the architectural role of `_Contracts` and `_Connectors` in NomadArchitecture.  
 It is written for:
 
 - newcomers learning the system  
@@ -16,7 +16,7 @@ It is written for:
 
 It explains:
 
-- what `_Ports` are  
+- what `_Contracts` are  
 - what `_Connectors` are  
 - how they relate  
 - how they preserve autonomy  
@@ -28,7 +28,7 @@ This is **law**, **learning material**, and **onboarding guidance**.
 
 ---
 
-## 2. Why `_Ports` and `_Connectors` Exist
+## 2. Why `_Contracts` and `_Connectors` Exist
 
 NomadArchitecture is built on three pillars:
 
@@ -46,15 +46,15 @@ But Features still need to:
 
 They must do this **without contaminating their meaning** and **without depending on any environment**.
 
-This is the tension `_Ports` and `_Connectors` solve.
+This is the tension `_Contracts` and `_Connectors` solve.
 
 ---
 
-## 3. `_Ports` - The Feature's Mechanical Boundary
+## 3. `_Contracts` - The Feature's Mechanical Boundary
 
 ### 3.1 Definition
 
-`_Ports` define **what the Feature needs mechanically**.
+`_Contracts` define **what the Feature needs mechanically**.
 
 They are:
 
@@ -66,7 +66,7 @@ They are:
 
 They express the **mechanical dialect** of the Feature.
 
-### 3.2 What belongs in `_Ports`
+### 3.2 What belongs in `_Contracts`
 
 - memory dialect contracts  
 - tool interfaces  
@@ -84,7 +84,7 @@ They express the **mechanical dialect** of the Feature.
 - Host knowledge  
 - UI or network code  
 
-### 3.4 Why `_Ports` matter
+### 3.4 Why `_Contracts` matter
 
 They give Features:
 
@@ -94,7 +94,7 @@ They give Features:
 - **override safety**  
 - **mechanical clarity**  
 
-A Feature depends only on its own `_Ports`, never on external mechanics.
+A Feature depends only on its own `_Contracts`, never on external mechanics.
 
 ---
 
@@ -106,7 +106,7 @@ A Feature depends only on its own `_Ports`, never on external mechanics.
 
 They are the Feature's **integration layer**, including:
 
-- default implementations of `_Ports`  
+- default implementations of `_Contracts`  
 - adapters to Foundations  
 - adapters to Hosts  
 - adapters to external systems  
@@ -153,23 +153,23 @@ They give Features:
 
 ---
 
-## 5. The Relationship Between `_Ports` and `_Connectors`
+## 5. The Relationship Between `_Contracts` and `_Connectors`
 
-### 5.1 `_Ports` define the contract  
+### 5.1 `_Contracts` define the contract  
 
-â€œWhat the Feature needs mechanically.â€
+“What the Feature needs mechanically.”
 
 ### 5.2 `_Connectors` provide the integration surface  
 
-â€œHow the Feature plugs into the world.â€
+“How the Feature plugs into the world.”
 
-### 5.3 Features depend only on `_Ports`  
+### 5.3 Features depend only on `_Contracts`  
 
 Never on `_Connectors`.
 
 ### 5.4 Hosts override `_Connectors`  
 
-Never `_Ports`.
+Never `_Contracts`.
 
 ### 5.5 Foundations provide fallback mechanics  
 
@@ -214,7 +214,7 @@ This ensures:
 ### 7.1 Movement Feature
 
 ```text
-_Ports/
+_Contracts/
   IMovementIntegrator.cs
   IMovementPolicy.cs
 
@@ -227,7 +227,7 @@ _Connectors/
 ### 7.2 Rendering Feature
 
 ```text
-_Ports/
+_Contracts/
   ISpriteLoader.cs
   IRenderQueue.cs
 
@@ -240,7 +240,7 @@ _Connectors/
 ### 7.3 Actor Feature
 
 ```text
-_Ports/
+_Contracts/
   IActorEnvelopeBuilder.cs
 
 _Connectors/
@@ -266,20 +266,20 @@ _Connectors/
 
 ## 9. Invariants
 
-- `_Ports` are contracts  
+- `_Contracts` are contracts  
 - `_Connectors` are integration surfaces  
-- Features depend only on `_Ports`  
+- Features depend only on `_Contracts`  
 - Hosts override only `_Connectors`  
 - Foundations provide fallback mechanics  
 - No domain logic in `_Connectors`  
-- No environment assumptions in `_Ports`  
+- No environment assumptions in `_Contracts`  
 - No cross-Feature contamination  
 
 ---
 
 ## 10. Summary
 
-`_Ports` and `_Connectors` are structural primitives that:
+`_Contracts` and `_Connectors` are structural primitives that:
 
 - preserve Feature autonomy  
 - enforce separation of meaning and mechanics  

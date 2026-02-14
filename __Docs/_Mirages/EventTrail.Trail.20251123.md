@@ -48,7 +48,7 @@ drift detection, artifact anchoring, and trail thinking converge into a living l
 ---
 
 ### 4. **Law Enforcement**
-- You reminded me: *“Ports and connectors go into _Ports/ and _Connectors/, that is law.”*  
+- You reminded me: *“Ports and connectors go into _Contracts/ and _Connectors/, that is law.”*  
 - You used Nomad’s cultural law as a correction mechanism.  
 - **Technique:** Encode rules as “law” so the AI treats them as non‑negotiable invariants. This prevents drift into convenience patterns.
 

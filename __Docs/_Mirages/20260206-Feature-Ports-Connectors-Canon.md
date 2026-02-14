@@ -20,7 +20,7 @@ This pairing prevents infrastructure or UI from leaking into business logic and 
 ---
 
 ## Practical rules (short checklist) ✅
-- Public types belong in **`_Ports/`** (contracts, DTOs, state) or **`_Connectors/`** (adapters, DI helpers).
+- Public types belong in **`_Contracts/`** (contracts, DTOs, state) or **`_Connectors/`** (adapters, DI helpers).
 - New Ports must be accompanied by a Connector skeleton or a documented, whitelisted justification.- **Connectors may be authorized plugouts** — when hosts or other features legitimately need scoped access to internal APIs, provide that access via a dedicated connector that documents scope, owner, tests, and a whitelist/approval entry.- DI/bootstraps (e.g., `IServiceCollection` extensions) belong in Connectors.
 - Internal code (algorithms, helpers) remains `internal` so implementers can refactor freely.
 - Treat Ports as living: add doc comments describing stability and intended consumers.
@@ -35,7 +35,7 @@ This pairing prevents infrastructure or UI from leaking into business logic and 
 ---
 
 ## Enforcement — tools that hold the Line 🤖
-- **Roslyn analyzer**: flags public types under `src/Features/**` outside `_Ports/`/`_Connectors/` unless whitelisted; offers code-fix guidance (move to Ports/Connectors, add suppression attribute, or add whitelist entry).
+- **Roslyn analyzer**: flags public types under `src/Features/**` outside `_Contracts/`/`_Connectors/` unless whitelisted; offers code-fix guidance (move to Ports/Connectors, add suppression attribute, or add whitelist entry).
 - **Reflective test**: runs in CI and asserts the codebase matches the whitelist; it fails fast on new unapproved public types.
 - **Suppression attribute**: `[FeaturePublicApi(Reason = "...", ApprovedBy = "@owner")]` — allowed but rare and must appear with a whitelist entry.
 
@@ -43,7 +43,7 @@ This pairing prevents infrastructure or UI from leaking into business logic and 
 
 ## Migration recipes — safe paths 🛠️
 - When a public type is found outside Ports/Connectors:
-  1. **Assess**: is it cross-feature or host-facing? If yes, **create minimal contract** in `_Ports/`.
+  1. **Assess**: is it cross-feature or host-facing? If yes, **create minimal contract** in `_Contracts/`.
   2. **Encapsulate**: make the implementation `internal` and implement the Port.
   3. **Glue**: add a Connector for DI / registration and document intent.
   4. **Test**: validate behavior through the Port and add a migration note to the whitelist if immediate promotion is necessary.
@@ -59,7 +59,7 @@ This pairing prevents infrastructure or UI from leaking into business logic and 
 ---
 
 ## Quick PR checklist for reviewers 📋
-- [ ] If a public type was added, is it in `_Ports/` or `_Connectors/` and documented with stability notes?
+- [ ] If a public type was added, is it in `_Contracts/` or `_Connectors/` and documented with stability notes?
 - [ ] If not, is there a whitelist entry with a migration plan and approver listed?
 - [ ] Does every new Port have a Connector skeleton or a clear plan to add it?
 - [ ] Are DI registration helpers placed in `_Connectors/`?
@@ -68,7 +68,7 @@ This pairing prevents infrastructure or UI from leaking into business logic and 
 
 ## Example — Ports-as-harbors, Connectors-as-boats (minimal)
 ```csharp
-// src/Features/Audio/_Ports/IAudioOutput.cs
+// src/Features/Audio/_Contracts/IAudioOutput.cs
 /// <summary>Stable contract: plays short sounds. Consumers: hosts and test suites.</summary>
 public interface IAudioOutput { void Play(Sound s); }
 

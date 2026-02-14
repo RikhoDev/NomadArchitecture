@@ -5,14 +5,14 @@ Use this template when creating a new Feature in `Features/`.
 - README.md — Why (mission), when to use, owner
 - Map.md — How it works, dependencies, wiring
 - Traces.md — Execution traces or examples
-- _Ports/ — mechanical contracts (interfaces)
+- _Contracts/ — mechanical contracts (interfaces)
 - _Connectors/ — default adapters, host bindings, mocks
 
 ## Checklist (add when creating a Feature)
 - [ ] `README.md` created and explains intent
 - [ ] `Map.md` documents wiring and dependencies
 - [ ] `Traces.md` contains at least one example trace
-- [ ] `_Ports/` contains clear, environment-agnostic contracts
+- [ ] `_Contracts/` contains clear, environment-agnostic contracts
 - [ ] `_Connectors/` contains at least one default ritual used by Hosts
 
 ## Promotion rules (practical guidance)

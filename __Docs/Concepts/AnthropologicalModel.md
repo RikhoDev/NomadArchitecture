@@ -83,7 +83,7 @@ From **NomadAI**:
 
 A Feature at any scale has:
 - Its own identity (README, purpose)
-- Its own tools (`_Ports/`, `_Connectors/`)
+- Its own tools (`_Contracts/`, `_Connectors/`)
 - Its own territory (folder structure)
 - Its own stories (Traces, decisions)
 
@@ -192,7 +192,7 @@ Docs are the **cultural transmission layer**:
 
 ### **Ports = Dialects**
 
-`_Ports/` are **local dialects** — the clan's way of speaking:
+`_Contracts/` are **local dialects** — the clan's way of speaking:
 - Contracts the clan exposes
 - Integrations the clan accepts
 - The vocabulary specific to the clan's domain

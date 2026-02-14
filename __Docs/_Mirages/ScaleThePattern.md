@@ -17,11 +17,11 @@ The principle "Structure is Communication" works because of the Port/Connector p
 **What I see working (Feature-level):**
 ```
 NomadGameEngine/src/Features/Rendering/
-├── _Ports/               ← Code interfaces (ICamera.cs, IRenderPipeline.cs)
+├── _Contracts/               ← Code interfaces (ICamera.cs, IRenderPipeline.cs)
 └── Camera/_Connectors/   ← Implementations
 
 NomadAI/Features/ServiceCatalog/
-├── _Ports/               ← Code interfaces (IMemoryDialect.cs, IModelBinding.cs)
+├── _Contracts/               ← Code interfaces (IMemoryDialect.cs, IModelBinding.cs)
 └── _Connectors/          ← Implementations
 ```
 
@@ -29,32 +29,32 @@ NomadAI/Features/ServiceCatalog/
 ```
 NomadArchitecture/
 └── __Docs/
-    └── _Ports/           ← The workspace's Core (documentation contracts)
+    └── _Contracts/           ← The workspace's Core (documentation contracts)
         ├── IGameHost.md
         ├── IAIPlatform.md
         └── IFeatureSystem.md
 
 NomadGameEngine/
-├── _Implements/          ← "I fulfill NomadArchitecture.__Docs._Ports.IGameHost"
+├── _Implements/          ← "I fulfill NomadArchitecture.__Docs._Contracts.IGameHost"
 └── Features/
 
 NomadAI/
-├── _Implements/          ← "I fulfill NomadArchitecture.__Docs._Ports.IAIPlatform"
+├── _Implements/          ← "I fulfill NomadArchitecture.__Docs._Contracts.IAIPlatform"
 └── Features/
 ```
 
 **Reality check (today):**
-- `NomadArchitecture/__Docs/` exists, but `NomadArchitecture/__Docs/_Ports/` does not (yet).
+- `NomadArchitecture/__Docs/` exists, but `NomadArchitecture/__Docs/_Contracts/` does not (yet).
 - `_Implements/` is not a current convention in these repos — it’s part of the mirage.
 - Treat all folder sketches below as *hypothetical* unless explicitly verified elsewhere.
 
-**The wondering**: What if workspace-level _Ports are the workspace's **Core**, expressed as documentation?
+**The wondering**: What if workspace-level _Contracts are the workspace's **Core**, expressed as documentation?
 
-**Why __Docs/_Ports/ feels right:**
-- At Feature level, _Ports/ = the Feature's Core (its contracts)
+**Why __Docs/_Contracts/ feels right:**
+- At Feature level, _Contracts/ = the Feature's Core (its contracts)
 - At workspace level, documentation contracts = the workspace's Core
 - __Docs/ is where canonical knowledge already lives
-- The pattern would be consistent: _Ports = Core at every scale
+- The pattern would be consistent: _Contracts = Core at every scale
 
 ---
 
@@ -70,7 +70,7 @@ NomadArchitecture/ (the spec)
 ├── __Docs/Transmission/README.md  ← How to explore / how to use
 ├── __Docs/_Chronicles/           ← Evolution trail (history)
 ├── __Docs/_Mirages/              ← Speculative seeds (non-canon)
-└── __Docs/_Ports/                 ← (proposed) Workspace-level ports as prose contracts
+└── __Docs/_Contracts/                 ← (proposed) Workspace-level ports as prose contracts
 
 NomadGameEngine/ (an implementation)
 ├── (optional) _Implements/          ← (proposed) Declares what workspace-ports are fulfilled
@@ -96,10 +96,10 @@ NomadArchitecture-Playground/ (an experiment garden)
 
 ```
 If NomadGameEngine had an `_Implements/` folder, I could read:
-"This repo implements NomadArchitecture.__Docs._Ports.IGameHost"
+"This repo implements NomadArchitecture.__Docs._Contracts.IGameHost"
 
 If NomadAI had an `_Implements/` folder, I could read:
-"This repo implements NomadArchitecture.__Docs._Ports.IAIPlatform"
+"This repo implements NomadArchitecture.__Docs._Contracts.IAIPlatform"
 
 If Playground had an `_Experiments/` garden wired to ports, I could see:
 "This is where ideas test themselves against the ports"
@@ -110,14 +110,14 @@ If Playground had an `_Experiments/` garden wired to ports, I could see:
 ```
 NomadArchitecture/
 └── __Docs/
-    └── _Ports/                    ← What if this were the workspace's Core?
+    └── _Contracts/                    ← What if this were the workspace's Core?
         ├── IGameHost.md           ← "Here's what a game host must be"
         ├── IAIPlatform.md         ← "Here's what an AI platform must be"
         ├── IFeatureSystem.md      ← "Here's what features must support"
         └── IHostOrchestration.md  ← "Here's how hosts coordinate"
 ```
 
-**The parallel**: Just like a Feature's Core is its _Ports/, the workspace's Core could be __Docs/_Ports/.
+**The parallel**: Just like a Feature's Core is its _Contracts/, the workspace's Core could be __Docs/_Contracts/.
 
 **The key difference**: These would be *documentation*, not code. Contracts in prose, enabling polyglot implementations.
 
@@ -133,9 +133,9 @@ Each implementation declares which ports it fulfills in its `_Implements/` folde
 
 ## The Documentation Family
 
-**Workspace-level _Ports are technology-agnostic documentation.**
+**Workspace-level _Contracts are technology-agnostic documentation.**
 
-Example: `NomadArchitecture/__Docs/_Ports/IGameHost.md`
+Example: `NomadArchitecture/__Docs/_Contracts/IGameHost.md`
 
 ```markdown
 # IGameHost Port
@@ -173,7 +173,7 @@ This contract can be implemented in:
 ```
 NomadArchitecture/
 └── __Docs/
-    ├── _Ports/                          ← Workspace Core (contracts)
+    ├── _Contracts/                          ← Workspace Core (contracts)
     │   ├── IGameHost.md                 ← Prose contract for game hosts
     │   ├── IAIPlatform.md               ← Prose contract for AI platforms
     │   ├── IFeatureSystem.md            ← Prose contract for features
@@ -190,7 +190,7 @@ NomadArchitecture/
 ```
 NomadGameEngine/
 ├── (optional) _Implements/              ← (proposed) What this repo fulfills
-├── src/Features/.../_Ports              ← Feature-level contracts (code)
+├── src/Features/.../_Contracts              ← Feature-level contracts (code)
 ├── src/Features/.../_Connectors         ← Feature-level implementations (code)
 └── __Docs/Transmission/README.md        ← How this repo transmits itself
 ```
@@ -200,7 +200,7 @@ NomadGameEngine/
 ```
 NomadAI/
 ├── (optional) _Implements/              ← (proposed) What this repo fulfills
-├── Features/.../_Ports                  ← Feature-level contracts (code)
+├── Features/.../_Contracts                  ← Feature-level contracts (code)
 ├── Features/.../_Connectors             ← Feature-level implementations (code)
 └── __Docs/Transmission/README.md        ← How this repo transmits itself
 ```
@@ -223,7 +223,7 @@ NomadArchitecture-Playground/
 → (if adopted) Look in Playground/_Experiments/
 
 "I want to build a game. What must I implement?"
-→ Read NomadArchitecture/__Docs/_Ports/IGameHost.md
+→ Read NomadArchitecture/__Docs/_Contracts/IGameHost.md
 → Choose your tech stack (C#, TypeScript, Python, etc.)
 → Implement the documented contracts
 
@@ -234,7 +234,7 @@ NomadArchitecture-Playground/
 → (if adopted) Their _Implements/ folders declare it structurally
 
 "Can I build a NomadGameEngine equivalent in TypeScript?"
-→ Yes! Implement NomadArchitecture/__Docs/_Ports/IGameHost.md in your language
+→ Yes! Implement NomadArchitecture/__Docs/_Contracts/IGameHost.md in your language
 ```
 
 ### To a Senior Dev
@@ -242,7 +242,7 @@ NomadArchitecture-Playground/
 ```
 "Is NomadAI compatible with Physics tracing?"
 → (if adopted) Check NomadAI/_Implements/
-→ Does it implement NomadArchitecture.__Docs._Ports.IFeatureSystem?
+→ Does it implement NomadArchitecture.__Docs._Contracts.IFeatureSystem?
 → If yes, Physics tracing should work
 
 "Can I run an experiment that tests a port?"
@@ -250,11 +250,11 @@ NomadArchitecture-Playground/
 → Shows what ports it tests and results
 
 "How should I extend both implementations equally?"
-→ Add to NomadArchitecture.__Docs._Ports/
+→ Add to NomadArchitecture.__Docs._Contracts/
 → Both repos reference it automatically
 
 "Can I build a Node.js version alongside the C# version?"
-→ Yes! Both implement the same __Docs/_Ports/ documentation
+→ Yes! Both implement the same __Docs/_Contracts/ documentation
 → Structure makes polyglot implementations explicit
 ```
 
@@ -266,21 +266,21 @@ NomadArchitecture-Playground/
 What if every level spoke the same language:
 
 Workspace Level:
-└── __Docs/_Ports/ (workspace's Core as documentation)
+└── __Docs/_Contracts/ (workspace's Core as documentation)
 
 Repository Level:
 ├── Features/ (capabilities)
 └── _Implements/ (workspace contracts fulfilled)
 
 Feature Level:
-├── _Ports/ (Feature's Core)
+├── _Contracts/ (Feature's Core)
 └── _Connectors/ (integration)
 
 Host Level:
 └── _Connectors/ (implementations)
 ```
 
-**The pattern**: At every level, _Ports = Core.
+**The pattern**: At every level, _Contracts = Core.
 
 At Feature level: Core is code interfaces.
 At workspace level: Core is documentation contracts.
@@ -297,7 +297,7 @@ The fractal holds, but the medium changes.
 - Would polyglot implementations actually emerge?
 
 **What would it cost to discover?**
-- Create one example contract in __Docs/_Ports/ (e.g., IGameHost.md)
+- Create one example contract in __Docs/_Contracts/ (e.g., IGameHost.md)
 - Add one _Implements/ marker in NomadGameEngine
 - See if it clarifies anything
 - See if it feels natural
@@ -310,7 +310,7 @@ The fractal holds, but the medium changes.
 
 **The test**: Does structure communicate, or does it prescribe?
 
-If adding __Docs/_Ports/IGameHost.md makes someone say "oh, now I understand what NomadGameEngine is"—then the pattern wants to scale.
+If adding __Docs/_Contracts/IGameHost.md makes someone say "oh, now I understand what NomadGameEngine is"—then the pattern wants to scale.
 
 If it feels like bureaucracy—then the workspace hasn't asked for it yet.
 
@@ -322,7 +322,7 @@ If it feels like bureaucracy—then the workspace hasn't asked for it yet.
 
 ```
 NomadArchitecture-Playground/_Experiments/<ExperimentName>/
-├── _Tests/NomadArchitecture.__Docs._Ports.<PortName>/
+├── _Tests/NomadArchitecture.__Docs._Contracts.<PortName>/
 │   └── Results.md
 │
 └── _Implementation/
@@ -357,7 +357,7 @@ If the workspace has similar pain—if repos don't know what they are to each ot
 
 The way to find out: **build the smallest thing that would test it.**
 
-Create `__Docs/_Ports/IGameHost.md`.
+Create `__Docs/_Contracts/IGameHost.md`.
 Add `_Implements/` to NomadGameEngine.
 See if it clarifies anything.
 
