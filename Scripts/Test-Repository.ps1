@@ -6,7 +6,8 @@
 #      .nomad-method/canon;
 #   4. every proof (*.Tests.ps1) passes;
 #   every awaiting_reading section named in a canon file exists; and
-#   Chronicles and Mirages are named YYMM-xx-Name.md and dated to agree.
+#   Chronicles and Mirages are named YYMM-xx-Name-Chronicle.md or
+#   YYMM-xx-Name-Mirage.md and dated to agree.
 # Usage: pwsh Scripts/Test-Repository.ps1    Exit code 0 means all checks pass.
 
 $ErrorActionPreference = 'Stop'
@@ -91,7 +92,8 @@ foreach ($rel in $headers.Keys) {
     if (-not ($segments | Where-Object { $_ -in '_Chronicles', '_Mirages' })) { continue }
     $leaf = $segments[-1]
     if ($leaf -eq 'README.md' -or $leaf -match '\.Trail\.\d{8}\.md$') { continue }
-    if ($leaf -notmatch '^(\d{2})(\d{2})-(\d{2})-[^.]+\.md$') { Report "$rel is not named YYMM-xx-Name.md"; continue }
+    $suffix = if ($segments -contains '_Chronicles') { 'Chronicle' } else { 'Mirage' }
+    if ($leaf -notmatch "^(\d{2})(\d{2})-(\d{2})-[^.]+-$suffix\.md$") { Report "$rel is not named YYMM-xx-Name-$suffix.md"; continue }
     $yymm = "$($Matches[1])-$($Matches[2])"; $index = "$($Matches[1])$($Matches[2])-$($Matches[3])"
     $date = $headers[$rel]['date']
     if (-not $date) { Report "$rel has no date header" }

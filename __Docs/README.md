@@ -2,7 +2,7 @@
 status: canon
 kind: doctrine
 origin: ai
-awaiting_reading: status-header
+awaiting_reading: status-header, dates-and-suffixes
 ---
 
 # __Docs
@@ -80,9 +80,10 @@ whole is recorded in the Trail of this README.
 
 ## Folder grammar
 
-This is the only place the grammar is defined. It is the convention of
-NomadGameEngineV2 (NGE:`Engine/__Docs/README.md`, Naming Conventions),
-adopted here at the human's direction on 2026-10-21.
+This is the only place the grammar is defined. The human directed on
+2026-10-21 that it follow NomadGameEngineV2; this section restates
+NGE:`Engine/__Docs/README.md` (Naming Conventions, and the local `__Docs/`
+rule above it).
 
 | Prefix | Meaning | Examples |
 |---|---|---|
@@ -90,12 +91,19 @@ adopted here at the human's direction on 2026-10-21.
 | `_` | structural folders and temporal surfaces | `_Connectors/`, `_Tests/`, `_Mirages/`, `_Chronicles/` |
 | none | content, named for the meaning it carries | `Hosts/`, `Canon.ps1`, `Worldview.md` |
 
-Chronicles and Mirages are named `YYMM-xx-Name-Chronicle.md` and
-`YYMM-xx-Name-Mirage.md`: the year and month they began, then an index that is
-local to their folder and starts at `01` each month. Their `date:` header and
-their filename agree, so history sorts by date and survives promotion or
-burial. A Host or Feature may carry its own `__Docs/` once its local history
-needs room.
+Chronicles and Mirages start with `YYMM-xx-`: the year and month they began,
+then an index that is local to their folder and starts at `01` each month. The
+filename and the document's header agree, so history sorts by date and
+survives promotion or burial. A Host or Feature may carry its own `__Docs/`
+once its local history needs room.
+
+### Dates and suffixes
+
+The assistant's additions, which make the rule checkable here:
+
+- the header field `date:` carries the date the filename must agree with;
+- a Chronicle's name ends `-Chronicle.md`, and a Mirage's ends `-Mirage.md`,
+  as NGE's files do in practice.
 
 ## How canon grows
 

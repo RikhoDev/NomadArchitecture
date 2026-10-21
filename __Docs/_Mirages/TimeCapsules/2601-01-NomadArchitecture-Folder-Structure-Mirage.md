@@ -11,8 +11,8 @@ date: 2026-01
 > promotion are replaced by [Architecture](../../Architecture.md). It also
 > contradicted itself: §7 says "Hosts may rewire any `_Ports`", while §1.4 and
 > §10 say Hosts override only `_Connectors`. The date in the file name probably
-> means 2026-01-19: the file was first committed on 2026-01-28 in `7ef042d`.
-> That date is unconfirmed, so the file has not been renamed.
+> meant 2026-01-19; the file was first committed on 2026-01-28 in `7ef042d`.
+> It is now named and dated by month, `2601`, since the day is unconfirmed.
 
 
 # 🧭 **NOMADARCHITECTURE — DOCTRINALLY ENRICHED CODE STRUCTURE TIMECAPSULE**  

@@ -196,38 +196,17 @@ The human's words:
    NGEv2 for context on that fix."
 
 This reverses one of the assistant's calls in Loop 2, "the wrapped form
-stays". Because the human directed it, the folder grammar is no longer listed
-as awaiting reading. What changed:
+stays". The folder grammar now restates NGE's Naming Conventions. Because the
+human directed that, it does not await reading. The assistant's additions do:
+the `date:` header field and the `-Chronicle`/`-Mirage` suffixes, in
+`#dates-and-suffixes`.
 
-- `__Docs__`, `_Mirages_` and `_Chronicles_` became `__Docs`, `_Mirages` and
-  `_Chronicles`, following NGE:`Engine/__Docs/README.md` (Naming Conventions):
-  - `__` marks documentation;
-  - `_` marks structural folders and temporal surfaces;
-  - no prefix marks content.
+The isolated review of `08f1700` corrected two claims:
+- the time capsule's month: its old name, `20060119`, and its first commit,
+  2026-01-28, both point to January 2026, but neither proves when it began;
+- the proof count: `08f1700` said 6 proof files; there are 5.
 
-  Git records every move as a rename.
-- Chronicles and Mirages are named `YYMM-xx-Name-Chronicle.md` and
-  `YYMM-xx-Name-Mirage.md`, with an index local to each folder. Each has a
-  `date:` header that agrees with its name; the dates come from each file's
-  first commit. The Chronicles keep their chapter order (Genesis, then The
-  First Shaman, then The Shaman and the Spirit's Hallucinations) as
-  `2511-01` to `2511-03`.
-- The time capsule became `2601-01-...-TimeCapsule.md`, dated `2026-01`. Its
-  old name said `20060119` and it was first committed on 2026-01-28, so the
-  month is certain and the day is not. This settles the open question below
-  without guessing the day.
-- `Scripts/Test-Repository.ps1` fails on a dated file whose name does not
-  match `YYMM-xx-`, whose `date:` disagrees with its name, or whose index
-  repeats in its folder. Three mutations confirmed this.
-- The Chronicles README lost its "Growth Roadmap", which planned folders such
-  as `_Myths_/` in the old grammar.
-- Trails, the stories in Chronicles, and quoted conversations keep the old
-  names in their prose, because they are records. Only their links were
-  rewritten.
-- Greeting was removed. Its last lesson, that the Host decides how a refusal
-  is shown, is in the DocReader README.
-- Checking the renamed tree with `explain` exposed a Foundation bug: a
-  README's lead lost its inline code ("inside ."). It is fixed, with a proof.
+Greeting was removed, and git records the renames.
 
 Not done, and offered to the human: NGE keeps Trails in `_Trails/` folders
 under their owner, with descriptive names. Here they still sit beside their

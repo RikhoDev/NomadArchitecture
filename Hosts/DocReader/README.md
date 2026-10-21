@@ -48,10 +48,10 @@ of them.
   the same author, and this one in the same change, so they are weak
   evidence of a shared need. Promoting it to a root `Foundations/Markdown`
   used by both waits for the human to judge that evidence.
-- It replaced the Greeting example in October 2026. Greeting's last lesson
-  lives here: the Host, not the Feature, decides how a refusal is shown. An
-  unknown command exits with code 2, and a path outside the repository exits
-  with code 1.
+- It replaced the Greeting example in October 2026. Greeting's lesson holds
+  here too: the Host, not the Feature, decides how a refusal is shown.
+  DocReader's own choices are code 2 for an unknown command and code 1 for a
+  path outside the repository.
 
 ## Absent on purpose
 
