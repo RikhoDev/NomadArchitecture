@@ -1,7 +1,7 @@
 ---
 status: canon
 kind: doctrine
-origin: ai-assisted
+origin: ai
 ---
 
 # __Docs__
@@ -21,8 +21,11 @@ These files are binding, and nothing else is:
 - [This README](README.md): document kinds, status headers, and how canon
   grows.
 
-The human authorized this canon on 2026-10-21. The authorization, quoted, and
-the debate behind each rule are in [README.Trail.20261021.md](README.Trail.20261021.md).
+On 2026-10-21 the human delegated this canon: to infer what they already hold,
+and to decide the rest. The human has not yet read the result. The Trail quotes
+the delegation and marks each rule as inferred from the human's record or
+decided by the assistant: [README.Trail.20261021.md](README.Trail.20261021.md).
+Any of it stands until the human contradicts it.
 [AGENTS.md](../AGENTS.md) points contributors and AI assistants here.
 
 ## Document kinds

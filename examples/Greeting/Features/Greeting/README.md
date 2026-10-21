@@ -1,7 +1,7 @@
 ---
 status: non-canon
 kind: guide
-origin: ai-assisted
+origin: ai
 ---
 
 # Greeting
@@ -22,7 +22,8 @@ three claims above: the greeting, trimming of the name, and refusal of a blank
 one. `Scripts/Test-Repository.ps1` runs it on every check.
 
 **Status.** Settled. Until October 2026 the whole Feature lived in
-`_Connectors/GreetingConnector.ps1`, which the
+`examples/MinimalFeature/Features/Greeting/_Connectors/GreetingConnector.ps1`,
+which the
 [connector rules](../../../../__Docs__/Architecture.md#contracts-and-connectors)
 no longer allow. It was moved to the Feature root and given a proof. The
 earlier shape is in git history.

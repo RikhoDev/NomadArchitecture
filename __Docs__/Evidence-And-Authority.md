@@ -1,7 +1,7 @@
 ---
 status: canon
 kind: doctrine
-origin: ai-assisted
+origin: ai
 ---
 
 # Evidence and Authority

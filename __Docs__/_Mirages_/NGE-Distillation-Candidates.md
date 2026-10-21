@@ -1,7 +1,7 @@
 ---
 status: non-canon
 kind: mirage
-origin: ai-assisted
+origin: ai
 ---
 
 # NGE distillation candidates

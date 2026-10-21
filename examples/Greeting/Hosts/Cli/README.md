@@ -1,7 +1,7 @@
 ---
 status: non-canon
 kind: guide
-origin: ai-assisted
+origin: ai
 ---
 
 # Cli

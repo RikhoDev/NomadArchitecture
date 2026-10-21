@@ -1,7 +1,7 @@
 ---
 status: non-canon
 kind: guide
-origin: ai-assisted
+origin: ai
 ---
 
 # _Connectors
@@ -24,13 +24,6 @@ a protocol. It fulfils a contract; it does not define the Feature's meaning.
 - adapters to a protocol, UI framework, runtime or tool, when the Feature has
   a real need for one
 - vocabulary that exists only for this relationship
-
-## What does not belong here
-
-- the Feature's public promise, which lives at the Feature root
-- algorithms: if a connector grows one, extract it to its owner
-- new meaning: if a connector invents some, the owning pillar is being bypassed
-- speculative defaults, no-op stand-ins, or fallbacks wired "just in case"
 
 ## Checklist
 

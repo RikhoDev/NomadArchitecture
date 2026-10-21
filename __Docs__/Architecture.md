@@ -1,14 +1,15 @@
 ---
 status: canon
 kind: doctrine
-origin: ai-assisted
+origin: ai
 ---
 
 # Architecture
 
 How a NomadArchitecture system is shaped. Each rule cites the NGE practice it
 was distilled from ([Sources](README.md#sources)). The
-[Greeting example](../examples/Greeting/README.md) follows every rule below.
+[Greeting example](../examples/Greeting/README.md) contradicts none of the rules below,
+and shows the ones that apply to a system that small.
 
 ## Pillars
 
@@ -27,6 +28,9 @@ A pillar is earned, not scaffolded: an empty `Core/` or `Foundations/` folder
 claims something nobody has needed.
 (NGE:`Engine/__Docs/Patterns/Feature-Sovereignty-Doctrine.md`;
 NGE:`Engine/Hosts/README.md`; NGE:`Engine/Core/README.md`)
+
+Replaces: "Core: the rules and contracts (the DNA)" and "Hosts: delivery
+skins" in the old root README.
 
 ## Placement
 
@@ -50,6 +54,8 @@ Folder count, uniform depth and cosmetic symmetry are not evidence of
 improvement. Change placement where a concrete boundary is being clarified;
 never bulk-relocate to make a diagram look uniform.
 (NGE:`AGENTS.md`; NGE:`Engine/__Docs/Patterns/Feature-Caravan-Sovereignty.md`)
+
+Replaces nothing. "No dumping grounds" stated the aim without a test to apply.
 
 ## Feature README
 

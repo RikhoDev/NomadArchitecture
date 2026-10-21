@@ -61,7 +61,7 @@ Each item below rests on something the human wrote, kept, or approved.
 | WHY / WHAT / HOW / COMMON | NGE:`Engine/__Docs/Patterns/Feature-Sovereignty-Doctrine.md` calls these "the inherited, strongly supported principles", inherited from this repository |
 | Placement test, authority stages | NGE:`AGENTS.md`, the contributor guidance; its visible history is committed under the human's account (RikhoDev), and earlier history is unknown because the clone is shallow |
 | Contracts and connectors | NGE:`README.md`: "One sentence should survive that reading" |
-| Host → Foundations → Features growth | NGE:`README.md`, Promotion Flow, the second sentence that "should survive" |
+| Host → Foundations → Features growth | NGE:`README.md`, Promotion Flow, committed as RikhoDev on 2026-10-20 (`812341a`). It reverses the 2025 order in `Worldview.Trail.20251102.md` ("Host → Features → … → Core → Foundations"). Reading the newer text as superseding the older is the assistant's interpretation |
 | Two independent consumers | NGE ADR 0011, status "Accepted", 2026-09-30 |
 | Observed, interpreted, unknown kept apart | The nomad-method plugin's working discipline, which the human published |
 | AI fabrication needs evidence | Chronicle II, *The Shaman and the Spirit's Hallucinations* |
@@ -98,11 +98,31 @@ human's contradiction.
   - Either NGE itself holds them as under validation, or this repository has
     no case to test them on.
   - Promotion would need two real consumers, by the rule above.
-- **Dropped:** the OBS / INT / UNK / PROP labels. The words are kept; nothing
-  here used the labels.
+- **Moved to the Mirage:** the OBS / INF / UNK / PROP labels. The canon keeps
+  the words; nothing here used the labels.
 - **Restored:** the Worldview's voice (tent, clans, ligaments, ground,
   memory). The second review noted it had been lost, and it is the part most
   clearly the human's.
+
+## Loop 2 review
+
+A third isolated review advised returning the assistant-decided items to
+`proposed`. The assistant held: item 6 delegates the decision itself, so
+handing it back would undo the request. Instead, the canon README now says
+which parts were delegated, and that nothing has been read by the human yet.
+Also applied from that review:
+
+- `origin: ai` on text the human did not write;
+- missing "Replaces" lines;
+- the connector guide no longer restates Architecture;
+- the claim-label contradiction;
+- the example's lineage path.
+
+Kept against its advice:
+
+- the three canon lists, because the check reconciles them, each has a
+  different reader, and the plugin needs its own file;
+- the pillars in both Worldview (essence) and Architecture (rules).
 
 ## Still open
 

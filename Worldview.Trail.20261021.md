@@ -20,23 +20,8 @@ with the human's words quoted verbatim.
 
 ## What the analysis observed
 
-- NGE has no `_Ports` folder. A dossier rejects it explicitly: "explicitly
-  avoid `_Contracts`, mandatory `_Ports`, and `_Capabilities`; retain only
-  `_Connectors` because relationship itself is meaningful"
-  (NGE:`Engine/__Docs/Dossiers/2608-23-Terrain-Feature-Family-Architecture-Migration.md`).
-- NGE Foundations implement Feature contracts: the Foundations project
-  references the Features project
-  (NGE:`Engine/Foundations/NomadGameEngineV2.Foundations.csproj`). There is no
-  fallback tier: "The absence of wiring IS the noop"
-  (NGE:`Engine/__Docs/Worldview.md` §7).
-- NGE grows from Host pressure: seam, then Foundations, then Features
-  (NGE:`README.md`, Promotion Flow). The 2025 emergence rhythm put Features
-  before Foundations.
-- NGE has no `Map.md` or `Traces.md` files; it uses a six-question folder
-  README. This stays an open decision (see `__Docs__/README.md`).
-- NGE carries roughly 1.3k Markdown files. It has rules against mislabelling
-  documents, but no rule limiting how canon grows. That gap is why the
-  growth rule exists here.
+The NGE evidence is cited rule by rule in `__Docs__/Architecture.md` and
+`__Docs__/README.Trail.20261021.md`.
 
 ## What changed in Worldview.md
 
@@ -59,7 +44,8 @@ Compared with the previous version (commit `6851a98`):
 - In the Closing Thought, "`_Connectors` and `_Ports` are the ligaments and
   cries of Features" became "`_Connectors` are the ligaments between owners".
 - References to `Tribe.md` and `Transmission.md` were removed. No commit on any
-  branch ever contained either file.
+  branch in this clone (`main`, `claude/serene-gates-jcd9gw`) contains either
+  file.
 - The AI conversation framing moved to this Trail (below).
 
 ## The conversation framing removed from the previous Worldview.md
