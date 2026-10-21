@@ -1,3 +1,9 @@
+---
+status: canon
+kind: guide
+origin: ai-assisted
+---
+
 # Feature Template
 
 Use this template when creating a new Feature in `Features/`.
@@ -5,19 +11,18 @@ Use this template when creating a new Feature in `Features/`.
 - README.md — Why (mission), when to use, owner
 - Map.md — How it works, dependencies, wiring
 - Traces.md — Execution traces or examples
-- _Ports/ — mechanical contracts (interfaces)
-- _Connectors/ — default adapters, host bindings, mocks
+- Contracts — the Feature's public promise, at the Feature root
+- _Connectors/ — only when the Feature has a real relationship to wire; see [_Connectors](Features/_Connectors/README.md)
 
 ## Checklist (add when creating a Feature)
 - [ ] `README.md` created and explains intent
 - [ ] `Map.md` documents wiring and dependencies
 - [ ] `Traces.md` contains at least one example trace
-- [ ] `_Ports/` contains clear, environment-agnostic contracts
-- [ ] `_Connectors/` contains at least one default ritual used by Hosts
+- [ ] Public contracts sit at the Feature root and name what the Feature needs and promises
+- [ ] Every file in `_Connectors/` wires a seam that exists today; no speculative defaults
 
 ## Promotion rules (practical guidance)
-- Promote a `_Connector` to `Foundations/` only after multiple Features share the implementation and there is evidence in `Traces.md` that it is stable and reusable.
-- Promote a contract into `Core/` only when language and types are repeatable and necessary across Features.
+- Promotion follows [Architecture: promotion](__Docs__/Architecture.md#promotion). Use `Traces.md` as part of the evidence.
 
 ## Minimal README example
 ```
@@ -32,7 +37,6 @@ Describe how Hosts or other Features use this Feature.
 ```
 
 ## Notes
-- Keep Ports contract-only: no implementation or environment assumptions.
-- Use `Traces.md` as evidence when generalizing behavior into `Core/` or `Foundations/`.
+- Keep contracts free of implementation and environment assumptions.
 - Keep documentation and examples small and actionable so they are easy to maintain.
 

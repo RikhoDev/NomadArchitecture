@@ -11,9 +11,7 @@ It is where raw, speculative, or AI‑generated ideas are placed for review.
 Nothing here is canon. These are illusions, sparks, and visions — some may fade, some may become the next oasis.
 
 ## The Underscore Grammar
-- `__Name__` → Pillars. Canonical, foundational, binding.  
-- `_Name_` → Liminal. Special, non‑canon, experimental.  
-- `Name` → Emergent. Named by convoys as they walk the terrain.
+The grammar is defined once, in [__Docs__/README.md](../README.md#folder-grammar).
 
 _Mirages_ is wrapped in underscores to signal its liminal status: inside the camp, but apart from the hearth.
 

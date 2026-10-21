@@ -1,82 +1,49 @@
-# _Connectors  
-### The Feature's Integration Surface
-
 ---
+status: canon
+kind: guide
+origin: ai-assisted
+---
+
+# _Connectors
+### A Feature's relationships
+
+This guide applies
+[Architecture: contracts and connectors](../../__Docs__/Architecture.md#contracts-and-connectors).
+It adds no rules.
 
 ## Purpose
 
-`_Connectors` contain everything that allows the Feature to **plug into the world**.
-
-They are the Feature's:
-
-- default implementations  
-- adapters  
-- bridges  
-- route maps  
-- UI bindings  
-- protocol bindings  
-- environment-specific glue  
-- test doubles  
-- identity manifests  
-
----
+A connector wires a real seam between the Feature and something it does not
+own: a Host's composition, another Feature, a Foundation mechanism, a tool or
+a protocol. It fulfils a contract; it does not define the Feature's meaning.
 
 ## What belongs here
 
-- default implementations of `_Ports`  
-- adapters to Foundations  
-- adapters to Hosts  
-- HTTP route maps  
-- CLI bindings  
-- Angular services  
-- Web components  
-- Node/Express adapters  
-- gRPC bindings  
-- Kafka bindings  
-- mocks and test doubles  
-- identity manifests  
+- the binding that registers the Feature into a Host's composition
+- a bridge between this Feature and another owner, imported from both sides
+- adapters to a protocol, UI framework, runtime or tool, when the Feature has
+  a real need for one
+- vocabulary that exists only for this relationship
 
----
+## What does not belong here
 
-## What does NOT belong here
-
-- domain logic  
-- cross-Feature knowledge  
-- Host orchestration  
-- environment secrets  
-
----
-
-## Rules
-
-- `_Connectors` must not contain domain logic.  
-- `_Connectors` must be override-friendly.  
-- `_Connectors` must not reference other Features.  
-- `_Connectors` must not assume a specific environment.  
-- `_Connectors` must expose the Feature's capabilities cleanly.  
-
----
-
-## Example
-
-```csharp
-public class LocalMovementIntegrator : IMovementIntegrator
-{
-    public void Integrate(ref MovementState state, float deltaTime)
-    {
-        // default mechanical implementation
-    }
-}
-```
-
----
+- the Feature's public promise, which lives at the Feature root
+- algorithms: if a connector grows one, extract a capability
+- new meaning: if a connector invents some, the owning pillar is being bypassed
+- speculative defaults, no-op stand-ins, or fallbacks wired "just in case"
+- environment secrets
 
 ## Checklist
 
-- [ ] Does this file integrate the Feature with the world?  
-- [ ] Is it free of domain logic?  
-- [ ] Is it override-friendly?  
-- [ ] Does it expose capabilities cleanly?  
-- [ ] Does it belong to this Feature's integration surface?  
+- [ ] Does this file wire a seam that exists today?
+- [ ] Is it thin enough that its logic lives somewhere else?
+- [ ] Would it disappear if this relationship disappeared?
 
 If all answers are yes, it belongs in `_Connectors`.
+
+## Lineage
+
+The earlier version of this guide treated connectors as default
+implementations, mocks and fallbacks, and forbade references to other
+Features. That model is [superseded](../../__Docs__/Concepts/PortsAndConnectors.md);
+see git history for the previous text.

@@ -1,4 +1,18 @@
-﻿# _Ports & _Connectors  
+---
+status: superseded
+kind: doctrine
+origin: ai
+superseded_by: ../Architecture.md#contracts-and-connectors
+---
+
+> **Superseded (2026-10-21).** This model of `_Ports`, `_Connectors` and the
+> three-tier fallback is kept for lineage only. Practice in NomadGameEngineV2
+> replaced it: contracts live with the owner of their meaning, connectors are
+> thin relationships at real seams, and the absence of wiring is the noop.
+> See [Architecture](../Architecture.md#contracts-and-connectors) and the
+> reasoning in [Worldview.Trail.20261021.md](../../Worldview.Trail.20261021.md).
+
+# _Ports & _Connectors  
 ### Mechanical Boundaries & Integration Surfaces in NomadArchitecture
 
 ---
@@ -157,11 +171,11 @@ They give Features:
 
 ### 5.1 `_Ports` define the contract  
 
-â€œWhat the Feature needs mechanically.â€
+“What the Feature needs mechanically.”
 
 ### 5.2 `_Connectors` provide the integration surface  
 
-â€œHow the Feature plugs into the world.â€
+“How the Feature plugs into the world.”
 
 ### 5.3 Features depend only on `_Ports`  
 

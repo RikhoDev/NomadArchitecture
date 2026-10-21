@@ -1,27 +1,33 @@
+---
+status: canon
+kind: guide
+origin: ai-assisted
+---
+
 # Translation: Metaphors → Practical Rules
 
-This short guide maps NomadArchitecture metaphors (Shaman, Mirages, Diplomats, Trails) to actionable rules and governance to help teams adopt the philosophy without confusion.
+This short guide maps NomadArchitecture metaphors (Shaman, Mirages, Diplomats, Trails) to the rules that govern them, so teams can adopt the philosophy without confusion. It adds no rules; each entry links to the rule it applies.
 
 ## Shaman → Steward of Continuity
-- Practical rule: Rotating role. Keep a short checklist for repository health (e.g., docs generator, housekeeping, promotion decisions).
-- When to act: after evidence in `Traces.md` accumulated or when system language drifts.
+- Practical rule: the rotating human role that keeps continuity and authorizes what becomes canon. See [Evidence and Authority](Evidence-And-Authority.md#authority).
+- When to act: when evidence has accumulated, when system language drifts, or when a proposal asks for a decision.
 
 ## Mirages → Exploration Documents
-- Practical rule: Use Mirage docs for thought experiments and proposals; mark them clearly as "mirage" and do not treat them as canon until they are validated by trails.
+- Practical rule: use Mirage docs for thought experiments and proposals, and mark them `status: non-canon`. They are not canon until a human promotes them. See [Document kinds](README.md#document-kinds).
 
-## Diplomats → Connectors / Host Adapters
-- Practical rule: A Diplomat lives in `_Connectors/terrain/` and is responsible for translating a Feature's Needs into host rituals.
-- Keep Diplomats stateless and purely translational; avoid embedding domain logic.
+## Diplomats → Connectors
+- Practical rule: a Diplomat is a connector, a thin relationship that wires a real seam between a Feature and something it does not own. It lives in the Feature's `_Connectors/`. See [Architecture: contracts and connectors](Architecture.md#contracts-and-connectors).
+- Keep Diplomats purely translational: if one grows an algorithm, extract a capability.
 
-## Trails → Traces & Evidence
-- Practical rule: `Traces.md` is the evidence store. Before promoting code into `Core/` or `Foundations/`, ensure multiple traces show the pattern is real and stable.
+## Trails → Lineage
+- Practical rule: a Trail records how a document or decision came to be, including the AI conversation behind it. See [Trails hold the conversation](README.md#trails-hold-the-conversation).
+- Evidence that a pattern is real belongs with the proof of its owner, and is cited when promoting. See [Architecture: promotion](Architecture.md#promotion).
 
 ## Ports → Contracts
-- Practical rule: Ports are contract-only. They should never import host or foundation specifics and must be easy to mock.
+- Practical rule: a contract lives with the owner of its meaning, usually at the Feature root. The mandatory `_Ports` folder is [superseded](Concepts/PortsAndConnectors.md).
 
 ## Promotion Guidance (quick)
-- Connector → Foundation: when at least 3 Features reuse it and `Traces.md` shows stability.
-- Port → Core: when concrete types and language are repeated and simplify cross-feature wiring.
+- Two independent consumers with a real, understood problem are enough; never invent a third. Connectors are not promoted; the mechanisms and contracts they reveal are. See [Architecture: promotion](Architecture.md#promotion).
 
 ---
 

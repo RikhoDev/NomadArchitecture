@@ -25,7 +25,7 @@ It’s an ongoing exploration of how we *might* address them by treating codebas
 - A small, stable **core** defines the rules.  
 - **Features** grow around it, each carrying its own story.  
 - **Docs** are part of the structure, not an afterthought.  
-- **Hosts** (API, CLI, UI, jobs) are just delivery skins—easy to swap.  
+- **Hosts** (API, CLI, UI, jobs) compose Features into something runnable—they carry the purpose, and they can be replaced.  
 
 ---
 
@@ -34,11 +34,13 @@ Every Nomad project is organized around five simple parts:
 
 | Folder        | Purpose |
 |---------------|---------|
-| **Core/**     | The rules and contracts (the DNA). |
-| **Features/** | Independent modules (the traits). |
-| **Foundations/** | Shared tools/utilities (kept lean). |
-| **Hosts/**    | Delivery layers (API, CLI, jobs, UI). |
-| **__Docs/**   | Documentation that explains both *how* and *why*. |
+| **Hosts/**    | WHY — compose Features into runnable delivery (API, CLI, jobs, UI). |
+| **Features/** | WHAT — sovereign promises, each with its own story. |
+| **Foundations/** | HOW — neutral mechanism that implements contracts. |
+| **Core/**     | COMMON — shared language, earned through real use. |
+| **__Docs__/** | Memory — the canon, plus the trails, mirages and chronicles behind it. |
+
+The rules are in [__Docs__/Architecture.md](./__Docs__/Architecture.md).
 
 ---
 
@@ -82,10 +84,10 @@ But this is still early work. These ideas are being tested, refined, and sometim
 
 ## 🏁 How to Explore
 1. Clone this repo.  
-2. Read [__Docs/Worldview.md](./__Docs/Worldview.md) for the philosophy.  
-3. Check [__Docs/Transmission.md](./__Docs/Transmission.md) for onboarding.  
-4. Explore `Features/` to see examples.  
-5. Try the [example project](./examples/) to see it in action. A MinimalHost example is included in `examples/MinimalHost` — run `pwsh .\examples\MinimalHost\host.ps1 -Name Alice` to see a sample trace.  
+2. Read [Worldview.md](./Worldview.md) for the philosophy.  
+3. Read [__Docs__/README.md](./__Docs__/README.md) for how the documentation is organised and what is canon.  
+4. Explore `Features/` to see the folder conventions.  
+5. Look at [examples/MinimalFeature](./examples/MinimalFeature/) for a minimal Feature connector. There is no runnable host example yet.
 
 ---
 
