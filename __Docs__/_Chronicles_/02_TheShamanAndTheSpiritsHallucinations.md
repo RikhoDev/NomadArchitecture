@@ -1,7 +1,7 @@
 ---
 status: non-canon
 kind: chronicle
-origin: ai
+origin: ai-assisted
 ---
 
 # 📜 Chronicle II: *The Shaman and the Spirit’s Hallucinations*  

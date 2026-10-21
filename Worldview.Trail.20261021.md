@@ -9,22 +9,14 @@ origin: ai-assisted
 > **Context:** NomadArchitecture had not changed since January 2026, while
 > NomadGameEngineV2 (NGE) had applied and revised the method for nine months.
 > An analysis compared the two and found that NGE practice contradicted
-> several NomadArchitecture rules. The human then chose the direction recorded
-> below.
+> several NomadArchitecture rules.
 > **Author:** Eric (Shaman), assisted by Claude Code.
 
-## Decisions taken by the human
+## Decisions and review loops
 
-Recorded from the session on 2026-10-21:
-
-1. NomadArchitecture becomes a **small base canon**, holding only general rules
-   distilled from project evidence, each citing its source.
-2. `_Ports`, the three-tier fallback, and connector promotion to Foundations
-   are **superseded, files kept**, each pointing to its replacement.
-3. AI conversation text is **separated** from the documents it produced and
-   kept verbatim in Trails.
-4. Canon growth is governed by a **rule without numeric caps**: every addition
-   names what it replaces or removes.
+Recorded once, for the canon as a whole, in
+[__Docs__/README.Trail.20261021.md](__Docs__/README.Trail.20261021.md),
+with the human's words quoted verbatim.
 
 ## What the analysis observed
 
@@ -50,20 +42,25 @@ Recorded from the session on 2026-10-21:
 
 Compared with the previous version (commit `6851a98`):
 
-- The canonical skeleton table moved to `__Docs__/Architecture.md` (one fact,
-  one owner).
+- The voice, the structure (Principles, Canonical Skeleton, Emergence Rhythm,
+  The Shaman, Closing Thought) and the metaphors are kept.
+- Each principle now links to the rule that carries it out.
+- Added principles: "Evidence precedes generalization" (sharpened), "Say what
+  you know, at the strength you know it", and "Show, then tell", which comes
+  from the human's request that the canon "show and speak for itself".
+- The Canonical Skeleton gained WHY / WHAT / HOW / COMMON. The detailed pillar
+  rules moved to `__Docs__/Architecture.md`.
 - "Supports inside Features" (`_Ports` → Core, `_Connectors` → Foundations) was
-  removed. It is superseded by the contracts-and-connectors rules in
-  Architecture.
-- The emergence rhythm was revised to match observed practice (above).
-- Principles were folded into Commitments, adding "evidence before
-  generalisation" and "say what you know, at the strength you know it".
-- "README, Map, Traces" became "why it exists, how it works, and the proof that
-  it works", which leaves the file format to the open decision.
-- References to `Tribe.md` and `Transmission.md` were removed: neither file
-  ever existed in this repository.
-- The Shaman is now defined as the human who authorizes canon, matching the
-  authority rule.
+  removed, superseded by the contracts-and-connectors rules.
+- The Emergence Rhythm now puts Foundations before Features, matching observed
+  practice.
+- "README, Map, Traces" became "why it exists, how it works and the proof that
+  it works", carried by the Feature README.
+- In the Closing Thought, "`_Connectors` and `_Ports` are the ligaments and
+  cries of Features" became "`_Connectors` are the ligaments between owners".
+- References to `Tribe.md` and `Transmission.md` were removed. No commit on any
+  branch ever contained either file.
+- The AI conversation framing moved to this Trail (below).
 
 ## The conversation framing removed from the previous Worldview.md
 
@@ -82,33 +79,3 @@ The closing lines:
 > Would you like me to **prepare this as a commit‑style diff** so you can drop it directly into the repo?
 
 The full previous text is in git history at commit `6851a98`.
-
-## Loop 1: review and correction (2026-10-21)
-
-The first draft, commit `6d44ae4`, went to an isolated reviewer, the
-nomad-method judge, which saw the diff but not the author's reasoning. Its main
-findings:
-
-- Files were labelled `canon` before the human had approved their text. The
-  four decisions above approve a direction, not the wording.
-- The draft broke three of its own new rules: the folder grammar was still
-  defined in two other places, most files had no status header, and three new
-  files named nothing they replaced.
-- Canon grew from about 100 lines to about 420, which is hard to reconcile with
-  "small".
-- Several rules were stated more than once.
-
-The human said to continue with the method. The correction:
-
-- Every doctrine file and guide is now `status: proposed` until the human signs
-  off on its text.
-- Three worlds, the recursion inside a Feature, Realization, the evidence
-  levels and doctrine maturity moved to
-  `__Docs__/_Mirages_/NGE-Distillation-Candidates.md`. They wait there until a
-  project here needs them.
-- "How systems grow" moved from Worldview into Architecture's Promotion
-  section. Worldview commitments are now one line each, linking to their owner.
-- The remaining sweeps were finished: root README, Caravans, the Mirages and
-  Chronicles READMEs, headers on every file, and "Replaces" lines.
-- AI conversation framing was moved from the Chronicles and Mirages into their
-  Trails.

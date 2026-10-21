@@ -1,6 +1,6 @@
 ---
 status: superseded
-kind: guide
+kind: trail
 origin: ai-assisted
 superseded_by: README.md
 ---

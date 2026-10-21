@@ -1,0 +1,7 @@
+# Canon files, read by the nomad-method plugin's commit check for restated
+# rules, and by Scripts/Test-Repository.ps1, which fails if this list, the
+# list in __Docs__/README.md#canon, and the files' status headers disagree.
+Worldview.md
+__Docs__/README.md
+__Docs__/Architecture.md
+__Docs__/Evidence-And-Authority.md

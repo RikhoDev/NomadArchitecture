@@ -1,5 +1,5 @@
 ---
-status: proposed
+status: non-canon
 kind: guide
 origin: ai-assisted
 ---

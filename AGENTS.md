@@ -1,5 +1,5 @@
 ---
-status: proposed
+status: non-canon
 kind: guide
 origin: ai-assisted
 ---
@@ -15,6 +15,8 @@ This file adds no rules; it points to the canon.
    [Architecture](__Docs__/Architecture.md#placement).
 4. Before stating a conclusion or acting on one, apply
    [Evidence and Authority](__Docs__/Evidence-And-Authority.md).
+5. Before committing, run `pwsh Scripts/Test-Repository.ps1`
+   ([Scripts](Scripts/README.md)).
 
 When you draft with an AI assistant, keep the conversation in the document's
 Trail, not in the document

@@ -30,45 +30,27 @@ It’s an ongoing exploration of how we *might* address them by treating codebas
 ---
 
 ## 🏗️ The Five Pillars
-Every Nomad project is organized around five simple parts:
-
-| Folder        | Purpose |
-|---------------|---------|
-| **Hosts/**    | WHY — compose Features into runnable delivery (API, CLI, jobs, UI). |
-| **Features/** | WHAT — sovereign promises, each with its own story. |
-| **Foundations/** | HOW — neutral mechanism that implements contracts. |
-| **Core/**     | COMMON — shared language, earned through real use. |
-| **__Docs__/** | Memory — the canon, plus the trails, mirages and chronicles behind it. |
-
-The rules are in [__Docs__/Architecture.md](./__Docs__/Architecture.md).
+Every Nomad project grows around five parts: **Hosts** (why), **Features** (what), **Foundations** (how), **Core** (the common language) and **__Docs__** (memory).  
+Their essence is in the [Worldview](./Worldview.md#canonical-skeleton); their rules are in [Architecture](./__Docs__/Architecture.md#pillars).
 
 ---
 
 ## 📖 Example (Tiny Feature)
-A Feature is more than just code—it carries its own context:
+A Feature is more than just code—it carries its own story and its own proof. The [Greeting example](./examples/Greeting/README.md) runs:
 
 ```
-Features/
- └── Greeting/
-      ├── GreetingService.cs   # the code
-      ├── README.md            # why this feature exists
-      ├── Map.md               # how it works
-      └── Traces.md            # examples of it running
+examples/Greeting/
+ ├── Hosts/Cli/greet.ps1                       # why: greet someone from a terminal
+ └── Features/Greeting/
+      ├── Greeting.ps1                         # what: the greeting promise
+      ├── README.md                            # promise, residents, relationships, proof, status
+      └── _Tests/Greeting.Tests.ps1            # proof it works
 ```
 
-This way, anyone (human or AI) can see:
-- **What it does**  
-- **Why it exists**  
-- **How it works**  
-- **Proof it works**
-
----
-
-## 🔑 Guiding Ideas
-- **Keep the Core small** → it holds only language that real use has made common.  
-- **Every Feature tells its own story** → no mysteries.  
-- **Docs are part of the architecture** → not optional.  
-- **Hosts are replaceable** → they carry the purpose; the meaning lives in Features.  
+```
+pwsh examples/Greeting/Hosts/Cli/greet.ps1 -Name Alice
+Hello, Alice!
+```
 
 ---
 
@@ -86,8 +68,7 @@ But this is still early work. These ideas are being tested, refined, and sometim
 1. Clone this repo.  
 2. Read [Worldview.md](./Worldview.md) for the philosophy.  
 3. Read [__Docs__/README.md](./__Docs__/README.md) for how the documentation is organised and what is canon.  
-4. Explore `Features/` to see the folder conventions.  
-5. Look at [examples/MinimalFeature](./examples/MinimalFeature/) for a minimal Feature connector. There is no runnable host example yet.
+4. Run the [Greeting example](./examples/Greeting/README.md), then `pwsh Scripts/Test-Repository.ps1` to see the repository check its own claims.
 
 ---
 

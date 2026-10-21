@@ -1,7 +1,7 @@
 ---
 status: non-canon
 kind: mirage
-origin: ai
+origin: ai-assisted
 ---
 
 # NomadArchitecture's Fractal Implications

@@ -1,41 +1,48 @@
 ---
-status: proposed
+status: non-canon
 kind: guide
 origin: ai-assisted
 ---
 
 # Feature Template
 
-Use this template when creating a new Feature in `Features/`.
+The living template is the [Greeting Feature](examples/Greeting/Features/Greeting/README.md):
+copy its shape, not its words. This page is the checklist that applies
+[Architecture](__Docs__/Architecture.md) when you create a Feature in
+`Features/`.
 
-- README.md — Why (mission), when to use, owner
-- Map.md — How it works, dependencies, wiring
-- Traces.md — Execution traces or examples
-- Contracts — the Feature's public promise, at the Feature root
-- _Connectors/ — only when the Feature has a real relationship to wire; see [_Connectors](Features/_Connectors/README.md)
+## Checklist
 
-## Checklist (add when creating a Feature)
-- [ ] `README.md` created and explains intent
-- [ ] `Map.md` documents wiring and dependencies
-- [ ] `Traces.md` contains at least one example trace
-- [ ] Public contracts sit at the Feature root and name what the Feature needs and promises
-- [ ] Every file in `_Connectors/` wires a seam that exists today; no speculative defaults
+- [ ] The Feature is named for the meaning it carries, not its technology.
+- [ ] The public promise sits at the Feature root.
+- [ ] `README.md` answers the [Feature README](__Docs__/Architecture.md#feature-readme)
+      questions: promise, residents, relationships, proof, status.
+- [ ] A proof in `_Tests/` checks each claim the README makes, and passes in
+      `Scripts/Test-Repository.ps1`.
+- [ ] `_Connectors/` exists only if a real seam needs wiring today.
+- [ ] Nothing was moved to Core or Foundations ahead of a second consumer
+      ([promotion](__Docs__/Architecture.md#promotion)).
 
-## Promotion rules (practical guidance)
-- Promotion follows [Architecture: promotion](__Docs__/Architecture.md#promotion). Use `Traces.md` as part of the evidence.
+## Minimal README
 
-## Minimal README example
-```
+```markdown
+---
+status: non-canon
+kind: guide
+origin: human
+---
+
 # {{FeatureName}}
 
-Purpose: ...
-
-Owner: @your-handle
-
-## Usage
-Describe how Hosts or other Features use this Feature.
+**Promise.** ...
+**Residents.** ...
+**Relationships.** ...
+**Proof.** ...
+**Status.** ...
 ```
 
-## Notes
-- Keep documentation and examples small and actionable so they are easy to maintain.
+## Lineage
 
+Earlier versions asked for `Map.md`, `Traces.md` and `_Ports/` in every
+Feature. They are superseded by the Feature README and the contract rules; see
+[README.Trail.20261021.md](__Docs__/README.Trail.20261021.md).

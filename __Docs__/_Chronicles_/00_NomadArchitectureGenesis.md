@@ -1,7 +1,7 @@
 ---
 status: non-canon
 kind: chronicle
-origin: ai
+origin: ai-assisted
 ---
 
 # Shaping the story of NomadArchitecture's Genesis - In transit

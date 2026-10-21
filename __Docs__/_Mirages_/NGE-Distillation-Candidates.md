@@ -8,9 +8,10 @@ origin: ai-assisted
 
 Rules that NomadGameEngineV2 (NGE) holds and that may generalise, but that
 this repository has no need for yet. They were drafted into canon on
-2026-10-21, and the isolated review moved them out: a docs-only repository has
-no multi-provider realization, no proof world and no recursion inside a
-Feature to test them against. Promote one only when a project shows the need
+2026-10-21. The author moved them out on the isolated reviewer's advice: this
+repository has no multi-provider realization, no proof world and no recursion
+inside a Feature to test them against. The reasoning is in
+[README.Trail.20261021.md](../README.Trail.20261021.md). Promote one only when a project shows the need
 (see [Architecture: promotion](../Architecture.md#promotion)).
 
 Citations use the `NGE:` form defined in [Sources](../README.md#sources).
@@ -80,3 +81,44 @@ settled. Doctrine under validation governs new work because it has enough
 evidence to act on, while naming what could still contradict it. A
 contradiction repairs the doctrine; it does not erase the evidence that
 justified acting. (NGE:`Engine/__Docs/Ontology/ENGINE-ONTOLOGY-CANON.md` §11)
+
+## Promotion candidates in full
+
+The canon keeps ADR 0011's core rule: two consumers are enough, and
+differences are evidence. The full grammar behind that rule follows.
+
+Classify each difference between consumers as:
+
+- **domain meaning:** it disappears with one product or Host;
+- **policy variance:** a legitimate local choice;
+- **realization variance:** another way to keep the same promise;
+- **fundamental conflict:** truths that cannot coexist under one honest
+  promise;
+- **unknown:** investigate; do not treat it as a veto.
+
+A candidate states five things:
+
+- its promise;
+- its exclusions;
+- the variance it leaves local;
+- the duplicate work it removes;
+- the work a future consumer no longer has to invent.
+
+Proving that another implementation keeps an existing promise is *realization
+acceptance*, not promotion.
+(NGE:`Engine/__Docs/ADRs/0011-variance-aware-useful-generalization.md`)
+
+## Claim labels
+
+NGE dossiers mark each claim with a label:
+
+| Label | Meaning |
+|---|---|
+| `OBS` | observed |
+| `INF` | inferred |
+| `UNK` | unknown |
+| `PROP` | proposed |
+
+The canon keeps the distinction in words. The labels would earn a place once
+documents here use them.
+(NGE:`Engine/__Docs/Dossiers/2610-83-Observable-Experiments-And-Evidence-Led-Promotion.md`)
