@@ -1,5 +1,5 @@
 ---
-status: canon
+status: proposed
 kind: guide
 origin: ai-assisted
 ---
@@ -17,7 +17,6 @@ This short guide maps NomadArchitecture metaphors (Shaman, Mirages, Diplomats, T
 
 ## Diplomats → Connectors
 - Practical rule: a Diplomat is a connector, a thin relationship that wires a real seam between a Feature and something it does not own. It lives in the Feature's `_Connectors/`. See [Architecture: contracts and connectors](Architecture.md#contracts-and-connectors).
-- Keep Diplomats purely translational: if one grows an algorithm, extract a capability.
 
 ## Trails → Lineage
 - Practical rule: a Trail records how a document or decision came to be, including the AI conversation behind it. See [Trails hold the conversation](README.md#trails-hold-the-conversation).
@@ -27,7 +26,7 @@ This short guide maps NomadArchitecture metaphors (Shaman, Mirages, Diplomats, T
 - Practical rule: a contract lives with the owner of its meaning, usually at the Feature root. The mandatory `_Ports` folder is [superseded](Concepts/PortsAndConnectors.md).
 
 ## Promotion Guidance (quick)
-- Two independent consumers with a real, understood problem are enough; never invent a third. Connectors are not promoted; the mechanisms and contracts they reveal are. See [Architecture: promotion](Architecture.md#promotion).
+- See [Architecture: promotion](Architecture.md#promotion).
 
 ---
 

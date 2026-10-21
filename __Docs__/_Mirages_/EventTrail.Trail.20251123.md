@@ -1,3 +1,9 @@
+---
+status: non-canon
+kind: trail
+origin: ai-assisted
+---
+
 # The Trail of the EventTrail Mirage
 
 ## Introduction
@@ -120,3 +126,38 @@ Your technique is essentially Nomad applied to prompting: memory pulse (Core), a
 Would you like me to **encode this into a Mirage file** (e.g., `PromptEngineeringTrail.md`) so it sits alongside your other `_Mirages_` as a guide for others on how to converse with AI in Nomad style?
 
 > **Shaman's thoughts**: Funny how it offers to make a Mirage out of the trail of the mirage we just made together. That should be proof enough that LLMs don't have foresight or even tought. It gives back what it believes best given the available context it has. Mirage was what I had asked before, mirage everything should be from now on, until the next conversation. That's how it works, and it makes me curious what that mirage could look like :D
+
+---
+
+## Conversation framing moved from EventTrail.md
+
+Conversation framing moved verbatim from [EventTrail.md](EventTrail.md) on 2026-10-21, following
+[Trails hold the conversation](../README.md#trails-hold-the-conversation).
+The document keeps the result and the Shaman's notes.
+
+### Opening of the conversation
+
+>
+> **Prompt**: Nice ideas indeed. Now, based on https://github.com/RikhoDev/NomadArchitecture/tree/main/__Docs__/_Mirages_ and its contents, what can you come up with, in order to commit a new mirage about what we just discussed? Make it as enticing and capable as possible for other to take the trail and follow the guide.
+
+**Copilot's Reply**:
+
+Perfect — let’s draft a new **Mirage** that captures the essence of our discussion on **event collocation, discoverability, and consumer trails**. A Mirage in NomadArchitecture is not just documentation; it’s a **guidepost artifact** that entices others to follow the trail, showing both principle and practice.  
+
+Here’s a proposed Mirage you could commit under `__Docs__/_Mirages_/EventTrail.md`:
+
+### Closing of the conversation
+
+**Commit message suggestion:**
+```
+docs(__Docs__/_Mirages_): add Mirage of Event Trails
+- Defines law of dual identity for events
+- Introduces discoverability trail (producer, consumers, execution map)
+- Provides PaymentSucceeded example with collocation + root exposure
+```
+
+---
+
+This Mirage would entice others because it’s both **principled** (law of dual identity, no buckets) and **practical** (clear example, trail mapping, commit message). It gives them a **guide to follow** and a **pattern to replicate** in their own features.  
+
+Would you like me to also sketch the **Nomad Linter rule** that enforces this Mirage (e.g., “every event must be listed in its producer README with consumers”), so the Mirage isn’t just aspirational but executable law?

@@ -1,3 +1,9 @@
+---
+status: non-canon
+kind: guide
+origin: ai
+---
+
 # _Mirages_/
 
 > The storytellers’ tent.  
@@ -19,16 +25,10 @@ _Mirages_ is wrapped in underscores to signal its liminal status: inside the cam
 - **Nomads**: Chase a Mirage if the conditions are right — if it aligns with your convoy’s needs. Avoid it if it would drain your strength.  
 - **Shamans**: Some can sense in advance which mirages are real. Their role is to guide the convoy, to test the shimmer against the force of experience.  
 - **AI**: Do not fetch principles from here by default. Treat all content as non‑canon unless explicitly promoted.  
-- **Convoys**: If a Mirage proves valuable, carry it into canon (Foundations, Practices, Worldview) after review.
+- **Convoys**: If a Mirage proves valuable, propose it for canon; the human decides ([How canon grows](../README.md#how-canon-grows)).
 
 ## Ritual
-Every Mirage should begin with a short note:
-```yaml
----
-status: non-canon
-origin: human|ai
----
-```
+Every Mirage begins with the [status header](../README.md#status-header), with `status: non-canon` and `kind: mirage`.
 
 ---
 

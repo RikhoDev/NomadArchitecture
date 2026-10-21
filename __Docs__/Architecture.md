@@ -1,5 +1,5 @@
 ---
-status: canon
+status: proposed
 kind: doctrine
 origin: ai-assisted
 ---
@@ -8,20 +8,6 @@ origin: ai-assisted
 
 How a NomadArchitecture system is shaped. Each rule cites the NGE practice it
 was distilled from (see [Sources](README.md#sources)).
-
-## Three worlds
-
-A repository holds three worlds that relate but are not interchangeable:
-
-- the **repository world** scaffolds the system: build, scripts, CI, tools;
-- the **system world** is the system itself, organised in pillars;
-- the **proof world** validates the system without becoming part of what it
-  means.
-
-Of any root artifact, ask: does it define the system, or scaffold it? If it
-scaffolds, it stays outside the pillars.
-(NGE:`Engine/__Docs/ROOT-ONTOLOGY.md`;
-NGE:`Engine/__Docs/Ontology/ENGINE-ONTOLOGY-CANON.md` §1)
 
 ## Pillars
 
@@ -33,8 +19,8 @@ Core        = COMMON emergent language
 __Docs__    = memory
 ```
 
-- A **Host** composes Features into something runnable and decides which
-  degradations it accepts. Hosts are replaceable roofs, never the soul.
+- A **Host** composes Features into something runnable and decides what it
+  accepts from them. Hosts are replaceable roofs, never the soul.
 - A **Feature** owns a promise and the meaning behind it.
 - A **Foundation** owns neutral mechanism. It implements contracts; reusing an
   implementation does not make it their owner.
@@ -43,23 +29,10 @@ __Docs__    = memory
   honest without it.
 - **__Docs__** owns memory; see [README.md](README.md).
 
-Inside a Feature the same split recurs:
-
-```text
-root           = the public WHAT and directly cohesive local HOW
-_Capabilities  = an earned, subordinate local HOW
-_Connectors    = the Feature's relationships
-named child    = another sovereign WHAT
-```
-
-Each level must earn an independent promise, invariant, consumer boundary or
-proof surface. This is not permission for symmetrical folder boilerplate.
-NGE holds this recursion as active under validation, not settled.
 (NGE:`Engine/__Docs/Patterns/Feature-Sovereignty-Doctrine.md`;
-NGE:`Engine/Core/README.md`)
+NGE:`Engine/Hosts/README.md`; NGE:`Engine/Core/README.md`)
 
-Replaces: `_Ports` as a mandatory Feature support, now
-[superseded](Concepts/PortsAndConnectors.md).
+Replaces: the canonical skeleton table in the 2025 Worldview.
 
 ## Placement
 
@@ -85,6 +58,9 @@ improvement. Change placement incrementally, where a concrete boundary is being
 clarified; never bulk-relocate to make a diagram look uniform.
 (NGE:`AGENTS.md`; NGE:`Engine/__Docs/Patterns/Feature-Caravan-Sovereignty.md`)
 
+Replaces: "No dumping grounds" and "Placement is narrative" in the 2025
+Worldview, which stated the aim without a test.
+
 ## Contracts and connectors
 
 > The edge of a Feature is defined by what it needs and what it promises, not
@@ -99,8 +75,8 @@ clarified; never bulk-relocate to make a diagram look uniform.
   Dependencies point toward the contracts being implemented.
 - A connector is thin. It wires a real seam: composition, dependency
   injection, runtime adaptation, synchronisation between domains, tool
-  integration. If it grows an algorithm, extract a capability. If it invents
-  meaning, the owning pillar is being bypassed.
+  integration. If it grows an algorithm, extract it to its owner. If it
+  invents meaning, the owning pillar is being bypassed.
 - Connectors are not promoted; the mechanisms and contracts they reveal are.
 - No speculative defaults: the absence of wiring is the noop. A Host that does
   not need a Feature does not wire it, and nothing falls back on its behalf.
@@ -108,31 +84,24 @@ clarified; never bulk-relocate to make a diagram look uniform.
 (NGE:`Engine/__Docs/Patterns/Contracts-And-Connectors-Doctrine.md`;
 NGE:`Engine/__Docs/Worldview.md` §3, §7)
 
-Replaces: the three-tier fallback, "Hosts override `_Connectors`",
-"`_Connectors` must not reference other Features", and connector promotion to
-Foundations, all now [superseded](Concepts/PortsAndConnectors.md).
-
-## Realization
-
-When more than one provider can realize a promise:
-
-1. the Feature states what its meaning requires, not which provider or API to
-   use;
-2. providers advertise neutral capabilities;
-3. composition resolves support, a named degradation, or a refusal;
-4. the Host decides whether that outcome is acceptable.
-
-A required capability protects the promise; an optional one describes a better
-or cheaper way to keep it. A missing requirement is a gap until a named
-alternative and Host acceptance exist. Never silently weaken the promise.
-(NGE:`AGENTS.md`;
-NGE:`Engine/__Docs/Dossiers/2609-11-Feature-First-Filesystem-Sovereignty-Target-Architecture.md`)
+Replaces: `_Ports` as a mandatory Feature folder, the three-tier fallback,
+"Hosts override `_Connectors`", "`_Connectors` must not reference other
+Features", and connector promotion to Foundations, all now
+[superseded](Concepts/PortsAndConnectors.md).
 
 ## Promotion
 
-Systems grow from pressure, not prediction. A Host exposes a real missing
-seam; reusable mechanism moves into Foundations; shared meaning becomes a
-Feature only after real use proves the need. (NGE:`README.md`, Promotion Flow)
+Systems grow from pressure, not prediction:
+
+1. **A Host sparks.** Intent and code begin together in one runnable place.
+2. **The Host exposes a seam.** Real pressure shows something missing.
+3. **Foundations harden.** Reusable mechanism leaves the Host.
+4. **Features earn their meaning.** Shared meaning becomes a Feature only
+   after real use proves the need.
+5. **Core remembers.** Language becomes Core only when it is common across
+   pillars.
+
+(NGE:`README.md`, Promotion Flow)
 
 Ownership moves up this ladder one earned step at a time:
 
@@ -164,6 +133,8 @@ dependency direction honest, move proof with its owner, and leave a Trail.
 (NGE:`Engine/__Docs/ADRs/0011-variance-aware-useful-generalization.md`;
 NGE:`Engine/__Docs/Patterns/NomadEvolutionRules.md`)
 
-Replaces: the promotion thresholds "at least 3 Features" in
-[Translation.md](Translation.md) and "multiple Features" in
-[FEATURE_TEMPLATE.md](../FEATURE_TEMPLATE.md), and "`_Ports` → Core".
+Replaces: the 2025 emergence rhythm (Host, Features, `_Connectors`, `_Ports`,
+Foundations, Core), which put Features before Foundations; the promotion
+thresholds "at least 3 Features" in [Translation.md](Translation.md) and
+"multiple Features" in [FEATURE_TEMPLATE.md](../FEATURE_TEMPLATE.md); and
+"`_Ports` → Core".

@@ -1,3 +1,9 @@
+---
+status: non-canon
+kind: trail
+origin: ai-assisted
+---
+
 # Assessment on the prompt engineering used to generate the chronicle
 
 > **Shaman's note**: This illustrates how I use AI to guide my own training as I reflect on each session. It also is an illustration of how The Shaman and the Spriti's Hallucinations was generated. This trail is shared to demonstrate how concepts can be illustrated in a different way.
@@ -167,3 +173,26 @@ That’s exactly how strong prompt engineering should work: each step prepares t
 
 Would you like me to **map this arc into a “Prompt Engineering Trail” Chronicle** — where each of your prompts becomes a ritual (Foundation, Inclusivity, Framing, Teaching, Reflection) — so your own process is canonized inside NomadArchitecture?
 
+---
+
+## Conversation framing moved from 02_TheShamanAndTheSpiritsHallucinations.md
+
+Conversation framing moved verbatim from [02_TheShamanAndTheSpiritsHallucinations.md](02_TheShamanAndTheSpiritsHallucinations.md) on 2026-10-21, following
+[Trails hold the conversation](../README.md#trails-hold-the-conversation).
+The document keeps the result and the Shaman's notes.
+
+### Opening of the conversation
+
+>
+> **Prompt P-3**: Take your last reply's contents as base context, and make it a really engaging story that is more digestible, yet contains as much depth and insights on prompt engineering and ai assistance management in NomadArchitecture. The Shaman could interact with people from neighbouring tribes to seek guidance, in order to illustrate each case, instead of these soulless sections we got before?  
+> **Prompt P-2**: I forgot, I would frame the spirit as the AI Spirit of Cognition. And it had always been there, the shaman just dug into the error because it wanted to understand the cause of what others called hallucinations. This is an example of the framing, you could use it to subtly storytell and teach right after, or mix the two, imagine what the reader would feel to guide the choice you make in storytelling  
+> **Prompt P-1**: naming the file 02_TheShamanAndTheSpiritsHallucinations would change the story?
+> **Final Prompt**: let's see that 02_TheShamanAndTheSpiritsHallucinations version of yours, I'm sure it will be spot on!
+
+> **Reply**: Here’s the **Chronicle II** re‑framed with the filename you suggested — `02_TheShamanAndTheSpiritsHallucinations`. The title reflects the *outside world’s misunderstanding*, while the story itself dismantles it and replaces it with the Shaman’s truth: fabrication is the single error.  
+
+### Closing of the conversation
+
+✨ With the filename *The Spirit’s Hallucinations*, the Chronicle dramatizes the **misunderstanding of the outside world** and then corrects it inside the story. The tension between title and content becomes part of the teaching: hallucination is a myth, fabrication is the truth.  
+
+Would you like me to **continue this into Chronicle III** where the tribes gather together, sharing these rituals across camps, so the practices of provenance, verification, and sacred silence become collective canon? That would show the evolution from *naming*, to *understanding fabrication*, to *building shared governance*.

@@ -22,8 +22,8 @@ Software architectures often struggle with:
 
 **NomadArchitecture doesn’t claim to have solved these problems.**  
 It’s an ongoing exploration of how we *might* address them by treating codebases as living systems:
-- A small, stable **core** defines the rules.  
-- **Features** grow around it, each carrying its own story.  
+- **Features** carry the system's meaning, each with its own story.  
+- A small **core** of shared language grows only from what proves common.  
 - **Docs** are part of the structure, not an afterthought.  
 - **Hosts** (API, CLI, UI, jobs) compose Features into something runnable—they carry the purpose, and they can be replaced.  
 
@@ -65,10 +65,10 @@ This way, anyone (human or AI) can see:
 ---
 
 ## 🔑 Guiding Ideas
-- **Keep the Core small** → everything else grows from it.  
+- **Keep the Core small** → it holds only language that real use has made common.  
 - **Every Feature tells its own story** → no mysteries.  
 - **Docs are part of the architecture** → not optional.  
-- **Hosts are replaceable** → the soul is in the Core + Features.  
+- **Hosts are replaceable** → they carry the purpose; the meaning lives in Features.  
 
 ---
 

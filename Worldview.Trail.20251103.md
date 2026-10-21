@@ -1,3 +1,9 @@
+---
+status: non-canon
+kind: trail
+origin: ai-assisted
+---
+
 # worldview.trail.2025-11b.md
 
 > **Trail:** Rewrite of the Worldview with Shaman role and supports clarified  

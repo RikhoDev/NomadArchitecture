@@ -1,5 +1,5 @@
 ---
-status: canon
+status: proposed
 kind: guide
 origin: ai-assisted
 ---
@@ -37,6 +37,5 @@ Describe how Hosts or other Features use this Feature.
 ```
 
 ## Notes
-- Keep contracts free of implementation and environment assumptions.
 - Keep documentation and examples small and actionable so they are easy to maintain.
 

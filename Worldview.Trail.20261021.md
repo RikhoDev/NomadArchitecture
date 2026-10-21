@@ -82,3 +82,33 @@ The closing lines:
 > Would you like me to **prepare this as a commit‑style diff** so you can drop it directly into the repo?
 
 The full previous text is in git history at commit `6851a98`.
+
+## Loop 1: review and correction (2026-10-21)
+
+The first draft, commit `6d44ae4`, went to an isolated reviewer, the
+nomad-method judge, which saw the diff but not the author's reasoning. Its main
+findings:
+
+- Files were labelled `canon` before the human had approved their text. The
+  four decisions above approve a direction, not the wording.
+- The draft broke three of its own new rules: the folder grammar was still
+  defined in two other places, most files had no status header, and three new
+  files named nothing they replaced.
+- Canon grew from about 100 lines to about 420, which is hard to reconcile with
+  "small".
+- Several rules were stated more than once.
+
+The human said to continue with the method. The correction:
+
+- Every doctrine file and guide is now `status: proposed` until the human signs
+  off on its text.
+- Three worlds, the recursion inside a Feature, Realization, the evidence
+  levels and doctrine maturity moved to
+  `__Docs__/_Mirages_/NGE-Distillation-Candidates.md`. They wait there until a
+  project here needs them.
+- "How systems grow" moved from Worldview into Architecture's Promotion
+  section. Worldview commitments are now one line each, linking to their owner.
+- The remaining sweeps were finished: root README, Caravans, the Mirages and
+  Chronicles READMEs, headers on every file, and "Replaces" lines.
+- AI conversation framing was moved from the Chronicles and Mirages into their
+  Trails.

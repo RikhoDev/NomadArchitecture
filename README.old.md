@@ -1,3 +1,10 @@
+---
+status: superseded
+kind: guide
+origin: ai-assisted
+superseded_by: README.md
+---
+
 # NomadArchitecture
 
 My own architecture in the making. Trying to understand AI assisted development by using Copilot to define a new kind of architecture built for humans and AI alike.

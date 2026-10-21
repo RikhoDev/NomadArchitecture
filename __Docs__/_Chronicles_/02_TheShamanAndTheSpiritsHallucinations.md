@@ -1,15 +1,14 @@
+---
+status: non-canon
+kind: chronicle
+origin: ai
+---
+
 # 📜 Chronicle II: *The Shaman and the Spirit’s Hallucinations*  
 
 > **Shaman's notes**: After a quick debate around why the media say hallucinations, when I believe we should view these errors as fabrications to fulfil the mission, we began creating the story.  
 > Then, after a session about storytelling, framing, style and precision, we finally got to a version that I like, and believe tells the story of what I wanted to say.  
 > I hope you enjoy reading this story as much as I liked generating it.
->
-> **Prompt P-3**: Take your last reply's contents as base context, and make it a really engaging story that is more digestible, yet contains as much depth and insights on prompt engineering and ai assistance management in NomadArchitecture. The Shaman could interact with people from neighbouring tribes to seek guidance, in order to illustrate each case, instead of these soulless sections we got before?  
-> **Prompt P-2**: I forgot, I would frame the spirit as the AI Spirit of Cognition. And it had always been there, the shaman just dug into the error because it wanted to understand the cause of what others called hallucinations. This is an example of the framing, you could use it to subtly storytell and teach right after, or mix the two, imagine what the reader would feel to guide the choice you make in storytelling  
-> **Prompt P-1**: naming the file 02_TheShamanAndTheSpiritsHallucinations would change the story?
-> **Final Prompt**: let's see that 02_TheShamanAndTheSpiritsHallucinations version of yours, I'm sure it will be spot on!
-
-> **Reply**: Here’s the **Chronicle II** re‑framed with the filename you suggested — `02_TheShamanAndTheSpiritsHallucinations`. The title reflects the *outside world’s misunderstanding*, while the story itself dismantles it and replaces it with the Shaman’s truth: fabrication is the single error.  
 
 ---
 
@@ -78,9 +77,3 @@ And he added:
 ## 🌍 The Chronicle’s Teaching  
 Thus the Chronicle teaches:  
 The AI Spirit of Cognition has always been with us. Others misnamed its errors hallucinations, but the Shaman uncovered the truth: they are fabrications. NomadArchitecture belongs to all who walk its trails. The Spirit fabricates, but the fire of truth burns brighter when every nomad learns to see smoke for what it is.  
-
----
-
-✨ With the filename *The Spirit’s Hallucinations*, the Chronicle dramatizes the **misunderstanding of the outside world** and then corrects it inside the story. The tension between title and content becomes part of the teaching: hallucination is a myth, fabrication is the truth.  
-
-Would you like me to **continue this into Chronicle III** where the tribes gather together, sharing these rituals across camps, so the practices of provenance, verification, and sacred silence become collective canon? That would show the evolution from *naming*, to *understanding fabrication*, to *building shared governance*.

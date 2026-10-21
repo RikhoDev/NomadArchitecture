@@ -1,3 +1,9 @@
+---
+status: non-canon
+kind: trail
+origin: ai-assisted
+---
+
 # A prompt engineering journey to a more purposeful Worldview
 
 > **Trail:** Evolution of the Worldview through an AI experimentation journey  

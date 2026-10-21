@@ -1,8 +1,10 @@
+---
+status: non-canon
+kind: chronicle
+origin: ai
+---
+
 # 🌌 The First Shaman of NomadArchitecture
-
-> **Prompt**: Could be fun to write the story of the first shaman for generations to come.We could start the legend of the first shaman as a myth echoing in the comunity, like novels that give the background in an entertaining way.
-
-Absolutely — let’s weave the **Legend of the First Shaman** directly into the **language of NomadArchitecture**, so it doesn’t just *tell* a story but *embodies* the worldview you’ve been building. Here’s how it could sound as a myth echoing through the repo:
 
 ---
 
@@ -49,9 +51,3 @@ The legend says:
 - Every new contributor is not just a coder, but a **nomad joining the camp**.  
 - Every new idea is not just a note, but a **Mirage that may one day become canon**.  
 - And the fire of the First Shaman still burns in the heart of NomadArchitecture.
-
----
-
-✨ This way, the myth doesn’t just sit alongside the project — it *uses the very vocabulary of NomadArchitecture* (Features, Hosts, Foundations, Docs, Trails, Mirages) to tell the story. It becomes both lore and documentation, a cultural anchor for the repo.
-
-Would you like me to **place this as `__Docs/Chronicles/FirstShaman.md`** (canon lore) or as the **first Mirage in `_Mirages_/`** (liminal myth), so it signals its status right away?

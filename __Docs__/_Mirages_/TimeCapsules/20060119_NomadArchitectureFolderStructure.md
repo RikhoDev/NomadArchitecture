@@ -8,22 +8,11 @@ superseded_by: ../../Architecture.md
 > **Superseded (2026-10-21).** This time capsule records the January 2026
 > doctrine. Its sections on `_Ports`, `_Connectors`, the fallback model and
 > promotion are replaced by [Architecture](../../Architecture.md). It also
-> contradicted itself: §7 says "Hosts may rewire any `_Ports`", while §4.4 and
+> contradicted itself: §7 says "Hosts may rewire any `_Ports`", while §1.4 and
 > §10 say Hosts override only `_Connectors`. The date in the file name probably
 > means 2026-01-19: the file was first committed on 2026-01-28 in `7ef042d`.
 > That date is unconfirmed, so the file has not been renamed.
 
-Absolutely, Eric — here is **Option C: the doctrinally enriched timecapsule**, which merges:
-
-- **your durable memory** (your true architectural doctrine)  
-- **the structural insights from the chat**  
-- **the refined understanding of `_Ports`, `_Connectors`, Features, Trails, and __Docs**  
-- **the fractal and cultural principles that define NomadArchitecture**  
-
-This version is **complete, accurate, enriched, and aligned with your worldview**.  
-It is suitable as a **canonical context seed** for a new chat.
-
----
 
 # 🧭 **NOMADARCHITECTURE — DOCTRINALLY ENRICHED CODE STRUCTURE TIMECAPSULE**  
 ### *A complete, authoritative reconstruction of NomadArchitecture’s structural doctrine, combining durable memory + chat insights.*
@@ -353,15 +342,3 @@ NomadArchitecture is:
 - **dialect‑driven**  
 - **lineage‑preserving**  
 - **Feature‑First**  
-
-This timecapsule is the **doctrinally enriched, memory‑aligned, structurally complete** representation of NomadArchitecture’s code structure.
-
----
-
-If you want, I can now generate:
-
-- a **doctrinally enriched documentation architecture timecapsule**  
-- a **doctrinally enriched fractal recursion timecapsule**  
-- a **doctrinally enriched Feature design timecapsule**  
-
-Just tell me which one you want next.

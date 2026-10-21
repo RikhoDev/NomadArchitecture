@@ -1,5 +1,5 @@
 ---
-status: canon
+status: proposed
 kind: doctrine
 origin: ai-assisted
 ---
@@ -18,19 +18,21 @@ observation
   -> interpretation
   -> architecture decision
   -> authorized implementation
-  -> focused proof
+  -> proof
   -> retained, promoted, quarantined, superseded, or removed
 ```
 
 Contributors and AI assistants may map evidence, challenge an assumption, and
 propose a bounded change. New canon or a material change of direction needs
-explicit human authorization; record who authorized it and when, in the commit
-message or the document. A working experiment, a passing test, or a review
-handoff does not gain that authority by surviving.
+explicit human authorization. Record who authorized it and when, in the commit
+message or the document, as NGE does for its committed-image rule. A working
+experiment, a passing test, or a review handoff does not gain that authority
+by surviving.
 
 Ceremony ends in a clear action: promotion, replacement, or deletion. It does
 not mean keeping every predecessor forever.
-(NGE:`AGENTS.md`; NGE:`Engine/__Docs/Patterns/NomadEvolutionRules.md`)
+(NGE:`AGENTS.md`; NGE:`Engine/__Docs/Patterns/NomadEvolutionRules.md`;
+NGE:`Engine/__Docs/Patterns/Architecture-Documentation-Legibility-Protocol.md`)
 
 ## Claims
 
@@ -45,26 +47,8 @@ Label what a claim is:
 A claim that cannot name its subject, owner, evidence and open questions is
 probably still folklore. (NGE:`Engine/__Docs/Ontology/ENGINE-ONTOLOGY-CANON.md` §8)
 
-## Evidence levels
-
-| Level | Means |
-|---|---|
-| structural | shape, placement or existence is shown |
-| focused proof | owning tests or narrow checks prove the local claim |
-| operational | representative use proves the claim in practice |
-| closure | the declared exit signal is earned and nothing is left open |
-| contradicted | current evidence disproves the claim; repair or demote it |
-
-The levels do not imply one another: structural is not focused proof, focused
-proof is not operational, operational is not closure. Reserve "complete" and
-"done" for closure. A screenshot or a passing unit test alone does not
-establish runtime, visual or cross-environment acceptance.
-(NGE:`Engine/__Docs/Ontology/ENGINE-ONTOLOGY-CANON.md` §6, §9)
-
-## Doctrine maturity
-
-Doctrine can be speculative (a Mirage), **active under validation**, or
-settled. Doctrine under validation governs new work because it has enough
-evidence to act on, while naming what could still contradict it. A
-contradiction repairs the doctrine; it does not erase the evidence that
-justified acting. (NGE:`Engine/__Docs/Ontology/ENGINE-ONTOLOGY-CANON.md` §11)
+Replaces nothing. The 2025 Worldview said "humans at the center" and "evidence
+precedes generalization" but gave no way to tell a decision from a proposal,
+or an observation from a reading of it. The 2025 Worldview itself was
+"AI re-generated, unrevised" and committed in the voice of canon, which shows
+the gap was real.

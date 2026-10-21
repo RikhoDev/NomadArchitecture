@@ -1,9 +1,11 @@
+---
+status: non-canon
+kind: mirage
+origin: ai
+---
+
 # How Feature can remain autonomous while interacting efficiently with the outside world
 
-> **Prompt 1**: Think of it, what if instead of Connectors, we used Diplomats? And what if instead of Ports we used Needs?
-> **Prompt 2**: Can you build a full blown Mirage documentation about this Diplomats concept?
-
-Absolutely, Eric. Here's a full-blown **Mirage-style documentation** for the **Diplomats** concept in NomadArchitecture — written in the voice of the Mirage, the wandering archivist of sovereign tribes.
 
 ---
 
@@ -117,7 +119,3 @@ This ritual lives in `_Diplomats_/angular/`, and is injected via the terrain’s
 > A Diplomat walks, listens, adapts, and returns.  
 > They are the living proof that a tribe can remain sovereign,  
 > even as it dances with the world.”
-
----
-
-Would you like me to help draft the `Needs.md` scroll next — the catalog of tribal desires and how they are expressed?

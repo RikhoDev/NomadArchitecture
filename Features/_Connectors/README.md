@@ -1,5 +1,5 @@
 ---
-status: canon
+status: proposed
 kind: guide
 origin: ai-assisted
 ---
@@ -28,10 +28,9 @@ a protocol. It fulfils a contract; it does not define the Feature's meaning.
 ## What does not belong here
 
 - the Feature's public promise, which lives at the Feature root
-- algorithms: if a connector grows one, extract a capability
+- algorithms: if a connector grows one, extract it to its owner
 - new meaning: if a connector invents some, the owning pillar is being bypassed
 - speculative defaults, no-op stand-ins, or fallbacks wired "just in case"
-- environment secrets
 
 ## Checklist
 

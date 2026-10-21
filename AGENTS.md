@@ -1,5 +1,5 @@
 ---
-status: canon
+status: proposed
 kind: guide
 origin: ai-assisted
 ---
@@ -19,3 +19,6 @@ This file adds no rules; it points to the canon.
 When you draft with an AI assistant, keep the conversation in the document's
 Trail, not in the document
 ([Trails hold the conversation](__Docs__/README.md#trails-hold-the-conversation)).
+
+Replaces nothing. AI assistants had no entry point to this repository's
+rules; NGE's `AGENTS.md` shows the value of one.
