@@ -68,7 +68,8 @@ But this is still early work. These ideas are being tested, refined, and sometim
 1. Clone this repo.  
 2. Read [Worldview.md](./Worldview.md) for the philosophy.  
 3. Read [__Docs__/README.md](./__Docs__/README.md) for how the documentation is organised and what is canon.  
-4. Run the [Greeting example](./examples/Greeting/README.md), then `pwsh Scripts/Test-Repository.ps1` to see the repository check its own claims.
+4. Run `pwsh Hosts/DocReader/reader.ps1` for a tour, then `canon`, `explain <path>` and `trail <path>`. The [DocReader](./Hosts/DocReader/README.md) is a Host built inside this repository by its own rules.
+5. Run `pwsh Scripts/Test-Repository.ps1` to see the repository check its own claims.
 
 ---
 

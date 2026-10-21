@@ -4,7 +4,8 @@
 #   3. the canon is the same in all three places that name it: the files'
 #      own status headers, the list in __Docs__/README.md, and
 #      .nomad-method/canon;
-#   4. every proof (*.Tests.ps1) passes.
+#   4. every proof (*.Tests.ps1) passes;
+#   and every awaiting_reading section named in a canon file exists.
 # Usage: pwsh Scripts/Test-Repository.ps1    Exit code 0 means all checks pass.
 
 $ErrorActionPreference = 'Stop'
@@ -78,6 +79,17 @@ foreach ($file in $markdown) {
                 if (-not $slugCache[$target].ContainsKey($anchor)) { Report "$rel links to missing anchor '$url'" }
             }
         }
+    }
+}
+
+# 2b. Sections awaiting the human's reading exist, and only on canon files
+foreach ($rel in $headers.Keys) {
+    $awaiting = $headers[$rel]['awaiting_reading']
+    if (-not $awaiting) { continue }
+    if ($headers[$rel]['status'] -ne 'canon') { Report "$rel lists awaiting_reading but is not canon" }
+    $slugs = Get-Slugs (Join-Path $root $rel)
+    foreach ($anchor in $awaiting -split ',' | ForEach-Object { $_.Trim() } | Where-Object { $_ }) {
+        if (-not $slugs.ContainsKey($anchor)) { Report "$rel awaits reading of '#$anchor', which is not a section of it" }
     }
 }
 

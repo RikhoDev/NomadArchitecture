@@ -124,9 +124,60 @@ Kept against its advice:
   different reader, and the plugin needs its own file;
 - the pillars in both Worldview (essence) and Architecture (rules).
 
+## Loop 3: the DocReader Host
+
+The human's words:
+
+7. "feature template is stale and useless as it is. Using nomadarchitecture
+   itself to have a nomadarchitecture doc reader coded inside the repository for
+   demonstration could be cool. Would be a host that would contain its local
+   pillars and showcase how things go together with the appropriate
+   explanations and all, what do you think of this?"
+8. "do both, fix canon as you build the host."
+
+"Both" covered two choices the assistant had offered: put the Host at the
+root, and fix the canon labels first. What changed:
+
+- **Canon labels.** An acceptance review, run with nomad-method 0.2.0, found
+  that `canon` was defined as "doctrine the human has authorized" while the
+  README said the human had not read it. The plugin's own new delegation rule
+  agreed with the review. The rules inferred from the human's record stay
+  canon. The three sections the assistant decided are now listed in an
+  `awaiting_reading` header, and bind no one until read:
+  - `Worldview.md#emergence-rhythm`
+  - `__Docs__/Architecture.md#feature-readme`
+  - `__Docs__/README.md#folder-grammar`
+
+  "Any of it stands until the human contradicts it" was removed; it put the
+  burden on the human.
+- **`Hosts/DocReader`** holds its own Features (Canon, Lineage, Placement)
+  and a Foundation (Markdown), each with its README and proof, plus a Host
+  proof that runs the real commands. Its tour, `canon` and `explain` read
+  their words from the READMEs, so the documents are what speak. The
+  assistant's outline listed `Lineage` and `Placement` under those names;
+  nothing else was planned in advance.
+- **`FEATURE_TEMPLATE.md` was deleted.** The human called it stale and
+  useless, and the Host's Features are now the template.
+- **The orphaned root guides moved** from `Features/_Ports/` and
+  `Features/_Connectors/` to `__Docs__/Concepts/`. The root then shows only
+  the pillar that exists, `Hosts/`.
+- **The checkable claim from the review was fixed:** "contradicts none of the
+  rules" is gone. The connector guide no longer says "imported from both
+  sides", which Architecture does not say.
+- **First use of a Mirage idea.** The Placement Feature names worlds
+  (repository, memory, system, examples) much as the Three-worlds Mirage
+  does. That is one consumer of the idea, so it is not a promotion.
+- **Promotion candidate, not promoted.** The Markdown Foundation and
+  `Scripts/Test-Repository.ps1` parse headers and links twice. The evidence is
+  recorded in the Foundation's README for the human to see first.
+- **Not taken from the review:** moving "Replaces" lines out of doctrine,
+  because this README's growth rule requires them there.
+
 ## Still open
 
 - The time capsule's file name, `20060119`, probably means 2026-01-19. It is
   unconfirmed, so the file has not been renamed.
-- `Features/_Ports/` and `Features/_Connectors/` at the root are guides with
-  no Feature beside them. They predate the example and may belong inside it.
+- Promote the Markdown Foundation to a root `Foundations/Markdown` shared with
+  `Scripts/Test-Repository.ps1`, once the human has seen the evidence.
+- Retire the Greeting example once the DocReader has proved itself, moving its
+  lesson into the Host's README.

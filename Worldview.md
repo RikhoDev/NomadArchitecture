@@ -2,6 +2,7 @@
 status: canon
 kind: doctrine
 origin: ai-assisted
+awaiting_reading: emergence-rhythm
 ---
 
 # Worldview of NomadArchitecture
@@ -43,9 +44,9 @@ this file.
   and the unknown stay distinct
   ([claims](__Docs__/Evidence-And-Authority.md#claims)).
 - **Show, then tell.** Canon speaks for itself through the repository: a tree
-  that explains itself, an [example](examples/Greeting/README.md) that follows
-  the rules and proves them, and a [check](Scripts/README.md) that fails when
-  the documents lie.
+  that explains itself, a [Host that reads the repository](Hosts/DocReader/README.md)
+  and an [example](examples/Greeting/README.md) that follow the rules and prove
+  them, and a [check](Scripts/README.md) that fails when the documents lie.
 
 ---
 

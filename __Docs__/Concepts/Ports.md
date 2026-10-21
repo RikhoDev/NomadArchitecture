@@ -2,13 +2,13 @@
 status: superseded
 kind: guide
 origin: ai
-superseded_by: ../../__Docs__/Architecture.md#contracts-and-connectors
+superseded_by: ../Architecture.md#contracts-and-connectors
 ---
 
 > **Superseded (2026-10-21).** A mandatory `_Ports` folder is no longer part of
 > the architecture. A contract lives with the owner of its meaning, usually at
 > the Feature root. See
-> [Architecture](../../__Docs__/Architecture.md#contracts-and-connectors).
+> [Architecture](../Architecture.md#contracts-and-connectors).
 
 # _Ports  
 ### The Feature's Mechanical Boundary

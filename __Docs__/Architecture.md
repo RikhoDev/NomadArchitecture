@@ -2,14 +2,16 @@
 status: canon
 kind: doctrine
 origin: ai
+awaiting_reading: feature-readme
 ---
 
 # Architecture
 
 How a NomadArchitecture system is shaped. Each rule cites the NGE practice it
 was distilled from ([Sources](README.md#sources)). The
-[Greeting example](../examples/Greeting/README.md) contradicts none of the rules below,
-and shows the ones that apply to a system that small.
+[DocReader Host](../Hosts/DocReader/README.md) and the
+[Greeting example](../examples/Greeting/README.md) are built by these rules, and
+the repository check runs their proofs.
 
 ## Pillars
 
@@ -129,5 +131,5 @@ direction honest, move the proof with its owner, and leave a Trail.
 accepted 2026-09-30; NGE:`Engine/__Docs/Patterns/NomadEvolutionRules.md`)
 
 Replaces: "`_Ports` → Core", and two promotion thresholds that disagreed:
-"at least 3 Features" (`Translation.md`) and "multiple Features"
-(`FEATURE_TEMPLATE.md`).
+"at least 3 Features" (`Translation.md`) and "multiple Features" (the
+former `FEATURE_TEMPLATE.md`).

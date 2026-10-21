@@ -8,7 +8,8 @@ origin: ai
 
 This file adds no rules; it points to the canon.
 
-1. Read [Worldview.md](Worldview.md) in full.
+1. Read [Worldview.md](Worldview.md) in full. For a guided start, run
+   `pwsh Hosts/DocReader/reader.ps1`.
 2. Read [__Docs__/README.md](__Docs__/README.md): what is canon, what each
    kind of document is, and how canon grows.
 3. Before placing, moving or promoting anything, apply

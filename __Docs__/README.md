@@ -2,6 +2,7 @@
 status: canon
 kind: doctrine
 origin: ai
+awaiting_reading: folder-grammar
 ---
 
 # __Docs__
@@ -21,11 +22,13 @@ These files are binding, and nothing else is:
 - [This README](README.md): document kinds, status headers, and how canon
   grows.
 
-On 2026-10-21 the human delegated this canon: to infer what they already hold,
-and to decide the rest. The human has not yet read the result. The Trail quotes
-the delegation and marks each rule as inferred from the human's record or
-decided by the assistant: [README.Trail.20261021.md](README.Trail.20261021.md).
-Any of it stands until the human contradicts it.
+On 2026-10-21 the human delegated this canon: to infer what they already
+hold, and to decide the rest. What was inferred from the human's own record is
+canon. What the assistant decided is listed, section by section, in each
+file's `awaiting_reading` header. It guides the work, but binds no one until
+the human has read it. The Trail quotes the delegation and gives the evidence
+for each rule: [README.Trail.20261021.md](README.Trail.20261021.md). To see the
+current state, run `pwsh Hosts/DocReader/reader.ps1 canon`.
 [AGENTS.md](../AGENTS.md) points contributors and AI assistants here.
 
 ## Document kinds
@@ -33,7 +36,7 @@ Any of it stands until the human contradicts it.
 | Kind | Where | Binding | Holds |
 |---|---|---|---|
 | doctrine | the canon files above | yes | rules in force |
-| guide | AGENTS.md, Translation.md, FEATURE_TEMPLATE.md, folder READMEs | no; it applies doctrine | practical on-ramps |
+| guide | AGENTS.md, Translation.md, `Concepts/`, folder READMEs | no; it applies doctrine | practical on-ramps |
 | mirage | [_Mirages_/](_Mirages_/README.md) | no | speculation, proposals, AI-generated ideas |
 | trail | `<Document>.Trail.<YYYYMMDD>.md`, beside its document | no | how a document came to be |
 | chronicle | [_Chronicles_/](_Chronicles_/README.md) | no | stories and cultural memory |
@@ -52,6 +55,7 @@ status: canon | proposed | non-canon | superseded
 kind: doctrine | guide | mirage | trail | chronicle
 origin: human | ai | ai-assisted
 superseded_by: <relative path>   # only when status is superseded
+awaiting_reading: <anchor>, ...    # canon sections the human has not yet read
 ---
 ```
 
@@ -59,6 +63,8 @@ superseded_by: <relative path>   # only when status is superseded
 - `proposed`: a change to doctrine awaiting authorization.
 - `non-canon`: guides, Mirages, Trails and Chronicles.
 - `superseded`: kept for lineage; `superseded_by` names the replacement.
+- `awaiting_reading`: on a canon file, the sections the assistant decided
+  under delegation. They are removed one by one as the human reads them.
 
 `origin: ai-assisted` means a human wrote or shaped part of the text, for
 example the Shaman's notes; `ai` means the text is the assistant's.

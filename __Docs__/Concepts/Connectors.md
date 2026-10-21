@@ -8,7 +8,7 @@ origin: ai
 ### A Feature's relationships
 
 This guide applies
-[Architecture: contracts and connectors](../../__Docs__/Architecture.md#contracts-and-connectors).
+[Architecture: contracts and connectors](../Architecture.md#contracts-and-connectors).
 It adds no rules.
 
 ## Purpose
@@ -20,7 +20,7 @@ a protocol. It fulfils a contract; it does not define the Feature's meaning.
 ## What belongs here
 
 - the binding that registers the Feature into a Host's composition
-- a bridge between this Feature and another owner, imported from both sides
+- a bridge between this Feature and another owner
 - adapters to a protocol, UI framework, runtime or tool, when the Feature has
   a real need for one
 - vocabulary that exists only for this relationship
@@ -37,5 +37,5 @@ If all answers are yes, it belongs in `_Connectors`.
 
 The earlier version of this guide treated connectors as default
 implementations, mocks and fallbacks, and forbade references to other
-Features. That model is [superseded](../../__Docs__/Concepts/PortsAndConnectors.md);
+Features. That model is [superseded](../Concepts/PortsAndConnectors.md);
 see git history for the previous text.
