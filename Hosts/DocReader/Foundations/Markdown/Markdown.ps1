@@ -16,12 +16,14 @@ function Read-StatusHeader([string]$Path) {
     return $fields
 }
 
-function Get-MarkdownLines([string]$Path) {
-    # Lines outside code fences, with inline code removed.
+function Get-MarkdownLines([string]$Path, [switch]$KeepInlineCode) {
+    # Lines outside code fences. Inline code is removed (so a link written as
+    # code is not a link), or with -KeepInlineCode kept as plain words.
     $inFence = $false
     foreach ($line in Get-Content -LiteralPath $Path) {
         if ($line -match '^\s*```') { $inFence = -not $inFence; continue }
-        if (-not $inFence) { $line -replace '`[^`]*`', '' }
+        if ($inFence) { continue }
+        if ($KeepInlineCode) { $line -replace '`', '' } else { $line -replace '`[^`]*`', '' }
     }
 }
 
@@ -71,7 +73,7 @@ function Get-MarkdownSection([string]$Path, [string]$Heading) {
 function Get-MarkdownLead([string]$Path) {
     # The sentence a reader meets first: a paragraph starting "**Promise.**"
     # if there is one, otherwise the first paragraph after the title.
-    $lines = @(Get-MarkdownLines $Path)
+    $lines = @(Get-MarkdownLines $Path -KeepInlineCode)
     $start = 0
     if ($lines.Count -gt 0 -and $lines[0] -eq '---') { $start = [Array]::IndexOf($lines, '---', 1) + 1 }
     $paragraphs = [System.Collections.Generic.List[string]]::new()

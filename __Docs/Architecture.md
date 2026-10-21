@@ -9,9 +9,8 @@ awaiting_reading: feature-readme
 
 How a NomadArchitecture system is shaped. Each rule cites the NGE practice it
 was distilled from ([Sources](README.md#sources)). The
-[DocReader Host](../Hosts/DocReader/README.md) and the
-[Greeting example](../examples/Greeting/README.md) are built by these rules, and
-the repository check runs their proofs.
+[DocReader Host](../Hosts/DocReader/README.md) is built by these rules, and the
+repository check runs its proofs.
 
 ## Pillars
 
@@ -24,7 +23,7 @@ the repository check runs their proofs.
 - **Core** (COMMON) owns shared language and its invariants. Code does not
   belong in Core because it is shared; it belongs there when the system
   becomes less honest without it.
-- **__Docs__** owns memory ([README.md](README.md)).
+- **__Docs** owns memory ([README.md](README.md)).
 
 A pillar is earned, not scaffolded: an empty `Core/` or `Foundations/` folder
 claims something nobody has needed.

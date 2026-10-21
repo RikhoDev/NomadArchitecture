@@ -6,7 +6,7 @@ origin: ai-assisted
 
 # Trail of the folder-structure time capsule
 
-Conversation framing moved verbatim from [20060119_NomadArchitectureFolderStructure.md](20060119_NomadArchitectureFolderStructure.md) on 2026-10-21, following
+Conversation framing moved verbatim from [20060119_NomadArchitectureFolderStructure.md](2601-01-NomadArchitecture-Folder-Structure-TimeCapsule.md) on 2026-10-21, following
 [Trails hold the conversation](../../README.md#trails-hold-the-conversation).
 The document keeps the result and the Shaman's notes.
 

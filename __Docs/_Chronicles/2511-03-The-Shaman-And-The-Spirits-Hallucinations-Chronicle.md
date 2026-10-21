@@ -2,6 +2,7 @@
 status: non-canon
 kind: chronicle
 origin: ai-assisted
+date: 2025-11-08
 ---
 
 # 📜 Chronicle II: *The Shaman and the Spirit’s Hallucinations*  

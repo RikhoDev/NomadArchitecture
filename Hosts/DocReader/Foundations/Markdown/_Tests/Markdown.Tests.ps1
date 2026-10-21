@@ -57,5 +57,11 @@ Assert-Promise 'otherwise the lead is the first paragraph' {
     (Get-MarkdownLead (Join-Path $dir 'plain.md')) -eq 'Just a lead paragraph, over two lines.'
 }
 
+Assert-Promise 'the lead keeps the words inside inline code' {
+    $code = Join-Path $dir 'code.md'
+    '# Code', '', '`_Mirages` is a tent inside `__Docs/`.' | Set-Content -LiteralPath $code
+    (Get-MarkdownLead $code) -eq '_Mirages is a tent inside __Docs/.'
+}
+
 Remove-Item -Recurse -Force $dir
 Complete-Proof

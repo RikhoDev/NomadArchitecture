@@ -7,11 +7,10 @@
 
 $script:PillarRoles = [ordered]@{ Hosts = 'WHY'; Features = 'WHAT'; Foundations = 'HOW'; Core = 'COMMON' }
 $script:Worlds = @{
-    '__Docs__'      = 'memory: the documentation pillar'
+    '__Docs'      = 'memory: the documentation pillar'
     'Scripts'       = 'repository world: scaffolding that checks the system, not part of it'
     '.github'       = 'repository world: scaffolding that checks the system, not part of it'
     '.nomad-method' = 'repository world: configuration for the nomad-method plugin'
-    'examples'      = 'examples: small systems that show the canon at work'
 }
 
 function Get-Placement {

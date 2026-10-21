@@ -60,7 +60,7 @@ Would you like me to also sketch a **Trail Map diagram** (textual arrows) that v
 
 ## Conversation framing moved from TrailsCanBecomeProjectsOfTheirOwn.md
 
-Conversation framing moved verbatim from [TrailsCanBecomeProjectsOfTheirOwn.md](TrailsCanBecomeProjectsOfTheirOwn.md) on 2026-10-21, following
+Conversation framing moved verbatim from [TrailsCanBecomeProjectsOfTheirOwn.md](2511-03-Trails-Can-Become-Projects-Of-Their-Own-Mirage.md) on 2026-10-21, following
 [Trails hold the conversation](../README.md#trails-hold-the-conversation).
 The document keeps the result and the Shaman's notes.
 

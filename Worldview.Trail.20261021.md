@@ -15,13 +15,13 @@ origin: ai-assisted
 ## Decisions and review loops
 
 Recorded once, for the canon as a whole, in
-[__Docs__/README.Trail.20261021.md](__Docs__/README.Trail.20261021.md),
+[__Docs/README.Trail.20261021.md](__Docs/README.Trail.20261021.md),
 with the human's words quoted verbatim.
 
 ## What the analysis observed
 
-The NGE evidence is cited rule by rule in `__Docs__/Architecture.md` and
-`__Docs__/README.Trail.20261021.md`.
+The NGE evidence is cited rule by rule in `__Docs/Architecture.md` and
+`__Docs/README.Trail.20261021.md`.
 
 ## What changed in Worldview.md
 
@@ -34,7 +34,7 @@ Compared with the previous version (commit `6851a98`):
   you know, at the strength you know it", and "Show, then tell", which comes
   from the human's request that the canon "show and speak for itself".
 - The Canonical Skeleton gained WHY / WHAT / HOW / COMMON. The detailed pillar
-  rules moved to `__Docs__/Architecture.md`.
+  rules moved to `__Docs/Architecture.md`.
 - "Supports inside Features" (`_Ports` → Core, `_Connectors` → Foundations) was
   removed, superseded by the contracts-and-connectors rules.
 - The Emergence Rhythm now puts Foundations before Features, matching observed

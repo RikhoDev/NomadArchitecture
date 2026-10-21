@@ -14,7 +14,7 @@ in `.nomad-method/canon` and each file's status and `awaiting_reading` header.
 
 **Relationships.** It needs a header reader: a function from a path to its
 status header. The Host gives it the Markdown Foundation's. It does not decide
-what canon is; [__Docs__/README.md](../../../../__Docs__/README.md#canon)
+what canon is; [__Docs/README.md](../../../../__Docs/README.md#canon)
 does.
 
 **Proof.** [_Tests/Canon.Tests.ps1](_Tests/Canon.Tests.ps1), with a fake header

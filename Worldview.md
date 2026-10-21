@@ -23,30 +23,30 @@ this file.
 
 - **Humans at the center.** AI may scaffold, draft and propose. Humans
   improvise, decide and leave scars. What binds is a human decision
-  ([authority](__Docs__/Evidence-And-Authority.md#authority)).
+  ([authority](__Docs/Evidence-And-Authority.md#authority)).
 - **Rotation of roles.** The system must outlive any single contributor.
   Continuity comes from trails, structure and shared language, not from
   gatekeepers.
 - **No dumping grounds.** Every artifact lives with the owner whose meaning
   would disappear without it. Placement is narrative
-  ([placement](__Docs__/Architecture.md#placement)).
+  ([placement](__Docs/Architecture.md#placement)).
 - **Docs as parallel architecture.** Documentation is a pillar, structured
   like the code and honest about what each document is: canon, mirage, trail
-  or chronicle ([document kinds](__Docs__/README.md#document-kinds)).
+  or chronicle ([document kinds](__Docs/README.md#document-kinds)).
 - **Trails as proof of life.** Every Feature tells why it exists, how it works
   and the proof that it works. Every document drafted with AI keeps its
   conversation in a Trail.
 - **Evidence precedes generalization.** No problem that has not been written
   is solved in advance, and nothing is shared before real use shows that it
-  is shared ([promotion](__Docs__/Architecture.md#promotion)).
+  is shared ([promotion](__Docs/Architecture.md#promotion)).
 - **Say what you know, at the strength you know it.** AI fabricates when truth
   is absent; the remedy is evidence, not trust. Observation, interpretation
   and the unknown stay distinct
-  ([claims](__Docs__/Evidence-And-Authority.md#claims)).
+  ([claims](__Docs/Evidence-And-Authority.md#claims)).
 - **Show, then tell.** Canon speaks for itself through the repository: a tree
-  that explains itself, a [Host that reads the repository](Hosts/DocReader/README.md)
-  and an [example](examples/Greeting/README.md) that follow the rules and prove
-  them, and a [check](Scripts/README.md) that fails when the documents lie.
+  that explains itself, a [Host that reads the repository](Hosts/DocReader/README.md),
+  built by the rules it explains and proven by its own tests, and a
+  [check](Scripts/README.md) that fails when the documents lie.
 
 ---
 
@@ -58,9 +58,9 @@ this file.
 | **Features/** | WHAT: capabilities | Sovereign promises, each carrying its story |
 | **Foundations/** | HOW: mechanisms | Hardened enablers that never dominate |
 | **Core/** | COMMON: the living commons | Language that real use has made shared |
-| **__Docs__/** | Memory: the story trailhead | Canon, trails, mirages and chronicles |
+| **__Docs/** | Memory: the story trailhead | Canon, trails, mirages and chronicles |
 
-The rules for each pillar are in [Architecture](__Docs__/Architecture.md#pillars).
+The rules for each pillar are in [Architecture](__Docs/Architecture.md#pillars).
 
 ---
 

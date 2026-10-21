@@ -6,7 +6,7 @@ origin: ai-assisted
 
 # Trail of the Genesis chronicle
 
-Conversation framing moved verbatim from [00_NomadArchitectureGenesis.md](00_NomadArchitectureGenesis.md) on 2026-10-21, following
+Conversation framing moved verbatim from [00_NomadArchitectureGenesis.md](2511-01-NomadArchitecture-Genesis-Chronicle.md) on 2026-10-21, following
 [Trails hold the conversation](../README.md#trails-hold-the-conversation).
 The chapter outline was wrapped in a ```` ```markdown ```` code fence; the fence lines were removed and its headings demoted one level. The title line began with a stray `*`, which pairs with the `*` at the end of the closing question below; it was removed.
 

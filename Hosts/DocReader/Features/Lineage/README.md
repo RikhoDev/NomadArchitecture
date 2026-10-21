@@ -13,8 +13,8 @@ replaced, what replaced it, and the Trails that hold its conversation.
 
 **Relationships.** It needs a header reader and a list of the repository's
 documents; the Host gives it both. It follows the rules for
-[`superseded_by`](../../../../__Docs__/README.md#status-header) and for
-[Trails](../../../../__Docs__/README.md#trails-hold-the-conversation).
+[`superseded_by`](../../../../__Docs/README.md#status-header) and for
+[Trails](../../../../__Docs/README.md#trails-hold-the-conversation).
 
 **Proof.** [_Tests/Lineage.Tests.ps1](_Tests/Lineage.Tests.ps1), with fake
 documents, including a `superseded_by` loop that must not hang.

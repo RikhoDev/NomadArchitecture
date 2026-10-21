@@ -4,7 +4,7 @@ kind: guide
 origin: ai
 ---
 
-# _Chronicles_/
+# _Chronicles/
 
 > These are the echoes of the tribe.  
 > Not canon, but important.  
@@ -14,7 +14,7 @@ origin: ai
 
 ## Purpose
 
-_Chronicles_ is the tent of memory inside `__Docs__/`.  
+`_Chronicles` is the tent of memory inside `__Docs/`.  
 It is where we keep the stories that are not doctrine but still matter.  
 They are **non‑canon by default**, yet they carry weight: they inspire, they entertain, they remind us who we are becoming.
 
@@ -27,9 +27,9 @@ They are **non‑canon by default**, yet they carry weight: they inspire, they e
 
 ## The Underscore Grammar
 
-The grammar is defined once, in [__Docs__/README.md](../README.md#folder-grammar).
+The grammar is defined once, in [__Docs/README.md](../README.md#folder-grammar).
 
-_Chronicles_ is wrapped in underscores to signal its liminal status: inside the camp, but apart from the hearth.
+The `_` prefix marks `_Chronicles` as a temporal surface: inside the camp, but apart from the hearth.
 
 ---
 
@@ -37,7 +37,7 @@ _Chronicles_ is wrapped in underscores to signal its liminal status: inside the 
 
 Chronicles are written as **chapters**, each in its own file:
 
-- Files are numbered for order: `00_NomadArchitectureGenesis.md`, `01_TheFirstShaman.md`, etc.  
+- Files are named by the [folder grammar](../README.md#folder-grammar): `2511-01-NomadArchitecture-Genesis-Chronicle.md`, `2511-02-The-First-Shaman-Chronicle.md`, and so on.  
 - Inside each file, use Roman numerals for chapter titles:  
   - *Chapter I — The First Shaman*  
   - *Chapter II — The First Convoy*  
@@ -47,21 +47,11 @@ Chronicles are written as **chapters**, each in its own file:
 
 ## Table of Contents
 
-- [Chapter 0 — NomadArchitecture Genesis](00_NomadArchitectureGenesis.md) (in transit)  
-- [Chapter I — The First Shaman](01_TheFirstShaman.md)  
-- [Chapter II — The Shaman and the Spirit’s Hallucinations](02_TheShamanAndTheSpiritsHallucinations.md)  
+- [Chapter 0 — NomadArchitecture Genesis](2511-01-NomadArchitecture-Genesis-Chronicle.md) (in transit)  
+- [Chapter I — The First Shaman](2511-02-The-First-Shaman-Chronicle.md)  
+- [Chapter II — The Shaman and the Spirit’s Hallucinations](2511-03-The-Shaman-And-The-Spirits-Hallucinations-Chronicle.md)  
 
 Each chapter's conversation is kept in the Trail beside it.
-
----
-
-## Growth Roadmap
-
-- **Up to ~30 chapters**: keep them flat, numbered.  
-- **30–99 chapters**: bundle into *Volumes* (e.g. `Volume1_Origins/`, `Volume2_Rituals/`).  
-- **100+ chapters**: promote into thematic sub‑chronicles (e.g. `_Myths_/`, `_Histories_/`, `_Legends_/`).  
-
-This way, the Chronicles grow like a **living archive**, not a dumping ground.
 
 ---
 

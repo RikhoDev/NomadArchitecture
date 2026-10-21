@@ -30,26 +30,28 @@ It’s an ongoing exploration of how we *might* address them by treating codebas
 ---
 
 ## 🏗️ The Five Pillars
-Every Nomad project grows around five parts: **Hosts** (why), **Features** (what), **Foundations** (how), **Core** (the common language) and **__Docs__** (memory).  
-Their essence is in the [Worldview](./Worldview.md#canonical-skeleton); their rules are in [Architecture](./__Docs__/Architecture.md#pillars).
+Every Nomad project grows around five parts: **Hosts** (why), **Features** (what), **Foundations** (how), **Core** (the common language) and **__Docs** (memory).  
+Their essence is in the [Worldview](./Worldview.md#canonical-skeleton); their rules are in [Architecture](./__Docs/Architecture.md#pillars).
 
 ---
 
-## 📖 Example (Tiny Feature)
-A Feature is more than just code—it carries its own story and its own proof. The [Greeting example](./examples/Greeting/README.md) runs:
+## 📖 Example
+A Feature is more than just code—it carries its own story and its own proof. The [DocReader](./Hosts/DocReader/README.md) is a Host built inside this repository by its own rules, and it reads the repository back to you:
 
 ```
-examples/Greeting/
- ├── Hosts/Cli/greet.ps1                       # why: greet someone from a terminal
- └── Features/Greeting/
-      ├── Greeting.ps1                         # what: the greeting promise
-      ├── README.md                            # promise, residents, relationships, proof, status
-      └── _Tests/Greeting.Tests.ps1            # proof it works
+Hosts/DocReader/
+ ├── reader.ps1                     # why: walk a newcomer through the repository
+ ├── Features/Canon/                # what: what binds, and what awaits reading
+ ├── Features/Lineage/              # what: where a document came from
+ ├── Features/Placement/            # what: whose meaning a path carries
+ └── Foundations/Markdown/          # how: reading headers, links and sections
+                                    # each with README.md and _Tests/
 ```
 
 ```
-pwsh examples/Greeting/Hosts/Cli/greet.ps1 -Name Alice
-Hello, Alice!
+pwsh Hosts/DocReader/reader.ps1 explain Hosts/DocReader/Features/Canon/Canon.ps1
+Hosts/DocReader/Features/Canon/Canon.ps1
+  is:      Feature Canon (WHAT), inside Host DocReader (WHY)
 ```
 
 ---
@@ -67,7 +69,7 @@ But this is still early work. These ideas are being tested, refined, and sometim
 ## 🏁 How to Explore
 1. Clone this repo.  
 2. Read [Worldview.md](./Worldview.md) for the philosophy.  
-3. Read [__Docs__/README.md](./__Docs__/README.md) for how the documentation is organised and what is canon.  
+3. Read [__Docs/README.md](./__Docs/README.md) for how the documentation is organised and what is canon.  
 4. Run `pwsh Hosts/DocReader/reader.ps1` for a tour, then `canon`, `explain <path>` and `trail <path>`. The [DocReader](./Hosts/DocReader/README.md) is a Host built inside this repository by its own rules.
 5. Run `pwsh Scripts/Test-Repository.ps1` to see the repository check its own claims.
 

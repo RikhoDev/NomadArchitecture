@@ -2,6 +2,7 @@
 status: non-canon
 kind: mirage
 origin: ai
+date: 2026-10-21
 ---
 
 # NGE distillation candidates

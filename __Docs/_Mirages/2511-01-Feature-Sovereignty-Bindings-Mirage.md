@@ -2,6 +2,7 @@
 status: non-canon
 kind: mirage
 origin: ai
+date: 2025-11-03
 ---
 
 # How Feature can remain autonomous while interacting efficiently with the outside world

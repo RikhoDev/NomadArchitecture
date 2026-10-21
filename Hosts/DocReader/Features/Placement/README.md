@@ -14,7 +14,7 @@ that owns it.
 
 **Relationships.** It needs a way to read a README's lead sentence; the Host
 gives it the Markdown Foundation's. It applies the placement test in
-[Architecture](../../../../__Docs__/Architecture.md#placement) as far as a
+[Architecture](../../../../__Docs/Architecture.md#placement) as far as a
 folder tree can show it. Whether the path is in the right home stays a human
 judgement.
 

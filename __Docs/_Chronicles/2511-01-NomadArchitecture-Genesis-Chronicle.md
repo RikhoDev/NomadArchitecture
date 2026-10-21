@@ -2,6 +2,7 @@
 status: non-canon
 kind: chronicle
 origin: ai-assisted
+date: 2025-11-03
 ---
 
 # Shaping the story of NomadArchitecture's Genesis - In transit

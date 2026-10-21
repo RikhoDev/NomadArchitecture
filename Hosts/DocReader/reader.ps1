@@ -81,7 +81,7 @@ function Show-Canon {
     }
     Write-Output ''
     Write-Wrapped ('Sections awaiting reading guide the work but bind no one until the human has read them. ' +
-        'Why: __Docs__/README.md#canon.') ''
+        'Why: __Docs/README.md#canon.') ''
 }
 
 function Show-Explain([string]$Path) {

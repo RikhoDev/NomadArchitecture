@@ -19,7 +19,7 @@ Assert-Promise 'the tour explains what is absent on purpose' { $tour.Text -match
 
 $canon = Invoke-Reader canon
 Assert-Promise 'canon lists the canon files with their status' {
-    $canon.Code -eq 0 -and $canon.Text -match 'Worldview\.md\s+canon' -and $canon.Text -match '__Docs__/Architecture\.md\s+canon'
+    $canon.Code -eq 0 -and $canon.Text -match 'Worldview\.md\s+canon' -and $canon.Text -match '__Docs/Architecture\.md\s+canon'
 }
 Assert-Promise 'canon shows each section that still awaits the human, and only those' {
     . (Join-Path $PSScriptRoot '..' 'Foundations' 'Markdown' 'Markdown.ps1')
@@ -38,8 +38,8 @@ Assert-Promise 'explain reads a path from the inside out' {
 Assert-Promise 'explain names the owner README and its promise' {
     $explain.Text -match 'owner:\s+Hosts/DocReader/Features/Canon/README\.md' -and $explain.Text -match 'Say what binds'
 }
-$superseded = Invoke-Reader explain '__Docs__/Concepts/PortsAndConnectors.md'
-Assert-Promise 'explain points from a superseded document to its replacement' { $superseded.Text -match 'replaced by: __Docs__/Architecture\.md' }
+$superseded = Invoke-Reader explain '__Docs/Concepts/PortsAndConnectors.md'
+Assert-Promise 'explain points from a superseded document to its replacement' { $superseded.Text -match 'replaced by: __Docs/Architecture\.md' }
 
 $trail = Invoke-Reader trail 'Worldview.md'
 Assert-Promise 'trail lists a document''s Trails' { $trail.Code -eq 0 -and $trail.Text -match 'Worldview\.Trail\.20261021\.md' }

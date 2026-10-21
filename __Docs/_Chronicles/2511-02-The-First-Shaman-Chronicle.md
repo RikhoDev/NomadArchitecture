@@ -2,6 +2,7 @@
 status: non-canon
 kind: chronicle
 origin: ai
+date: 2025-11-03
 ---
 
 # 🌌 The First Shaman of NomadArchitecture

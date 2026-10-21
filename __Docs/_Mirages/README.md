@@ -4,7 +4,7 @@ kind: guide
 origin: ai
 ---
 
-# _Mirages_/
+# _Mirages/
 
 > The storytellers’ tent.  
 > The shimmer on the horizon.  
@@ -12,14 +12,14 @@ origin: ai
 > The wise know when to chase, and when to turn away.
 
 ## Purpose
-_Mirages_ is the liminal tent inside `__Docs/`.  
+`_Mirages` is the liminal tent inside `__Docs/`.  
 It is where raw, speculative, or AI‑generated ideas are placed for review.  
 Nothing here is canon. These are illusions, sparks, and visions — some may fade, some may become the next oasis.
 
 ## The Underscore Grammar
-The grammar is defined once, in [__Docs__/README.md](../README.md#folder-grammar).
+The grammar is defined once, in [__Docs/README.md](../README.md#folder-grammar).
 
-_Mirages_ is wrapped in underscores to signal its liminal status: inside the camp, but apart from the hearth.
+The `_` prefix marks `_Mirages` as a temporal surface: inside the camp, but apart from the hearth. Mirages are named by the [folder grammar](../README.md#folder-grammar).
 
 ## How to Navigate
 - **Nomads**: Chase a Mirage if the conditions are right — if it aligns with your convoy’s needs. Avoid it if it would drain your strength.  

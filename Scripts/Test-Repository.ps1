@@ -2,10 +2,11 @@
 #   1. every Markdown file except the root README carries a valid status header;
 #   2. every relative link and #anchor resolves;
 #   3. the canon is the same in all three places that name it: the files'
-#      own status headers, the list in __Docs__/README.md, and
+#      own status headers, the list in __Docs/README.md, and
 #      .nomad-method/canon;
 #   4. every proof (*.Tests.ps1) passes;
-#   and every awaiting_reading section named in a canon file exists.
+#   every awaiting_reading section named in a canon file exists; and
+#   Chronicles and Mirages are named YYMM-xx-Name.md and dated to agree.
 # Usage: pwsh Scripts/Test-Repository.ps1    Exit code 0 means all checks pass.
 
 $ErrorActionPreference = 'Stop'
@@ -82,6 +83,23 @@ foreach ($file in $markdown) {
     }
 }
 
+# 2a. Chronicles and Mirages follow the folder grammar: YYMM-xx-Name.md, an
+#     index local to each folder, and a date header that agrees with the name
+$seen = @{}
+foreach ($rel in $headers.Keys) {
+    $segments = $rel -split '/'
+    if (-not ($segments | Where-Object { $_ -in '_Chronicles', '_Mirages' })) { continue }
+    $leaf = $segments[-1]
+    if ($leaf -eq 'README.md' -or $leaf -match '\.Trail\.\d{8}\.md$') { continue }
+    if ($leaf -notmatch '^(\d{2})(\d{2})-(\d{2})-[^.]+\.md$') { Report "$rel is not named YYMM-xx-Name.md"; continue }
+    $yymm = "$($Matches[1])-$($Matches[2])"; $index = "$($Matches[1])$($Matches[2])-$($Matches[3])"
+    $date = $headers[$rel]['date']
+    if (-not $date) { Report "$rel has no date header" }
+    elseif ($date -notmatch '^20(\d{2})-(\d{2})(-\d{2})?$' -or "$($Matches[1])-$($Matches[2])" -ne $yymm) { Report "$rel is dated '$date', which disagrees with its name" }
+    $key = (($segments[0..($segments.Count - 2)]) -join '/') + "/$index"
+    if ($seen.ContainsKey($key)) { Report "$rel reuses index $index of $($seen[$key])" } else { $seen[$key] = $rel }
+}
+
 # 2b. Sections awaiting the human's reading exist, and only on canon files
 foreach ($rel in $headers.Keys) {
     $awaiting = $headers[$rel]['awaiting_reading']
@@ -97,19 +115,19 @@ foreach ($rel in $headers.Keys) {
 $byHeader = @($headers.Keys | Where-Object { $headers[$_]['status'] -eq 'canon' } | Sort-Object)
 $listFile = Join-Path $root '.nomad-method/canon'
 $byPlugin = @(Get-Content -LiteralPath $listFile | Where-Object { $_ -and $_ -notmatch '^\s*#' } | ForEach-Object { $_.Trim() })
-$docsReadme = Get-Content -LiteralPath (Join-Path $root '__Docs__/README.md') -Raw
+$docsReadme = Get-Content -LiteralPath (Join-Path $root '__Docs/README.md') -Raw
 $section = [regex]::Match($docsReadme, '(?ms)^## Canon\s*$(.*?)^## ').Groups[1].Value
 $byReadme = @([regex]::Matches($section, '(?m)^- \[[^\]]*\]\(([^)#\s]+)') | ForEach-Object {
-    Rel ([IO.Path]::GetFullPath((Join-Path (Join-Path $root '__Docs__') $_.Groups[1].Value)))
+    Rel ([IO.Path]::GetFullPath((Join-Path (Join-Path $root '__Docs') $_.Groups[1].Value)))
 })
-$byReadme += '__Docs__/README.md'
+$byReadme += '__Docs/README.md'
 foreach ($file in $byHeader) {
     if ($file -notin $byPlugin) { Report "$file is canon but missing from .nomad-method/canon" }
-    if ($file -notin $byReadme) { Report "$file is canon but not listed in __Docs__/README.md#canon" }
+    if ($file -notin $byReadme) { Report "$file is canon but not listed in __Docs/README.md#canon" }
 }
 foreach ($file in $byReadme | Sort-Object -Unique) {
-    if (-not $headers.ContainsKey($file)) { Report "__Docs__/README.md lists $file as canon, but it does not exist"; continue }
-    if ($headers[$file]['status'] -ne 'canon') { Report "__Docs__/README.md lists $file as canon, but its header says '$($headers[$file]['status'])'" }
+    if (-not $headers.ContainsKey($file)) { Report "__Docs/README.md lists $file as canon, but it does not exist"; continue }
+    if ($headers[$file]['status'] -ne 'canon') { Report "__Docs/README.md lists $file as canon, but its header says '$($headers[$file]['status'])'" }
 }
 foreach ($file in $byPlugin) {
     if (-not (Test-Path (Join-Path $root $file))) { Report ".nomad-method/canon lists missing file $file" }

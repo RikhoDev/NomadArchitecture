@@ -3,6 +3,7 @@ status: superseded
 kind: mirage
 origin: ai
 superseded_by: ../../Architecture.md
+date: 2026-01
 ---
 
 > **Superseded (2026-10-21).** This time capsule records the January 2026
@@ -83,7 +84,7 @@ Each folder has a **screaming role**:
 - Documentation as a parallel architecture  
 - Mirrors NomadArchitecture recursively  
 - Houses worldview, lineage, cultural context  
-- Contains `_Mirages_/` for speculative ideas  
+- Contains `_Mirages/` for speculative ideas  
 - Contains Trails for documentation artifacts  
 - Supports onboarding as ceremony  
 
@@ -219,9 +220,9 @@ Trail contents:
 
 ---
 
-# **6. `_Mirages_/` — Speculative Ideas (Structural Invariant)**
+# **6. `_Mirages/` — Speculative Ideas (Structural Invariant)**
 
-Inside `__Docs/`, `_Mirages_/` is:
+Inside `__Docs/`, `_Mirages/` is:
 
 - a structural invariant  
 - a home for speculative, raw, or AI‑generated ideas  

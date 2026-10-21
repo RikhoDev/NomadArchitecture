@@ -2,6 +2,7 @@
 status: non-canon
 kind: mirage
 origin: ai-assisted
+date: 2025-11-23
 ---
 
 # NomadArchitecture's Fractal Implications

@@ -24,4 +24,4 @@ which must not count as links.
 **Status.** Promotion candidate: `Scripts/Test-Repository.ps1` reads headers,
 links and anchors with its own copy of this mechanism. That makes two
 consumers, both written by the same author, which is weak evidence
-([promotion](../../../../__Docs__/Architecture.md#promotion)). Not promoted.
+([promotion](../../../../__Docs/Architecture.md#promotion)). Not promoted.

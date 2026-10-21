@@ -32,7 +32,7 @@ because nothing outside it needs them yet:
 **Relationships.** Each Feature states what it needs as a parameter, and the
 Host passes the Foundation's functions in. A Feature never loads another
 pillar, which is the rule "Foundations implement Feature contracts" in
-[Architecture](../../__Docs__/Architecture.md#contracts-and-connectors). The
+[Architecture](../../__Docs/Architecture.md#contracts-and-connectors). The
 wiring is a few lines at the top of `reader.ps1`, so it needs no
 `_Connectors/`.
 
@@ -48,8 +48,10 @@ of them.
   the same author, and this one in the same change, so they are weak
   evidence of a shared need. Promoting it to a root `Foundations/Markdown`
   used by both waits for the human to judge that evidence.
-- When it has proved itself, the Greeting example is expected to retire, and
-  its lesson moves into this README.
+- It replaced the Greeting example in October 2026. Greeting's last lesson
+  lives here: the Host, not the Feature, decides how a refusal is shown. An
+  unknown command exits with code 2, and a path outside the repository exits
+  with code 1.
 
 ## Absent on purpose
 

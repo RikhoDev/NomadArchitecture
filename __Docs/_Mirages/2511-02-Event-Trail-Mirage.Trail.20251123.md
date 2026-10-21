@@ -131,7 +131,7 @@ Would you like me to **encode this into a Mirage file** (e.g., `PromptEngineerin
 
 ## Conversation framing moved from EventTrail.md
 
-Conversation framing moved verbatim from [EventTrail.md](EventTrail.md) on 2026-10-21, following
+Conversation framing moved verbatim from [EventTrail.md](2511-02-Event-Trail-Mirage.md) on 2026-10-21, following
 [Trails hold the conversation](../README.md#trails-hold-the-conversation).
 The document keeps the result and the Shaman's notes.
 

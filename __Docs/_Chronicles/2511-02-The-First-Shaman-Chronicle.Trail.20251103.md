@@ -6,7 +6,7 @@ origin: ai-assisted
 
 # Trail of The First Shaman
 
-Conversation framing moved verbatim from [01_TheFirstShaman.md](01_TheFirstShaman.md) on 2026-10-21, following
+Conversation framing moved verbatim from [01_TheFirstShaman.md](2511-02-The-First-Shaman-Chronicle.md) on 2026-10-21, following
 [Trails hold the conversation](../README.md#trails-hold-the-conversation).
 The document keeps the result and the Shaman's notes.
 

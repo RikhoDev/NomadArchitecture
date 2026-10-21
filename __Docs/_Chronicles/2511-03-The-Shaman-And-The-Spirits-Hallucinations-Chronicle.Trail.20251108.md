@@ -177,7 +177,7 @@ Would you like me to **map this arc into a “Prompt Engineering Trail” Chroni
 
 ## Conversation framing moved from 02_TheShamanAndTheSpiritsHallucinations.md
 
-Conversation framing moved verbatim from [02_TheShamanAndTheSpiritsHallucinations.md](02_TheShamanAndTheSpiritsHallucinations.md) on 2026-10-21, following
+Conversation framing moved verbatim from [02_TheShamanAndTheSpiritsHallucinations.md](2511-03-The-Shaman-And-The-Spirits-Hallucinations-Chronicle.md) on 2026-10-21, following
 [Trails hold the conversation](../README.md#trails-hold-the-conversation).
 The document keeps the result and the Shaman's notes.
 
