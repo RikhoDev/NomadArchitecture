@@ -24,4 +24,4 @@ know a terminal exists.
 **Proof.** The Feature's proof covers the promise. Running the command above is
 the only check of this Host; it has no automated proof of its own.
 
-**Status.** Settled.
+**Status.** No open questions; only a manual run checks it.

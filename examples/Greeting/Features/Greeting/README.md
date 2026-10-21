@@ -21,7 +21,7 @@ seam exists to wire; the Host calls the promise directly.
 three claims above: the greeting, trimming of the name, and refusal of a blank
 one. `Scripts/Test-Repository.ps1` runs it on every check.
 
-**Status.** Settled. Until October 2026 the whole Feature lived in
+**Status.** Its proof passes. Until October 2026 the whole Feature lived in
 `examples/MinimalFeature/Features/Greeting/_Connectors/GreetingConnector.ps1`,
 which the
 [connector rules](../../../../__Docs__/Architecture.md#contracts-and-connectors)

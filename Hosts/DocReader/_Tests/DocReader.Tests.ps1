@@ -21,7 +21,15 @@ $canon = Invoke-Reader canon
 Assert-Promise 'canon lists the canon files with their status' {
     $canon.Code -eq 0 -and $canon.Text -match 'Worldview\.md\s+canon' -and $canon.Text -match '__Docs__/Architecture\.md\s+canon'
 }
-Assert-Promise 'canon shows what still awaits the human' { $canon.Text -match "#feature-readme\s+decided by the assistant; awaiting the human's reading" }
+Assert-Promise 'canon shows each section that still awaits the human, and only those' {
+    . (Join-Path $PSScriptRoot '..' 'Foundations' 'Markdown' 'Markdown.ps1')
+    $root = Join-Path $PSScriptRoot '..' '..' '..'
+    $awaiting = @(Get-Content (Join-Path $root '.nomad-method/canon') | Where-Object { $_ -and $_ -notmatch '^#' } |
+        ForEach-Object { (Read-StatusHeader (Join-Path $root $_))['awaiting_reading'] -split ',' } |
+        ForEach-Object { $_.Trim() } | Where-Object { $_ })
+    $shown = @([regex]::Matches($canon.Text, "#(\S+)\s+decided by the assistant; awaiting the human's reading") | ForEach-Object { $_.Groups[1].Value })
+    (($awaiting | Sort-Object) -join ' ') -eq (($shown | Sort-Object) -join ' ')
+}
 
 $explain = Invoke-Reader explain 'Hosts/DocReader/Features/Canon/Canon.ps1'
 Assert-Promise 'explain reads a path from the inside out' {

@@ -173,11 +173,22 @@ root, and fix the canon labels first. What changed:
 - **Not taken from the review:** moving "Replaces" lines out of doctrine,
   because this README's growth rule requires them there.
 
+### Loop 3 review
+
+An isolated review with nomad-method 0.2.0 found:
+
+- the `awaiting_reading` rule was itself decided by the assistant, but was
+  not marked as awaiting; it now is (`#status-header`);
+- "two independent consumers" overstated the promotion evidence;
+- "Settled" claimed more than the proofs show;
+- the Host proof was tied to the sections that happen to await reading;
+- a wrong anchor in the Lineage README.
+
+All are fixed. The loop-3 commit message (`4f4f9d4`) gave the proofs as "5
+files with 40 claims"; there are 6 files with 36.
+
 ## Still open
 
 - The time capsule's file name, `20060119`, probably means 2026-01-19. It is
   unconfirmed, so the file has not been renamed.
-- Promote the Markdown Foundation to a root `Foundations/Markdown` shared with
-  `Scripts/Test-Repository.ps1`, once the human has seen the evidence.
-- Retire the Greeting example once the DocReader has proved itself, moving its
-  lesson into the Host's README.
+- The DocReader's own next steps are kept in its README's Status.

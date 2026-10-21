@@ -2,7 +2,7 @@
 status: canon
 kind: doctrine
 origin: ai
-awaiting_reading: folder-grammar
+awaiting_reading: status-header, folder-grammar
 ---
 
 # __Docs__
@@ -23,12 +23,11 @@ These files are binding, and nothing else is:
   grows.
 
 On 2026-10-21 the human delegated this canon: to infer what they already
-hold, and to decide the rest. What was inferred from the human's own record is
-canon. What the assistant decided is listed, section by section, in each
-file's `awaiting_reading` header. It guides the work, but binds no one until
-the human has read it. The Trail quotes the delegation and gives the evidence
-for each rule: [README.Trail.20261021.md](README.Trail.20261021.md). To see the
-current state, run `pwsh Hosts/DocReader/reader.ps1 canon`.
+hold, and to decide the rest. The inferred rules are canon. The sections the
+assistant decided are named in each file's `awaiting_reading`
+[header](#status-header), and bind no one until the human has read them.
+Evidence for each rule: [README.Trail.20261021.md](README.Trail.20261021.md).
+Current state: `pwsh Hosts/DocReader/reader.ps1 canon`.
 [AGENTS.md](../AGENTS.md) points contributors and AI assistants here.
 
 ## Document kinds
@@ -36,7 +35,7 @@ current state, run `pwsh Hosts/DocReader/reader.ps1 canon`.
 | Kind | Where | Binding | Holds |
 |---|---|---|---|
 | doctrine | the canon files above | yes | rules in force |
-| guide | AGENTS.md, Translation.md, `Concepts/`, folder READMEs | no; it applies doctrine | practical on-ramps |
+| guide | AGENTS.md, Translation.md, `Concepts/Connectors.md`, folder READMEs | no; it applies doctrine | practical on-ramps |
 | mirage | [_Mirages_/](_Mirages_/README.md) | no | speculation, proposals, AI-generated ideas |
 | trail | `<Document>.Trail.<YYYYMMDD>.md`, beside its document | no | how a document came to be |
 | chronicle | [_Chronicles_/](_Chronicles_/README.md) | no | stories and cultural memory |

@@ -21,5 +21,5 @@ judgement.
 **Proof.** [_Tests/Placement.Tests.ps1](_Tests/Placement.Tests.ps1), on a
 throwaway tree.
 
-**Status.** Settled. It reads ownership from READMEs; a folder without one is
+**Status.** Its proof passes. It reads ownership from READMEs; a folder without one is
 owned by the nearest folder above that has one.

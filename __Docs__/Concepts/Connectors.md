@@ -37,5 +37,5 @@ If all answers are yes, it belongs in `_Connectors`.
 
 The earlier version of this guide treated connectors as default
 implementations, mocks and fallbacks, and forbade references to other
-Features. That model is [superseded](../Concepts/PortsAndConnectors.md);
+Features. That model is [superseded](PortsAndConnectors.md);
 see git history for the previous text.

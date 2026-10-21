@@ -20,5 +20,5 @@ does.
 **Proof.** [_Tests/Canon.Tests.ps1](_Tests/Canon.Tests.ps1), with a fake header
 reader.
 
-**Status.** Settled for what it shows. It does not check that the canon lists
+**Status.** Its proof passes. It does not check that the canon lists
 agree; `Scripts/Test-Repository.ps1` does.

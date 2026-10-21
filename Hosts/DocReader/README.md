@@ -44,10 +44,10 @@ of them.
 **Status.** A Sprout: the smallest honest attempt, grown inside its Host.
 
 - The Markdown Foundation duplicates what `Scripts/Test-Repository.ps1` does to
-  read headers and links. That makes two independent consumers, which is
-  enough to promote it to a root `Foundations/Markdown` used by both. It has
-  not been promoted in the change that created it, so the human can see the
-  evidence first.
+  read headers and links. That makes two consumers, but both were written by
+  the same author, and this one in the same change, so they are weak
+  evidence of a shared need. Promoting it to a root `Foundations/Markdown`
+  used by both waits for the human to judge that evidence.
 - When it has proved itself, the Greeting example is expected to retire, and
   its lesson moves into this README.
 
