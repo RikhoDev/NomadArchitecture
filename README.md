@@ -14,11 +14,11 @@ proves it. The repository says all of this itself.**
 
 ## The problem it addresses
 
-Intent leaks. It leaks from the architect who stops reading the code to the
-team that then decides alone. It leaks from one AI session to the next, which
+Intent leaks. It leaks from one project to another, when a capability cannot
+move without its whole system. It leaks from one AI session to the next, which
 remembers nothing and fills the gap with something plausible. It leaks from
-one project to another, when a capability cannot move without its whole
-system. And it leaks from the people who leave.
+the architect who draws the map and leaves, to the team that then decides
+alone. And it leaks from the people who leave.
 
 AI assistants make every one of these leaks faster. They now draft a large
 share of code, documentation and design decisions, quickly and plausibly.

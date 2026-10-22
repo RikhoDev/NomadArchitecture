@@ -26,22 +26,20 @@ date: 2026-10-22
 *Interpreted, from the lineage below.* NomadArchitecture began as an answer to
 one problem: intent leaks. It leaks in four places.
 
-- **From the architect who stops reading the code, to the team that then
-  decides alone.** In July 2025, a story written alongside the first sample
-  game tells exactly this. An architect, buried in strategy, uses an AI
-  assistant to read their own team's code. They find the cost of every
-  decision made in isolation. Its last line is that documentation does not
-  implement itself. The method's first worldview, three months later, made it
-  a rule: no one gets to vanish after drawing the map.
-- **From one AI session to the next.** A note from the same summer records
-  that the AI assistant has no memory, and invents a plausible history when
-  asked for one. The fix it gives is to keep the conversation in a file. That
-  file became the method's Trails.
 - **From one project to another.** The method's first promise was mobility:
   capabilities that "pack up and join a new convoy with zero friction". In the
   author's account, it came from earlier work projects built as slices. He
   wanted to copy a slice from one project into another, to move Features. A
   Feature that can move is mobile, and mobile suggested nomad.
+- **From one AI session to the next.** A SampleGame note from August 2025 records
+  that the AI assistant has no memory, and invents a plausible history when
+  asked for one. The fix it gives is to keep the conversation in a file. That
+  file became the method's Trails.
+- **From the architect who draws the map and leaves, to the team that then
+  decides alone.** The method's first worldview (2025-11-02) calls this the
+  Fleeting Architect: architects design, then disappear, leaving brittle
+  rules behind. Its answer is that the role rotates, and that "no one gets to
+  vanish after drawing the map".
 - **From people to time.** In the author's own account, ideas "tended to stay
   in my head and eventually fade into oblivion."
 
@@ -141,8 +139,7 @@ show what it should look like, which is why there is no definitive proof yet.
 | When | Ground | What happened to the method |
 |---|---|---|
 | 2025-07-15 | SampleGame | A small C# game starts with a "feature-first" architecture: Features, Hosts and input ports on day one. |
-| 2025-07-16 to 07-28 | SampleGame | Core appears, then Foundations and connectors, with the first decision records on layers and connectors. The first recorded promotion moves a projectile up into the Features folder. Architecture is explored through "pattern stories", sorted into published books, approved candidates and work in progress. |
-| 2025-07-31 | SampleGame | The story of the absent architect. Its afterword labels which parts are reality and which are fiction. |
+| 2025-07-16 to 07-28 | SampleGame | Core appears, then Foundations and connectors, with the first decision records on layers and connectors. The first recorded promotion moves a projectile up into the Features folder. Architecture is explored through "pattern stories", sorted into published books, approved candidates and work in progress. In the author's account, story sessions in SampleGame also tested his prompting and the storytelling of the models of the time; one short fiction from them is an aside, not part of the method's history. |
 | 2025-08-03 | SampleGame | The name NomadArchitecture first appears, after the nomad families of Cyberpunk 2020: mobile families with strong internal bonds, linked by a shared vocabulary. The pillars existed before the name, so the metaphor came after the structure. Two decision records are accepted that day. One promotes a concept to Core only when two or more domains need it, to avoid a "God Core". The other lets AI assist under constraints: architectural decisions need human approval. The assistant's instructions file becomes the method's first agent guidance. |
 | 2025-08-18 to 08-20 | SampleGame | Lessons on AI as a development team, a pitch "for executives", and an MIT licence. The game has no automated tests: analysis documents and demos are its checks. |
 | 2025-10-31 to 11-02 | the method's own repository | First public form, nine days after a last SampleGame story fix. The metaphor changes from nomad families to the camp, the fire and the Shaman. The worldview adds a covenant (AI may scaffold, humans decide) and the principle that the architecture "teaches newcomers by structure and story". It calls the skeleton platform-agnostic. |
@@ -201,7 +198,6 @@ system is the coordination medium for minds that share no memory.
 | The Worldview | all grounds | It is the heart of the architecture. The first engine's worldview carried the intent but got the form wrong: its Features were allowed to lean on Foundations. That engine's lessons grew the V2 sprout, and the sprout's lessons gave birth to the corrected worldview. That worldview became the basis of the V2 engine, and the culture kept moving from there: the `_Contracts/` reversal, the worldview made the first contributor reading, and finally the method's canon. In the author's words, it is what "holds the intent and protects the fire". |
 | Sprouts | the February worldview's rite | Every Sprout-Host is promoted or buried, and every fossil leaves a Trail. NomadGameEngineV2 itself grew as a sprout host inside the first engine and graduated into its own repository. The method's own October branch now lives as a sprout beside its `main`. |
 | Status of documents | SampleGame's stories | Stories moved from work in progress to approved to books, with superseded versions archived. That became the canon's status header, and Mirages, Chronicles and Trails kept apart from the canon. |
-| Labelling claims | SampleGame's afterword on reality and fiction | It became the canon's rule on claims: observed, interpreted or unknown. |
 | Memory across sessions | SampleGame's note on what an assistant cannot remember | Trails, and later a plugin that loads the working discipline into every session. |
 | Narrative | SampleGame's pattern stories | The method's Chronicles and Worldview carry its culture as story, not as rules. The metaphors changed twice while the structure held, so they behave like Hosts: replaceable skins over a soul that stays. |
 | Mobility | SampleGame's first promise | It was lost from the method's repository: no rule there named it. The pillars still held the shape that makes it possible. In October 2026 it returned to the canon as a rule that every Feature, less its connectors, needs only Core, with a test that holds it. A real move followed. A Feature joined a second system unchanged, and the move showed what the test could not: the Feature's contract still spoke its first system's language. |
