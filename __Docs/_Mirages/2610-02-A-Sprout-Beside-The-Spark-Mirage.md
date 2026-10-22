@@ -17,7 +17,14 @@ and nothing here replaces it.
 The branch lives beside `main`, the way NomadGameEngineV2 lived as a sprout
 inside the first engine, and it has no name of its own yet. It earns a name,
 and a reference from `main`'s README and documentation, only by its evidence.
-The author gives the name and decides whether `main` points to it.
+The author gives the name.
+
+On 2026-10-22 the author let the assistant point to this branch from `main`,
+"for what you think it is (agency under observation is part of the
+experiment)". `main`'s README now has one section, *A Sprout Beside the
+Spark*, in commit `43d2305`. It describes the sprout in the assistant's terms
+and changes nothing else on `main`. That pointer is a grant, not a name
+earned.
 
 ## What earning it would mean
 
