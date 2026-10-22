@@ -45,7 +45,7 @@ never learns. Over time:
 | Capabilities that move | A Feature, less its connectors, needs only Core, so it can join another Host or another system with its contracts and proof | A conformance test per Feature, and a real move ([Rentals](Reference/Rentals/README.md)) |
 | Knowledge that survives turnover | Each component answers five questions in its README; each decision keeps its Trail; the repository explains any path on request | [DocReader](Hosts/DocReader/README.md) and the README check |
 
-The rules themselves fit in about 3,100 words: the [canon](__Docs/README.md#canon).
+The rules themselves fit in about 3,200 words: the [canon](__Docs/README.md#canon).
 
 ## Where it comes from
 
