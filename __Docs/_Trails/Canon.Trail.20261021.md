@@ -229,7 +229,8 @@ What changed:
   `AGENTS.md`, `Hosts/`, `LICENSE`, `README.md`, `Scripts/`, `Worldview.md`
   and `__Docs/`.
 - `README.old.md` was the README's own record, so it is a Trail:
-  `Root-README.Trail.20251031.md`, dated by its last commit. Its old label,
+  `Root-README.Trail.20251031.md`. It is dated by the last commit of its
+  content (`8d07e9e`, 2025-10-31), before it was renamed. Its old label,
   `superseded`, became `non-canon`, because a Trail is history, not a
   replaced rule.
 - Three Trails would have shared the name `README`, so they are named for
@@ -242,6 +243,27 @@ What changed:
   that points nowhere. Two mutations confirmed this.
 - Every relative link, inside the moved Trails and toward them, was rewritten
   from both ends.
+
+### Step 4 review, and a trial run on nomad-method
+
+The isolated review of `7caa9af` found:
+- four link labels that still read `README.Trail.20261021.md`;
+- a naming rule that three Trails broke;
+- an NGE citation that supported only the folder, not the naming or
+  `trail_of:`;
+- loose wording on the root README Trail's date;
+- a hand-kept list of residents in `_Trails/README.md` that would go stale.
+
+All are fixed. The naming rule now says `<Owner>`, the check enforces it, and
+the list is gone. The Genesis Chronicle still mentions `README.old.md`; that is
+story text, kept as written.
+
+Running this repository's tools against a copy of `RikhoDev/nomad-method`
+found two bugs in them:
+- `Test-Repository.ps1` crashed when `.nomad-method/canon` or the canon index
+  was missing. It now reports what is missing.
+- A README whose first line is an HTML image gave that tag as its lead. Leads
+  now skip lines that are only HTML, with a proof.
 
 ## Still open
 

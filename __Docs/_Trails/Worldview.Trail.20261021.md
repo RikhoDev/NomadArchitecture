@@ -16,13 +16,13 @@ trail_of: ../../Worldview.md
 ## Decisions and review loops
 
 Recorded once, for the canon as a whole, in
-[__Docs/README.Trail.20261021.md](Canon.Trail.20261021.md),
+[__Docs/_Trails/Canon.Trail.20261021.md](Canon.Trail.20261021.md),
 with the human's words quoted verbatim.
 
 ## What the analysis observed
 
 The NGE evidence is cited rule by rule in `__Docs/Architecture.md` and
-`__Docs/README.Trail.20261021.md`.
+`__Docs/_Trails/Canon.Trail.20261021.md`.
 
 ## What changed in Worldview.md
 

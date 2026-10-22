@@ -12,7 +12,7 @@ this repository has no need for yet. They were drafted into canon on
 2026-10-21. The author moved them out on the isolated reviewer's advice: this
 repository has no multi-provider realization, no proof world and no recursion
 inside a Feature to test them against. The reasoning is in
-[README.Trail.20261021.md](../_Trails/Canon.Trail.20261021.md). Promote one only when a project shows the need
+[Canon.Trail.20261021.md](../_Trails/Canon.Trail.20261021.md). Promote one only when a project shows the need
 (see [Architecture: promotion](../Architecture.md#promotion)).
 
 Citations use the `NGE:` form defined in [Sources](../README.md#sources).

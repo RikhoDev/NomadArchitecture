@@ -110,6 +110,7 @@ foreach ($rel in $headers.Keys) {
     if ($trailOf -and -not $isTrail) { Report "$rel has trail_of but is not a trail" }
     if (-not $isTrail) { continue }
     if (-not (($rel -split '/') -contains '_Trails')) { Report "$rel is a trail outside a _Trails folder" }
+    if ((Split-Path $rel -Leaf) -notmatch '^[^.]+\.Trail\.\d{8}\.md$') { Report "$rel is not named <Owner>.Trail.<YYYYMMDD>.md" }
     if (-not $trailOf) { Report "$rel is a trail without trail_of" }
     elseif (-not (Test-Path (Join-Path (Split-Path (Join-Path $root $rel) -Parent) $trailOf) -PathType Leaf)) { Report "$rel trail_of '$trailOf' does not exist" }
 }
@@ -128,13 +129,16 @@ foreach ($rel in $headers.Keys) {
 # 3. The canon agrees with itself
 $byHeader = @($headers.Keys | Where-Object { $headers[$_]['status'] -eq 'canon' } | Sort-Object)
 $listFile = Join-Path $root '.nomad-method/canon'
-$byPlugin = @(Get-Content -LiteralPath $listFile | Where-Object { $_ -and $_ -notmatch '^\s*#' } | ForEach-Object { $_.Trim() })
-$docsReadme = Get-Content -LiteralPath (Join-Path $root '__Docs/README.md') -Raw
+$docsReadmePath = Join-Path $root '__Docs/README.md'
+if (-not (Test-Path -LiteralPath $listFile)) { Report '.nomad-method/canon is missing: there is no canon list' }
+if (-not (Test-Path -LiteralPath $docsReadmePath)) { Report '__Docs/README.md is missing: there is no canon index' }
+$byPlugin = @(if (Test-Path -LiteralPath $listFile) { Get-Content -LiteralPath $listFile | Where-Object { $_ -and $_ -notmatch '^\s*#' } | ForEach-Object { $_.Trim() } })
+$docsReadme = if (Test-Path -LiteralPath $docsReadmePath) { Get-Content -LiteralPath $docsReadmePath -Raw } else { '' }
 $section = [regex]::Match($docsReadme, '(?ms)^## Canon\s*$(.*?)^## ').Groups[1].Value
 $byReadme = @([regex]::Matches($section, '(?m)^- \[[^\]]*\]\(([^)#\s]+)') | ForEach-Object {
     Rel ([IO.Path]::GetFullPath((Join-Path (Join-Path $root '__Docs') $_.Groups[1].Value)))
 })
-$byReadme += '__Docs/README.md'
+if (Test-Path -LiteralPath $docsReadmePath) { $byReadme += '__Docs/README.md' }
 foreach ($file in $byHeader) {
     if ($file -notin $byPlugin) { Report "$file is canon but missing from .nomad-method/canon" }
     if ($file -notin $byReadme) { Report "$file is canon but not listed in __Docs/README.md#canon" }

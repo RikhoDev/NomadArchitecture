@@ -72,7 +72,8 @@ function Get-MarkdownSection([string]$Path, [string]$Heading) {
 
 function Get-MarkdownLead([string]$Path) {
     # The sentence a reader meets first: a paragraph starting "**Promise.**"
-    # if there is one, otherwise the first paragraph after the title.
+    # if there is one, otherwise the first paragraph after the title. Quotes,
+    # tables, rules and lines that are only an HTML tag are not prose.
     $lines = @(Get-MarkdownLines $Path -KeepInlineCode)
     $start = 0
     if ($lines.Count -gt 0 -and $lines[0] -eq '---') { $start = [Array]::IndexOf($lines, '---', 1) + 1 }
@@ -81,7 +82,7 @@ function Get-MarkdownLead([string]$Path) {
     foreach ($line in $lines[$start..($lines.Count - 1)] + '') {
         if ($line.Trim() -eq '' -or $line -match '^#') {
             if ($current.Count) { $paragraphs.Add(($current -join ' ')); $current.Clear() }
-        } elseif ($line -notmatch '^\s*([>|]|-{3,})') {
+        } elseif ($line -notmatch '^\s*([>|]|-{3,})' -and $line -notmatch '^\s*<[^>]+>\s*$') {
             $current.Add($line.Trim())
         }
     }

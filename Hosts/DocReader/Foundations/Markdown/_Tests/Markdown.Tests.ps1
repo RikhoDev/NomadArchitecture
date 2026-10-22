@@ -63,5 +63,11 @@ Assert-Promise 'the lead keeps the words inside inline code' {
     (Get-MarkdownLead $code) -eq '_Mirages is a tent inside __Docs/.'
 }
 
+Assert-Promise 'the lead skips lines that are only HTML, such as an image' {
+    $html = Join-Path $dir 'html.md'
+    '# Icon', '', '<img src="icon.png" alt="an icon" width="128">', '', 'The real first sentence.' | Set-Content -LiteralPath $html
+    (Get-MarkdownLead $html) -eq 'The real first sentence.'
+}
+
 Remove-Item -Recurse -Force $dir
 Complete-Proof

@@ -26,7 +26,7 @@ On 2026-10-21 the human delegated this canon: to infer what they already
 hold, and to decide the rest. The inferred rules are canon. The sections the
 assistant decided are named in each file's `awaiting_reading`
 [header](#status-header), and bind no one until the human has read them.
-Evidence for each rule: [README.Trail.20261021.md](_Trails/Canon.Trail.20261021.md).
+Evidence for each rule: [Canon.Trail.20261021.md](_Trails/Canon.Trail.20261021.md).
 Current state: `pwsh Hosts/DocReader/reader.ps1 canon`.
 [AGENTS.md](../AGENTS.md) points contributors and AI assistants here.
 
@@ -76,9 +76,10 @@ When a document is drafted with an AI assistant, the document holds the result
 and its Trail holds the conversation, kept verbatim: the prompts, the
 assistant's framing and its follow-up offers. The Shaman's notes stay in the
 document. Trails live in the `_Trails/` folder of the nearest `__Docs/`, as
-in NomadGameEngineV2 (NGE:`Engine/__Docs/_Trails/README.md`), named
-`<Document>.Trail.<YYYYMMDD>.md` and dated by the conversation, or by the first
-commit when that date is unknown. A change to the canon as a whole is recorded
+NomadGameEngineV2 keeps them (NGE:`Engine/__Docs/_Trails/README.md`). Each is
+named `<Owner>.Trail.<YYYYMMDD>.md`, where the owner is its document's name, or
+a name that says whose README it is. It is dated by the conversation, or by the
+first commit when that date is unknown. A change to the canon as a whole is recorded
 in `_Trails/Canon.Trail.<YYYYMMDD>.md`.
 
 ## Folder grammar
