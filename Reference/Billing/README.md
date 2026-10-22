@@ -37,7 +37,8 @@ Reminders sees Invoicing only through
   fail the build when the architecture is broken:
   - a Feature depends on a Foundation or a Host;
   - Core depends on another pillar;
-  - a Feature reaches another Feature outside its `_Connectors`;
+  - a Feature could not pack up and leave: outside its `_Connectors` it
+    needs more than Core (mobility, the method's first promise);
   - a namespace, folder or type is named for a bucket (`Common`, `Utils`, ...);
   - a namespace disagrees with the folder its code lives in;
   - a resident's README leaves one of the five questions unanswered.

@@ -2,7 +2,7 @@
 status: canon
 kind: doctrine
 origin: ai
-decided_by_assistant: feature-readme, required-by-the-platform
+decided_by_assistant: pillars, feature-readme, required-by-the-platform
 ---
 
 # Architecture
@@ -17,7 +17,10 @@ repository check runs its proofs.
 - A **Host** (WHY) composes Features into something runnable and decides what
   it accepts from them, including how a refused promise is shown. Hosts are
   replaceable roofs, never the soul.
-- A **Feature** (WHAT) owns a promise and the meaning behind it.
+- A **Feature** (WHAT) owns a promise and the meaning behind it. It can pack
+  up and leave: outside its `_Connectors` it needs only Core, so it can join
+  another Host, or another system, with its contracts, its proof and its
+  Trail. Mobility was the method's first promise.
 - A **Foundation** (HOW) owns neutral mechanism. It implements contracts;
   reusing an implementation does not make it their owner.
 - **Core** (COMMON) owns shared language and its invariants. Code does not
@@ -27,7 +30,8 @@ repository check runs its proofs.
 
 A pillar is earned, not scaffolded: an empty `Core/` or `Foundations/` folder
 claims something nobody has needed.
-(NGE:`Engine/__Docs/Patterns/Feature-Sovereignty-Doctrine.md`;
+(SampleGame:`.github/copilot-instructions.md`, family mobility, 2025-08-03;
+NGE:`Engine/__Docs/Patterns/Feature-Sovereignty-Doctrine.md`;
 NGE:`Engine/Hosts/README.md`; NGE:`Engine/Core/README.md`)
 
 Replaces: "Core: the rules and contracts (the DNA)" and "Hosts: delivery
@@ -136,7 +140,9 @@ promote because an AI suggested an abstraction before the seam was proven.
 
 When a promotion is earned, update the rule it changes, keep dependency
 direction honest, move the proof with its owner, and leave a Trail.
-(NGE:`Engine/__Docs/ADRs/0011-variance-aware-useful-generalization.md`,
+(SampleGame:`docs/decision-records/adr-vocabulary-promotion-pattern.md`,
+accepted 2025-08-03, where the two-consumer rule first appears;
+NGE:`Engine/__Docs/ADRs/0011-variance-aware-useful-generalization.md`,
 accepted 2026-09-30; NGE:`Engine/__Docs/Patterns/NomadEvolutionRules.md`)
 
 Replaces: "`_Ports` → Core", and two promotion thresholds that disagreed:

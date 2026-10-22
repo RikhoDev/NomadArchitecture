@@ -104,6 +104,13 @@ The canon arm's baseline has six more tests: the conformance tests.
   alone.
 - **The reminders pair differed only in its tests.** The production code was
   the same.
+- **Structure taught, and story taught.** The method's worldview of
+  November 2025 claimed that the architecture "teaches newcomers by structure
+  and story".
+  This pilot is one data point for each half. The code alone taught the
+  control arm the pillars: no session crossed them. Only the documents
+  carried *why* to hold back: the promotion rule, and keeping each owner's
+  README true.
 - **Only the canon arm kept the documentation current:** nine READMEs updated
   across three tasks. Both payments sessions noticed the same open issue (the
   due-soon digest still lists paid invoices). The canon arm recorded it in the

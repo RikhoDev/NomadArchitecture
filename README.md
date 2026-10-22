@@ -1,17 +1,25 @@
 # NomadArchitecture
 
-**An architecture method for teams that build software with AI assistants. It
-keeps three things true as a codebase grows: what binds, who decided it, and
-what proves it. And it makes the repository say so itself.**
+**An architecture method for keeping intent alive in software that people and
+AI assistants build together. The structure carries what the system is, its
+stories carry why, and a small canon says what binds, who decided it, and what
+proves it. The repository says all of this itself.**
 
 ---
 
 ## The problem it addresses
 
-AI assistants now draft a large share of code, documentation and design
-decisions, quickly and plausibly. Plausible is not accountable. A generated
-rule reads like an agreed one, a passing test reads like approval, and what
-one session decided, the next one never learns. Over time:
+Intent leaks. It leaks from the architect who stops reading the code to the
+team that then decides alone. It leaks from one AI session to the next, which
+remembers nothing and fills the gap with something plausible. It leaks from
+one project to another, when a capability cannot move without its whole
+system. And it leaks from the people who leave.
+
+AI assistants make every one of these leaks faster. They now draft a large
+share of code, documentation and design decisions, quickly and plausibly.
+Plausible is not accountable. A generated rule reads like an agreed one, a
+passing test reads like approval, and what one session decided, the next one
+never learns. Over time:
 
 - **Authority blurs.** Nobody can say which guidance binds, or who approved it.
 - **Architecture erodes.** Structure decays because placement is never
@@ -29,9 +37,28 @@ one session decided, the next one never learns. Over time:
 | Who decided | Named canon owners; every canon commit declares `human`, `review` or `delegated` authority; the assistant's decisions stay marked until a human reads them | [`Test-CanonAuthority`](Scripts/README.md) in CI, and code-owner review |
 | AI provenance | Every document states its origin; AI conversations are kept as Trails, apart from the rules they produced | `Test-Repository` in CI |
 | Architecture that holds | Hosts compose, Features promise, Foundations implement, Core is earned; dependencies point one way | Conformance tests that fail the build ([Billing](Reference/Billing/README.md)) |
+| Capabilities that move | A Feature, less its connectors, needs only Core, so it can join another Host or another system with its contracts and proof | A conformance test per Feature |
 | Knowledge that survives turnover | Each component answers five questions in its README; each decision keeps its Trail; the repository explains any path on request | [DocReader](Hosts/DocReader/README.md) and the README check |
 
 The rules themselves fit in about 3,100 words: the [canon](__Docs/README.md#canon).
+
+## Where it comes from
+
+It was not designed and then applied. It was grown through explorations, each
+of which changed it a little:
+
+- a sample game in July 2025, where Features, Hosts, Foundations and Core
+  appeared before the method had a name;
+- a first game engine, where the rules met tests and CI;
+- a second engine, built as an evidence ground, where one developer and
+  several AI assistants kept about 400,000 lines of C# in shape for seven
+  months.
+
+Rules were added when the evidence earned them, and withdrawn when it went
+against them. The method claims that the same laws apply at every scale: a
+Feature, a team and an organisation are each a sovereign unit with its own
+boundary, its own memory and its own shared vocabulary. That claim is not yet
+shown beyond code. A case study of the lineage is in preparation.
 
 ## See it working
 
@@ -82,17 +109,17 @@ The rules themselves fit in about 3,100 words: the [canon](__Docs/README.md#cano
     pillars. A blind judge preferred the canon arm on all three tasks. On two
     of them the difference was promotion: the code-only arm moved code into a
     shared place for a single caller. This is one run per cell, and the
-    judge used the canon as its rubric.
+    judge used the canon as its rubric. Read another way, structure taught
+    both arms the pillars, and only the documents carried why to hold back.
 - **Observed in a second repository:** applying the canon to nomad-method found
   six misfits with a plugin platform. One became a canon rule; the others were
   fixed where they belonged or left with reasons.
 - **Not yet shown:**
   - adoption by a team other than the author's;
   - measured effects on onboarding time or defect rates;
-  - a repeated trial with more than one run per cell.
-
-  A case study from seven months of use on a private C# engine is in
-  preparation.
+  - a repeated trial with more than one run per cell;
+  - a Feature actually moved into another system. The mobility test holds
+    the dependency shape that makes a move possible; no move has been made.
 
 ## Adopt it in steps
 

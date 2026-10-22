@@ -47,26 +47,27 @@ public sealed class ConformanceTests
     }
 
     [Fact]
-    public void A_Feature_reaches_another_Feature_only_through_its_connectors()
+    public void Every_Feature_can_pack_up_and_leave()
     {
-        // "A connector is thin. It wires a real seam." Only a Feature's
-        // _Connectors may see another Feature.
+        // Mobility, the method's first promise: a Feature, less its
+        // _Connectors, needs nothing in the system but Core, so it can join
+        // another Host or another system with its contracts and its proof.
+        // Only a connector may see another Feature: "A connector is thin. It
+        // wires a real seam." (Architecture: Pillars; Contracts and connectors)
         var features = SystemMap.Features();
-        foreach (var assembly in SystemMap.Pillar("Features"))
+        foreach (var feature in features)
         {
-            foreach (var feature in features)
-            {
-                foreach (var other in features.Where(f => f != feature))
-                {
-                    var result = Types.InAssembly(assembly)
-                        .That().ResideInNamespace($"{Ns("Features")}.{feature}")
-                        .And().DoNotResideInNamespace($"{Ns("Features")}.{feature}._Connectors")
-                        .ShouldNot().HaveDependencyOn($"{Ns("Features")}.{other}")
-                        .GetResult();
-                    Assert.True(result.IsSuccessful,
-                        $"{feature} reaches {other} outside its _Connectors: {string.Join(", ", result.FailingTypeNames ?? [])}.");
-                }
-            }
+            var own = $"{Ns("Features")}.{feature}";
+            var others = new[] { Ns("Foundations"), Ns("Hosts") }
+                .Concat(features.Where(f => f != feature).Select(f => $"{Ns("Features")}.{f}"))
+                .ToArray();
+            var result = Types.InAssemblies(SystemMap.Pillar("Features"))
+                .That().ResideInNamespace(own)
+                .And().DoNotResideInNamespace($"{own}._Connectors")
+                .ShouldNot().HaveDependencyOnAny(others)
+                .GetResult();
+            Assert.True(result.IsSuccessful,
+                $"{feature} cannot leave without {string.Join(", ", others)}: {string.Join(", ", result.FailingTypeNames ?? [])}.");
         }
     }
 
