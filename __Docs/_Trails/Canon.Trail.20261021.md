@@ -283,8 +283,10 @@ toolchain requires, and they became the subsection
 plugin instead (0.2.1), so the rule that every document carries a header
 stays universal.
 
-**The awaiting sections.** The assistant checked each one against the evidence
-now available, and kept all four:
+**The awaiting sections.** The assistant judged each of the four against the
+evidence now available, and kept all four. The fifth section in the header,
+`#required-by-the-platform`, is new in this loop. The reasons below are the
+assistant's reading of the evidence:
 
 | Section | Evidence |
 |---|---|

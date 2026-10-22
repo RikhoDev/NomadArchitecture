@@ -24,11 +24,11 @@ Assert-Promise 'canon lists the canon files with their status' {
 Assert-Promise 'canon shows each section the assistant decided, and only those' {
     . (Join-Path $PSScriptRoot '..' 'Foundations' 'Markdown' 'Markdown.ps1')
     $root = Join-Path $PSScriptRoot '..' '..' '..'
-    $awaiting = @(Get-Content (Join-Path $root '.nomad-method/canon') | Where-Object { $_ -and $_ -notmatch '^#' } |
+    $decided = @(Get-Content (Join-Path $root '.nomad-method/canon') | Where-Object { $_ -and $_ -notmatch '^#' } |
         ForEach-Object { (Read-StatusHeader (Join-Path $root $_))['decided_by_assistant'] -split ',' } |
         ForEach-Object { $_.Trim() } | Where-Object { $_ })
     $shown = @([regex]::Matches($canon.Text, "#(\S+)\s+decided by the assistant under delegation") | ForEach-Object { $_.Groups[1].Value })
-    (($awaiting | Sort-Object) -join ' ') -eq (($shown | Sort-Object) -join ' ')
+    (($decided | Sort-Object) -join ' ') -eq (($shown | Sort-Object) -join ' ')
 }
 
 $explain = Invoke-Reader explain 'Hosts/DocReader/Features/Canon/Canon.ps1'

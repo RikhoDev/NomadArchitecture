@@ -117,11 +117,11 @@ foreach ($rel in $headers.Keys) {
 
 # 2b. Sections the assistant decided exist, and are named only on canon files
 foreach ($rel in $headers.Keys) {
-    $awaiting = $headers[$rel]['decided_by_assistant']
-    if (-not $awaiting) { continue }
+    $decided = $headers[$rel]['decided_by_assistant']
+    if (-not $decided) { continue }
     if ($headers[$rel]['status'] -ne 'canon') { Report "$rel lists decided_by_assistant but is not canon" }
     $slugs = Get-Slugs (Join-Path $root $rel)
-    foreach ($anchor in $awaiting -split ',' | ForEach-Object { $_.Trim() } | Where-Object { $_ }) {
+    foreach ($anchor in $decided -split ',' | ForEach-Object { $_.Trim() } | Where-Object { $_ }) {
         if (-not $slugs.ContainsKey($anchor)) { Report "$rel names '#$anchor' as decided by the assistant, but it is not a section of it" }
     }
 }

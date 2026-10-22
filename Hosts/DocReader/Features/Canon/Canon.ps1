@@ -21,9 +21,9 @@ function Get-Canon {
             $decided = @($header['decided_by_assistant'] -split ',' | ForEach-Object { $_.Trim() } | Where-Object { $_ })
         }
         [pscustomobject]@{
-            Path            = $path
-            Exists          = [bool]$header -or (Test-Path -LiteralPath $full)
-            Status          = if ($header) { $header['status'] } else { $null }
+            Path               = $path
+            Exists             = [bool]$header -or (Test-Path -LiteralPath $full)
+            Status             = if ($header) { $header['status'] } else { $null }
             DecidedByAssistant = $decided
         }
     }

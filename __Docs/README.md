@@ -68,7 +68,8 @@ decided_by_assistant: <anchor>, ... # canon sections the assistant decided under
 - `superseded`: kept for lineage; `superseded_by` names the replacement.
 - `decided_by_assistant`: on a canon file, the sections the assistant decided
   under the human's delegation. They bind. The human's reading can overturn
-  them, and removes them from the list as it confirms them.
+  them, and removes them from the list as it confirms them; the decision stays
+  recorded in the canon Trail.
 
 `origin: ai-assisted` means a human wrote or shaped part of the text, for
 example the Shaman's notes; `ai` means the text is the assistant's.

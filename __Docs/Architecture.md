@@ -51,25 +51,22 @@ Before adding or moving an artifact, apply three tests:
   with it? If it would remain as shared machinery, it belongs to Foundations or
   to the composition that uses it.
 
-### Required by the platform
-
-When a host platform or toolchain requires a layout or a name, such as a
-plugin's `skills/` and `hooks/` folders or a test runner's `tests/`, that layout
-belongs to the platform, as a Host's composition belongs to the Host. Keep the
-required names; place meaning beneath or beside them, and apply the tests above
-from there. Do not rename what the platform reads to fit the folder grammar.
-(Evidence: RikhoDev/nomad-method, `__Docs/_Trails/README.Trail.20261022.md`,
-misfits 1 and 4.)
-
-Replaces nothing. Applied to a Claude Code plugin, the Explorer test and the
-folder grammar could not be met without breaking the plugin.
-
 Folder count, uniform depth and cosmetic symmetry are not evidence of
 improvement. Change placement where a concrete boundary is being clarified;
 never bulk-relocate to make a diagram look uniform.
 (NGE:`AGENTS.md`; NGE:`Engine/__Docs/Patterns/Feature-Caravan-Sovereignty.md`)
 
 Replaces nothing. "No dumping grounds" stated the aim without a test to apply.
+
+### Required by the platform
+
+When a host platform or toolchain requires a layout or a name, such as a
+plugin's `skills/` and `hooks/` folders or a test runner's `tests/`, keep it.
+Place meaning beneath or beside it, and apply the tests above from there. Do
+not rename what the platform reads to fit the folder grammar.
+
+Replaces nothing. Applying this canon to RikhoDev/nomad-method showed the gap
+(that repository's `__Docs/_Trails/README.Trail.20261022.md`, misfits 1 and 4).
 
 ## Feature README
 
