@@ -98,6 +98,42 @@ check it, the lineage below cites what it found.
   inside the first engine, the first fractal NomadArchitecture, and was then
   extracted.
 
+### How to read the experiments
+
+In the author's words: "The learnings show the architecture. The experiments
+are just that." Every ground in this chapter is an experiment, not a verdict.
+None of them is the method, and none is final. What the method is shows in the
+loop they share:
+
+1. find what works;
+2. make it work at scale;
+3. convey it durably;
+4. get better, again and again.
+
+It is the learning cycle of the method's first worldview: expression,
+experience, evidence, reflection, revision. Read the figures below as one turn
+of that loop, not as its result.
+
+### The part most often missed: names that carry intent
+
+The first engine was created from the method's worldview and a complete draft
+of what a game engine's folders and files would look like in the method's
+canon. Its folder and file names were driven by intent.
+
+*The author's account:* that part is very important, and it is often mistaken
+for a secondary one. AI agents have not fully mastered it, and few examples
+show what it should look like, which is why there is no definitive proof yet.
+
+*Observed:*
+- The second engine named it a contract in its own right in April 2026: a
+  path should say what world it is in, what responsibility it carries, and
+  whether it is law, intent, machinery, roof, proof or trail, before anyone
+  opens the file.
+- It keeps a ledger of paths that fail that test, and a script that measures
+  it.
+- In the onboarding pilot, the arm with code and names alone stayed inside
+  the pillars.
+
 ## Lineage
 
 *Observed*, except where marked.
@@ -111,7 +147,7 @@ check it, the lineage below cites what it found.
 | 2025-08-18 to 08-20 | SampleGame | Lessons on AI as a development team, a pitch "for executives", and an MIT licence. The game has no automated tests: analysis documents and demos are its checks. |
 | 2025-10-31 to 11-02 | the method's own repository | First public form, nine days after a last SampleGame story fix. The metaphor changes from nomad families to the camp, the fire and the Shaman. The worldview adds a covenant (AI may scaffold, humans decide) and the principle that the architecture "teaches newcomers by structure and story". It calls the skeleton platform-agnostic. |
 | 2026-01-20 | NomadAI | An AI-agent service generated from the myth: Features for an agent runtime, billing and governance, each with Trails, ports and connectors. Two commits, left in that state. |
-| 2026-01-25 to 03-07 | NomadGameEngine | The first engine, which started as the sample game's engine: 275 commits across its branches (`main` stops at 02-13). Ports and connectors are enforced, a gameplay capability is promoted to a generic Feature, and the evolution rules that both later grounds cite appear. Architecture tests run in CI beside a CODEOWNERS file. A chronicle states the Fractal Laws: a Feature, a team, a department and an enterprise follow the same laws. The leak the author describes is visible: its Features project references Foundations, on `main` and still on 03-01. |
+| 2026-01-25 to 03-07 | NomadGameEngine | The first engine, which started as the sample game's engine. By the author's account, it was created from the method's worldview, copied to its root, and a complete draft of an engine's folder structure; the repository's history begins after that step. Its first commit already holds that draft, a whole engine's Feature families (AI, Animation, Audio, Networking, Physics, Rendering and more), most with ports or connectors. It has 275 commits across its branches (`main` stops at 02-13). Ports and connectors are enforced, a gameplay capability is promoted to a generic Feature, and the evolution rules that both later grounds cite appear. Architecture tests run in CI beside a CODEOWNERS file. A chronicle states the Fractal Laws: a Feature, a team, a department and an enterprise follow the same laws. The leak the author describes is visible: its Features project references Foundations, on `main` and still on 03-01. |
 | 2026-01-28 | the method's own repository | The time capsule: a 352-line folder-structure document from the chat assistant's memory, with ports, connectors and a Feature template. |
 | 2026-02-13 to 02-16 | NomadGameEngine, branch `vnext-refactored` | The branch forks from `main`. On 02-14, `_Ports` are renamed `_Contracts` across the code. On 02-16 a new worldview, "v1.1", is carried into the engine, a day after it appeared on a coding-agent branch of the method's repository (02-15). It opens with Intent First, "the spark that gives a system its soul". It sets out the Sprout-Host rite: every Sprout-Host is promoted or buried, and every fossil leaves a Trail. And it puts contracts and connectors at every scale. |
 | 2026-02-23 | NomadGameEngine, branch `vnext-refactored` | A DirectX sprout host grows in numbered "growth loops", 0 to 13, in one day. Each loop is a commit, and they end in a promoted mesh-draw contract and a chronicle. |
