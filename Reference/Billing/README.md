@@ -20,8 +20,9 @@ dotnet run --project Reference/Billing/Hosts/Api
 | Pillar | Resident | Promise |
 |---|---|---|
 | Hosts (WHY) | [Api](Hosts/Api/README.md) | finance staff issue and look up invoices over HTTP |
+| | [Worker](Hosts/Worker/README.md) | a morning digest of invoices falling due |
 | Features (WHAT) | [Invoicing](Features/Invoicing/README.md) | issue an invoice and keep it |
-| Foundations (HOW) | [Storage](Foundations/Storage/README.md) | keep invoices, safely under concurrent use |
+| Foundations (HOW) | [Storage](Foundations/Storage/README.md) | keep invoices, in memory or in a file Hosts share |
 
 There is no `Core/` yet: no language is shared between two Features.
 

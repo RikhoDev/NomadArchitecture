@@ -6,16 +6,19 @@ origin: ai
 
 # Storage
 
-**Promise.** Keep invoices for the life of the process, safely under
-concurrent use, and find them again by identity.
+**Promise.** Keep invoices and find them again by identity: in memory for one
+process, or in a JSON file that several Hosts on one machine share.
 
-**Residents.** [InMemoryInvoiceStore.cs](InMemoryInvoiceStore.cs).
+**Residents.** [InMemoryInvoiceStore.cs](InMemoryInvoiceStore.cs) and
+[JsonFileInvoiceStore.cs](JsonFileInvoiceStore.cs). Both implement one
+contract; the file's JSON shape belongs to this Foundation.
 
 **Relationships.** It implements `IInvoiceStore`, the contract the
 [Invoicing Feature](../../Features/Invoicing/README.md) declares. It depends on
 that contract and on nothing else in the system. Hosts choose it.
 
-**Proof.** [_Tests/InMemoryInvoiceStoreTests.cs](_Tests/InMemoryInvoiceStoreTests.cs).
+**Proof.** [_Tests/](_Tests/InMemoryInvoiceStoreTests.cs), one file per store.
 
-**Status.** In memory only. A database store would be another Foundation
-fulfilling the same contract, chosen by the Host, with Invoicing unchanged.
+**Status.** The file store arrived with the Worker Host, which needed to see
+the Api Host's invoices. A database store would be a third implementation of
+the same contract; Invoicing would not change.

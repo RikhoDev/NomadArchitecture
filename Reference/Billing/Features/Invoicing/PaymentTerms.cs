@@ -1,8 +1,8 @@
-namespace Billing.Hosts.Api;
+namespace Billing.Features.Invoicing;
 
 /// <summary>
 /// When an invoice falls due: "net N", the number of days after issue.
-/// Host-local: only this Host needs due dates so far.
+/// Promoted from the Api Host when the Worker Host became a second consumer.
 /// </summary>
 public static class PaymentTerms
 {

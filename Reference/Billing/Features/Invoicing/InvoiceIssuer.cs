@@ -3,7 +3,7 @@ namespace Billing.Features.Invoicing;
 /// <summary>Issues invoices: the Invoicing promise.</summary>
 public sealed class InvoiceIssuer(IInvoiceStore store, TimeProvider clock)
 {
-    public Invoice Issue(string customer, Money total)
+    public Invoice Issue(string customer, Money total, int netDays = PaymentTerms.DefaultNetDays)
     {
         if (string.IsNullOrWhiteSpace(customer))
         {
@@ -16,7 +16,7 @@ public sealed class InvoiceIssuer(IInvoiceStore store, TimeProvider clock)
         }
 
         var issuedOn = DateOnly.FromDateTime(clock.GetUtcNow().UtcDateTime);
-        var invoice = new Invoice(Guid.NewGuid(), customer.Trim(), total, issuedOn);
+        var invoice = new Invoice(Guid.NewGuid(), customer.Trim(), total, issuedOn, PaymentTerms.DueDate(issuedOn, netDays));
         store.Add(invoice);
         return invoice;
     }

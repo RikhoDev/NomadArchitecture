@@ -24,5 +24,6 @@
     <ProjectReference Include="../Features/Features.csproj" />
     <ProjectReference Include="../Foundations/Foundations.csproj" />
     <ProjectReference Include="../Hosts/Api/Api.csproj" />
+    <ProjectReference Include="../Hosts/Worker/Worker.csproj" />
   </ItemGroup>
 </Project>

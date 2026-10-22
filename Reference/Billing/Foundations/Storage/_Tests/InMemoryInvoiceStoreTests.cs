@@ -6,7 +6,7 @@ namespace Billing.Proofs.Foundations.Storage;
 public sealed class InMemoryInvoiceStoreTests
 {
     private static Invoice NewInvoice(int day) =>
-        new(Guid.NewGuid(), "Acme", new Money(10m, "EUR"), new DateOnly(2026, 10, day));
+        new(Guid.NewGuid(), "Acme", new Money(10m, "EUR"), new DateOnly(2026, 10, day), new DateOnly(2026, 11, day));
 
     [Fact]
     public void Finds_what_it_keeps_and_lists_it_oldest_first()

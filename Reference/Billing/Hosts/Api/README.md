@@ -10,8 +10,9 @@ origin: ai
 `POST /invoices` and `GET /invoices/{id}`. A refused invoice answers `400`
 with the reason.
 
-**Residents.** [Program.cs](Program.cs) composes the system and maps the
-routes. [PaymentTerms.cs](PaymentTerms.cs) computes when an invoice falls due.
+**Residents.** [Program.cs](Program.cs) composes the system, chooses the store
+(the shared file when `Billing:StorePath` is set, memory otherwise) and maps
+the routes.
 
 **Relationships.** It composes the
 [Invoicing Feature](../../Features/Invoicing/README.md) with the
@@ -21,4 +22,5 @@ about HTTP: routes, status codes, the shape of the JSON.
 **Proof.** [_Tests/ApiTests.cs](_Tests/ApiTests.cs) drives the real Host
 through HTTP.
 
-**Status.** `PaymentTerms` is Host-local: this Host is its only consumer.
+**Status.** `PaymentTerms` lived here until the Worker Host needed due dates
+too; it was then promoted into Invoicing.

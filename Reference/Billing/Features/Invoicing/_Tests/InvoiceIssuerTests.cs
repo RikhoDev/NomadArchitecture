@@ -24,6 +24,7 @@ public sealed class InvoiceIssuerTests
         Assert.Equal("Acme Ltd", invoice.Customer);
         Assert.Equal(new Money(120m, "EUR"), invoice.Total);
         Assert.Equal(new DateOnly(2026, 10, 22), invoice.IssuedOn);
+        Assert.Equal(new DateOnly(2026, 11, 21), invoice.DueOn);
         Assert.Same(invoice, Assert.Single(store.Items));
     }
 
@@ -35,6 +36,14 @@ public sealed class InvoiceIssuerTests
     {
         var issuer = new InvoiceIssuer(new ListStore(), Clock);
         Assert.Throws<ArgumentException>(() => issuer.Issue(customer, new Money(amount, "EUR")));
+    }
+
+    [Fact]
+    public void Payment_terms_set_the_due_date_and_stay_within_a_year()
+    {
+        var invoice = new InvoiceIssuer(new ListStore(), Clock).Issue("Acme", new Money(1m, "EUR"), netDays: 14);
+        Assert.Equal(new DateOnly(2026, 11, 5), invoice.DueOn);
+        Assert.Throws<ArgumentOutOfRangeException>(() => PaymentTerms.DueDate(invoice.IssuedOn, 400));
     }
 
     [Fact]
