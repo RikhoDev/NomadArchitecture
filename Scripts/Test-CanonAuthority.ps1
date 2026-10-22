@@ -2,8 +2,13 @@
 #
 #   pwsh Scripts/Test-CanonAuthority.ps1 -Range <base>..<head> [-Repository <path>]
 #
-# A commit that touches a canon file (listed in .nomad-method/canon, plus
-# .github/CODEOWNERS, which names the canon's owners) must carry a trailer:
+# A commit that touches a governed file must carry a trailer. Governed are
+# the canon (listed in .nomad-method/canon), .github/CODEOWNERS, which names
+# the canon's owners, and the checks that hold them: this script,
+# Scripts/Test-Repository.ps1 and the workflows in .github/workflows/. A
+# commit could otherwise switch a guard off without declaring anything.
+# CI runs this script as it was before the range, so a range cannot weaken
+# the check that judges it.
 #
 #   Canon-Authority: human       a canon owner wrote it, or read and confirmed it
 #   Canon-Authority: review      proposed: it merges only with a canon owner's approval
@@ -26,7 +31,8 @@ function Invoke-Git { git -C $Repository @args }
 $canonList = Join-Path $Repository '.nomad-method/canon'
 $canon = @(if (Test-Path -LiteralPath $canonList) {
         Get-Content -LiteralPath $canonList | Where-Object { $_ -and $_ -notmatch '^\s*#' } | ForEach-Object { $_.Trim() }
-    }) + '.github/CODEOWNERS'
+    }) + '.github/CODEOWNERS', 'Scripts/Test-CanonAuthority.ps1', 'Scripts/Test-Repository.ps1'
+function Test-Governed([string]$Path) { $Path -in $canon -or $Path -like '.github/workflows/*' }
 
 function Get-Decided([string]$Commit, [string]$Path) {
     $text = Invoke-Git show "${Commit}:$Path" 2>$null
@@ -39,7 +45,7 @@ function Get-Decided([string]$Commit, [string]$Path) {
 $commits = @(Invoke-Git rev-list --no-merges --reverse $Range)
 foreach ($commit in $commits) {
     $short = $commit.Substring(0, 7)
-    $touched = @(Invoke-Git diff-tree --no-commit-id --name-only -r $commit | Where-Object { $_ -in $canon })
+    $touched = @(Invoke-Git diff-tree --no-commit-id --name-only -r $commit | Where-Object { Test-Governed $_ })
     if (-not $touched) { continue }
 
     $authority = (Invoke-Git log -1 --format='%(trailers:key=Canon-Authority,valueonly)' $commit | Where-Object { $_ }) -join ' '

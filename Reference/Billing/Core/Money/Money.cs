@@ -2,7 +2,9 @@ namespace Billing.Core;
 
 /// <summary>
 /// An amount in one currency. Amounts in different currencies never mix.
-/// Promoted from the Invoicing Feature when Reminders became its second speaker.
+/// Promoted from the Invoicing Feature when Reminders, a second Feature, needed
+/// it: Invoicing no longer owned its meaning, and Features, Foundations and
+/// Hosts all speak it.
 /// </summary>
 public readonly record struct Money
 {

@@ -8,7 +8,11 @@ public sealed class JsonFileInvoiceStoreTests : IDisposable
 {
     private readonly string _path = Path.Combine(Path.GetTempPath(), $"billing-{Guid.NewGuid()}.json");
 
-    public void Dispose() => File.Delete(_path);
+    public void Dispose()
+    {
+        File.Delete(_path);
+        File.Delete($"{_path}.lock");
+    }
 
     [Fact]
     public void Two_stores_on_one_file_see_the_same_invoices()
@@ -19,6 +23,17 @@ public sealed class JsonFileInvoiceStoreTests : IDisposable
         var other = new JsonFileInvoiceStore(_path);
         Assert.Equal(invoice, other.Find(invoice.Id));
         Assert.Equal([invoice], other.All());
+    }
+
+    [Fact]
+    public void Stores_writing_at_once_lose_no_invoice()
+    {
+        // Each store stands for a Host process: they share the file, not a lock object.
+        var stores = Enumerable.Range(0, 4).Select(_ => new JsonFileInvoiceStore(_path)).ToList();
+        Parallel.ForEach(Enumerable.Range(0, 80), new ParallelOptions { MaxDegreeOfParallelism = 8 }, i =>
+            stores[i % stores.Count].Add(new Invoice(Guid.NewGuid(), $"Customer {i}", new Money(i + 1, "EUR"), new DateOnly(2026, 1, 1), new DateOnly(2026, 1, 31))));
+
+        Assert.Equal(80, new JsonFileInvoiceStore(_path).All().Count);
     }
 
     [Fact]

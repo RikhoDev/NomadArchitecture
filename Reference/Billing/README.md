@@ -24,7 +24,6 @@ dotnet run --project Reference/Billing/Hosts/Api
 | Features (WHAT) | [Invoicing](Features/Invoicing/README.md) | issue an invoice, due by its terms, and keep it |
 | | [Reminders](Features/Reminders/README.md) | decide whom to remind, how firmly, with a late fee on final notice |
 | Foundations (HOW) | [Storage](Foundations/Storage/README.md) | keep invoices, in memory or in a file Hosts share |
-
 | Core (COMMON) | [Money](Core/Money/README.md) | an amount in one currency, never mixed |
 
 Reminders sees Invoicing only through
@@ -39,8 +38,12 @@ Reminders sees Invoicing only through
   - a Feature depends on a Foundation or a Host;
   - Core depends on another pillar;
   - a Feature reaches another Feature outside its `_Connectors`;
-  - a namespace is named for a bucket (`Common`, `Utils`, ...);
-  - a resident's README does not answer the five questions.
+  - a namespace, folder or type is named for a bucket (`Common`, `Utils`, ...);
+  - a namespace disagrees with the folder its code lives in;
+  - a resident's README leaves one of the five questions unanswered.
+
+  They hold the shape, not the judgement. Policy inside a properly placed
+  connector, or a README whose answers say little, still passes.
 - **Proof beside its owner.** Each resident keeps its tests in `_Tests/`.
   Only the [Proofs](Proofs/Proofs.csproj) project compiles them, so
   production assemblies never contain tests.
@@ -65,7 +68,9 @@ mistake rather than hiding it.
    Host, `Money` is local to Invoicing, and there is no `Core/`.
 2. **A second Host.** The Worker needs due dates too, so `PaymentTerms` is
    promoted from the Api Host into Invoicing. A file store lets two Hosts share
-   invoices, and each Host chooses its Foundation.
+   invoices, and each Host chooses its Foundation. They share it only when both
+   are given the same `Billing:StorePath`; without one, the Api keeps invoices
+   in memory.
 3. **A second Feature.** Reminders needs `Money`, so `Money` is promoted into
    a new `Core/`. Reminders sees Invoicing only through its connector.
 

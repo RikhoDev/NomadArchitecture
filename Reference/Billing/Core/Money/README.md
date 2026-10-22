@@ -9,7 +9,7 @@ origin: ai
 **Promise.** An amount in one currency, rounded to cents half away from zero,
 that never mixes currencies.
 
-**Residents.** [Money.cs](Money.cs).
+**Residents.** [Money.cs](Money.cs): the amount, its currency, and the operations that refuse to mix currencies.
 
 **Relationships.** Spoken by the [Invoicing](../../Features/Invoicing/README.md)
 and [Reminders](../../Features/Reminders/README.md) Features. It depends on

@@ -67,10 +67,9 @@ every copy.
 **Grading, the same for both arms:**
 
 1. The session's own build and tests.
-2. Billing's five dependency and naming conformance rules, copied into the
-   control results first. The README rule is left out, because the control
-   has no READMEs.
-3. A blind judge: a fresh session given the six diffs, shuffled and
+2. Billing's conformance rules, copied into the control results first. The
+   README rule is left out, because the control has no READMEs.
+3. A blind judge: a fresh session given the six diffs, shuffled afresh and
    relabelled, without README changes, plus the baseline code and the
    [rubric](judge-prompt.md). It scores placement, promotion, contracts and
    connectors, proof, and correctness, 0 to 2 each.
@@ -125,6 +124,16 @@ The canon arm's baseline has six more tests: the conformance tests.
   trial,** in one session.
 - **Billing is small.** It shows whether a session follows the method, not
   whether the method pays off at scale.
+- **The rules were weaker then.** The pilot was graded with five conformance
+  rules. A later review showed they could be dodged, and the rules were
+  hardened. All six pilot results also pass the hardened rules.
+
+**Since the pilot:** a cold review found that a repeat would contaminate
+itself. The canon arm would read this folder, with its results, rubric and
+verdicts. `prepare` now removes this Host from the canon copies, and drops the
+root README's mentions of it. The pilot itself was not affected, because this
+Host did not exist when it ran. The blind mapping, fixed in the pilot, is now
+drawn afresh on each `grade`.
 
 To repeat it, run the three commands above in a new work folder. Give the
 reviewer `judge/prompt.txt`, unblind with `blind-map.txt`, and add the result

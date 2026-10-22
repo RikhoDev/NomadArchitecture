@@ -36,8 +36,28 @@ prepare() {
             local d="$work/$arm-$task"
             rm -rf "$d" && mkdir -p "$d"
             if [ "$arm" = canon ]; then
-                # The whole repository, as committed.
+                # The whole repository, as committed, less this trial: a session
+                # must not read earlier results, the rubric or the verdicts.
                 git -C "$repo" archive HEAD | tar -x -C "$d"
+                rm -rf "${d:?}/Hosts/OnboardingTrial"
+                python3 - "$d/README.md" <<'PY'
+import sys
+# Drop every list item that mentions the trial, with its indented lines.
+path = sys.argv[1]
+lines = open(path, newline='').read().splitlines(keepends=True)
+out, skip = [], None
+for line in lines:
+    text = line.rstrip('\r\n')
+    indent = len(text) - len(text.lstrip(' '))
+    if skip is not None and text.strip() and indent > skip:
+        continue
+    skip = None
+    if text.lstrip().startswith('- ') and 'OnboardingTrial' in text:
+        skip = indent
+        continue
+    out.append(line)
+open(path, 'w', newline='').write(''.join(out))
+PY
             else
                 # The same code with the method's documents and checks taken
                 # out: no READMEs, no conformance tests, no build comments.
@@ -85,9 +105,10 @@ grade() {
     local work=$1
     local judge="$work/judge"
     rm -rf "$judge" && mkdir -p "$judge"
-    # One fixed shuffle, so the judge cannot tell the arms apart by letter.
-    local letters=(P Q R S T U)
-    local order=(control-reminders canon-csv control-payments canon-reminders control-csv canon-payments)
+    # A fresh shuffle each time, so the judge cannot tell the arms apart by
+    # letter; blind-map.txt records it for unblinding.
+    local letters=(P Q R S T U) order=()
+    mapfile -t order < <(for a in "${arms[@]}"; do for t in "${tasks[@]}"; do echo "$a-$t"; done; done | shuf)
     : > "$work/blind-map.txt"
     for i in "${!order[@]}"; do
         local name=${order[$i]} letter=${letters[$i]}

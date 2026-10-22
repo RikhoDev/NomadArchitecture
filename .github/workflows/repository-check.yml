@@ -30,7 +30,16 @@ jobs:
           if ($env:PULL_BASE) { $range = "$($env:PULL_BASE)..HEAD" }
           elseif ($env:PUSH_BEFORE -and $env:PUSH_BEFORE -notmatch '^0+$') { $range = "$($env:PUSH_BEFORE)..HEAD" }
           else { $range = 'HEAD~1..HEAD' }
-          ./Scripts/Test-CanonAuthority.ps1 -Range $range
+          # Judge the range with the check as it stood before it, so a commit
+          # in the range cannot weaken its own judge.
+          $base = ($range -split '\.\.')[0]
+          $check = './Scripts/Test-CanonAuthority.ps1'
+          git cat-file -e "${base}:Scripts/Test-CanonAuthority.ps1" 2>$null
+          if ($LASTEXITCODE -eq 0) {
+            $check = Join-Path $env:RUNNER_TEMP 'Test-CanonAuthority.ps1'
+            git show "${base}:Scripts/Test-CanonAuthority.ps1" | Set-Content $check
+          }
+          & $check -Range $range -Repository $PWD
 
   reference:
     name: Reference system (.NET) and its conformance tests

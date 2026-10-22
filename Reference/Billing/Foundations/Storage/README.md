@@ -21,4 +21,7 @@ that contract and on nothing else in the system. Hosts choose it.
 
 **Status.** The file store arrived with the Worker Host, which needed to see
 the Api Host's invoices. A database store would be a third implementation of
-the same contract; Invoicing would not change.
+the same contract; Invoicing would not change. The file store first locked only
+within one process, so two Hosts writing at once could lose or corrupt
+invoices. A review found it; every access now holds a lock file, and a proof
+writes from several stores at once.

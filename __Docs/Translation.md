@@ -16,7 +16,7 @@ neighbours, not synonyms: each row says where NomadArchitecture differs.
 | Host | Composition root; application, service or entry point | It owns the purpose, the wiring and how refusals are shown, and nothing else. |
 | Feature | Vertical slice; bounded capability | It is defined by its promise and its README answers, not by a layer. |
 | Foundation | Infrastructure, adapters | It implements contracts the Features declare, never the reverse. |
-| Core | Shared kernel | It is earned by a second speaker, not designed in advance. |
+| Core | Shared kernel | It is earned when language is spoken across pillars and no single owner remains, not designed in advance ([Promotion](Architecture.md#promotion)). |
 | Contract | Port (hexagonal architecture) | It lives with the owner of its meaning, not in a ports folder. |
 | Connector | Adapter between bounded contexts; anti-corruption layer | It is the only code that sees both sides, and it holds no policy. |
 | Canon | Architecture standards; accepted ADRs | It is a short listed set, with declared authority on every change. |

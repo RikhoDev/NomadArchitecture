@@ -62,5 +62,17 @@ Invoke-RepoGit add -A
 Invoke-RepoGit commit -q -m "Read section one`n`nCanon-Authority: human"
 Assert-Promise 'a human may clear it' { (Check).Code -eq 0 }
 
+New-Item -ItemType Directory (Join-Path $repo 'Scripts') -Force | Out-Null
+Commit 'Scripts/Test-CanonAuthority.ps1' 'exit 0' 'Simplify the check'
+Assert-Promise 'a commit that changes the authority check itself must declare authority' {
+    $r = Check; $r.Code -eq 1 -and $r.Text -match 'declares no Canon-Authority'
+}
+
+New-Item -ItemType Directory (Join-Path $repo '.github/workflows') -Force | Out-Null
+Commit '.github/workflows/check.yml' 'on: push' 'Tidy CI'
+Assert-Promise 'so must a commit that changes a workflow' {
+    $r = Check; $r.Code -eq 1 -and $r.Text -match 'declares no Canon-Authority'
+}
+
 Remove-Item -Recurse -Force $repo
 Complete-Proof

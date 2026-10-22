@@ -42,7 +42,7 @@ The rules themselves fit in about 3,100 words: the [canon](__Docs/README.md#cano
   - a Foundation with two interchangeable stores, and a Core that had to be
     earned.
 
-  Its git history shows two promotions as they happened. Six conformance
+  Its git history shows two promotions as they happened. Seven conformance
   rules fail the build when the architecture is broken.
 - **[OnboardingTrial](Hosts/OnboardingTrial/README.md)**, a Host that tests
   whether a fresh AI session given this repository builds in its shape,
@@ -60,13 +60,19 @@ The rules themselves fit in about 3,100 words: the [canon](__Docs/README.md#cano
 
 - **Observed in this repository:**
   - CI runs the documents check, the canon-authority check and the reference
-    system's 24 tests on every push.
-  - Every deliberate break tried has failed the check meant to catch it, for
-    example:
-    - a `Helpers` namespace;
-    - a Feature reaching into another outside its connector;
-    - a README missing its status;
-    - a canon commit without declared authority.
+    system's 26 tests on every push.
+  - The checks have been attacked, and not all of them held. A cold review
+    got these past the checks:
+    - a `Helpers` folder;
+    - policy code in a fake connector namespace;
+    - a README of empty headings;
+    - a commit that switched the authority check off;
+    - a forged `Canon-Authority: human`.
+
+    The first four now fail the build or CI. The forgery is stopped only by
+    code-owner review, which this repository's branch protection does not yet
+    require. Policy inside a properly placed connector still passes.
+    Placement remains a judgement that no check holds.
   - Every isolated review recorded in the
     [canon Trail](__Docs/_Trails/Canon.Trail.20261021.md) found at least one
     defect the author had missed.
