@@ -17,7 +17,7 @@ public sealed class OutstandingFromInvoicingTests
 
         var outstanding = Assert.Single(new OutstandingFromInvoicing(store).Outstanding());
 
-        Assert.Equal(issued.Id, outstanding.InvoiceId);
+        Assert.Equal(issued.Id, outstanding.OwedId);
         Assert.Equal("Contoso", outstanding.Customer);
         Assert.Equal(issued.Total, outstanding.Amount);
         Assert.Equal(issued.DueOn, outstanding.DueOn);

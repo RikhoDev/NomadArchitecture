@@ -48,8 +48,9 @@ two things that no test had seen.
 - **Reminders spoke its birthplace's language.** Its contract was
   `OutstandingInvoice`, with an `InvoiceId`, so this system's connector had to
   call a late tool an invoice. The meaning Reminders owns, "an amount a
-  customer owes", is not Invoicing's. The next commit renames the contract in
-  Reminders' own words; Billing's connector is the one that translates.
+  customer owes", is not Invoicing's. The commit after the move renamed the
+  contract in Reminders' own words: `AmountOwed`, from `IAmountsOwed`.
+  Billing's connector now translates invoices, as this one translates loans.
 - **Its namespace carries its birthplace.** Reminders is still
   `Billing.Features.Reminders` here. The family keeps its name in the new
   convoy. It is harmless to the build, but a reader at the rental counter sees

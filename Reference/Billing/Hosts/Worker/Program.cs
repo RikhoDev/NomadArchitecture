@@ -12,7 +12,7 @@ var storePath = builder.Configuration["Billing:StorePath"] ?? "billing-invoices.
 builder.Services.AddSingleton(TimeProvider.System);
 builder.Services.AddSingleton<IInvoiceStore>(new JsonFileInvoiceStore(storePath));
 builder.Services.AddSingleton<DueSoonDigest>();
-builder.Services.AddSingleton<IOutstandingInvoices, OutstandingFromInvoicing>();
+builder.Services.AddSingleton<IAmountsOwed, OutstandingFromInvoicing>();
 builder.Services.AddSingleton<ReminderPolicy>();
 builder.Services.AddHostedService<DigestService>();
 builder.Build().Run();

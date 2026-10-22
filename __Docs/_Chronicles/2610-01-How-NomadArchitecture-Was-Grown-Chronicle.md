@@ -110,7 +110,7 @@ system is the coordination medium for minds that share no memory.
 | Labelling claims | SampleGame's afterword on reality and fiction | It became the canon's rule on claims: observed, interpreted or unknown. |
 | Memory across sessions | SampleGame's note on what an assistant cannot remember | Trails, and later a plugin that loads the working discipline into every session. |
 | Narrative | SampleGame's pattern stories | The method's Chronicles and Worldview carry its culture as story, not as rules. The metaphors changed twice while the structure held, so they behave like Hosts: replaceable skins over a soul that stays. |
-| Mobility | SampleGame's first promise | It was lost from the method's repository: no rule there named it. The pillars still held the shape that makes it possible. In October 2026 it returned to the canon as a rule that every Feature, less its connectors, needs only Core, with a test that holds it. |
+| Mobility | SampleGame's first promise | It was lost from the method's repository: no rule there named it. The pillars still held the shape that makes it possible. In October 2026 it returned to the canon as a rule that every Feature, less its connectors, needs only Core, with a test that holds it. A real move followed. A Feature joined a second system unchanged, and the move showed what the test could not: the Feature's contract still spoke its first system's language. |
 | Checks in CI | NomadGameEngine had them | The second engine ran its tests locally; why is not recorded. The canon puts them back. |
 | Writing everything down | NomadGameEngineV2 | About 1.06 million words of exploration against about 19,000 of binding decisions. Nothing yet says when an exploration ends. The canon answers in part: a short listed canon, status on every document, and AI conversations kept apart. |
 
@@ -183,8 +183,10 @@ system is the coordination medium for minds that share no memory.
   do not measure defect rates, delivery speed or onboarding time.
 - **Thin probe evidence:** one or two runs per condition, designed and scored
   by the people under study.
-- **Mobility is held as a shape, not shown as a move.** No Feature has yet
-  been moved into another system.
+- **Mobility is shown by one move, made for the purpose.** On the day this was
+  published, Reminders moved from the reference billing system into a second
+  one, unchanged, with its proof. That move is within the method's own
+  repository, not between teams.
 - **Steered research.** An AI assistant working for the author gathered and
   interpreted these facts, partly under the author's hints. A second
   assistant checked the figures against the git histories, and a third,

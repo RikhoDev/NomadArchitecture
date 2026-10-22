@@ -6,19 +6,19 @@ namespace Billing.Proofs.Features.Reminders;
 
 public sealed class ReminderPolicyTests
 {
-    private sealed class Fixed(params OutstandingInvoice[] items) : IOutstandingInvoices
+    private sealed class Fixed(params AmountOwed[] items) : IAmountsOwed
     {
-        public IReadOnlyList<OutstandingInvoice> Outstanding() => items;
+        public IReadOnlyList<AmountOwed> Outstanding() => items;
     }
 
     private static readonly DateOnly Today = new(2026, 10, 22);
     private static readonly FakeTimeProvider Clock = new(new DateTimeOffset(2026, 10, 22, 7, 0, 0, TimeSpan.Zero));
 
-    private static OutstandingInvoice DueDaysAgo(string customer, int days, decimal amount = 100m) =>
+    private static AmountOwed DueDaysAgo(string customer, int days, decimal amount = 100m) =>
         new(Guid.NewGuid(), customer, new Money(amount, "EUR"), Today.AddDays(-days));
 
     [Fact]
-    public void Reminds_more_firmly_the_longer_an_invoice_is_overdue_most_overdue_first()
+    public void Reminds_more_firmly_the_longer_an_amount_is_overdue_most_overdue_first()
     {
         var reminders = new ReminderPolicy(new Fixed(
             DueDaysAgo("Fourteen", 14), DueDaysAgo("Fifteen", 15), DueDaysAgo("Thirty-one", 31), DueDaysAgo("Not yet", 0)), Clock).Due();

@@ -37,7 +37,7 @@ never learns. Over time:
 | Who decided | Named canon owners; every canon commit declares `human`, `review` or `delegated` authority; the assistant's decisions stay marked until a human reads them | [`Test-CanonAuthority`](Scripts/README.md) in CI, and code-owner review |
 | AI provenance | Every document states its origin; AI conversations are kept as Trails, apart from the rules they produced | `Test-Repository` in CI |
 | Architecture that holds | Hosts compose, Features promise, Foundations implement, Core is earned; dependencies point one way | Conformance tests that fail the build ([Billing](Reference/Billing/README.md)) |
-| Capabilities that move | A Feature, less its connectors, needs only Core, so it can join another Host or another system with its contracts and proof | A conformance test per Feature |
+| Capabilities that move | A Feature, less its connectors, needs only Core, so it can join another Host or another system with its contracts and proof | A conformance test per Feature, and a real move ([Rentals](Reference/Rentals/README.md)) |
 | Knowledge that survives turnover | Each component answers five questions in its README; each decision keeps its Trail; the repository explains any path on request | [DocReader](Hosts/DocReader/README.md) and the README check |
 
 The rules themselves fit in about 3,100 words: the [canon](__Docs/README.md#canon).
@@ -73,6 +73,10 @@ tells the lineage, with the evidence and its limits.
 
   Its git history shows two promotions as they happened. Seven conformance
   rules fail the build when the architecture is broken.
+- **[Reference/Rentals](Reference/Rentals/README.md)**, a second system that
+  Billing's Reminders joined unchanged, with its proof. The move also showed
+  what no test had seen: Reminders' contract spoke Invoicing's language, and it
+  was renamed in its own words.
 - **[OnboardingTrial](Hosts/OnboardingTrial/README.md)**, a Host that tests
   whether a fresh AI session given this repository builds in its shape,
   against the same code without the documents. One script prepares, runs and
@@ -124,8 +128,8 @@ tells the lineage, with the evidence and its limits.
   - adoption by a team other than the author's;
   - measured effects on onboarding time or defect rates;
   - a repeated trial with more than one run per cell;
-  - a Feature actually moved into another system. The mobility test holds
-    the dependency shape that makes a move possible; no move has been made.
+  - mobility beyond a single move. One Feature has moved, within this
+    repository, into a second system built for the purpose.
 
 ## Adopt it in steps
 

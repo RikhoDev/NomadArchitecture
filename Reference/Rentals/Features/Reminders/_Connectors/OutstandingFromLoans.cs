@@ -9,8 +9,8 @@ namespace Rentals.Features.Reminders._Connectors;
 /// both Features, and it holds no policy: how firmly to remind, and the late
 /// fee, stay with Reminders.
 /// </summary>
-public sealed class OutstandingFromLoans(LoanDesk desk) : IOutstandingInvoices
+public sealed class OutstandingFromLoans(LoanDesk desk) : IAmountsOwed
 {
-    public IReadOnlyList<OutstandingInvoice> Outstanding() =>
-        [.. desk.Out().Select(l => new OutstandingInvoice(l.Id, l.Customer, l.LateCharge, l.ReturnBy))];
+    public IReadOnlyList<AmountOwed> Outstanding() =>
+        [.. desk.Out().Select(l => new AmountOwed(l.Id, l.Customer, l.LateCharge, l.ReturnBy))];
 }
