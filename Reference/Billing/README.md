@@ -44,3 +44,23 @@ Reminders sees Invoicing only through
 - **Proof beside its owner.** Each resident keeps its tests in `_Tests/`.
   Only the [Proofs](Proofs/Proofs.csproj) project compiles them, so
   production assemblies never contain tests.
+
+## Read its history
+
+The system was built one consumer at a time, and each promotion is a commit:
+
+```text
+git log --oneline -- Reference/Billing
+git log --follow --stat -- Reference/Billing/Features/Invoicing/PaymentTerms.cs
+git log --follow --stat -- Reference/Billing/Core/Money/Money.cs
+```
+
+1. **One Host, one Feature, one Foundation.** Due dates are local to the Api
+   Host, `Money` is local to Invoicing, and there is no `Core/`.
+2. **A second Host.** The Worker needs due dates too, so `PaymentTerms` is
+   promoted from the Api Host into Invoicing. A file store lets two Hosts share
+   invoices, and each Host chooses its Foundation.
+3. **A second Feature.** Reminders needs `Money`, so `Money` is promoted into
+   a new `Core/`. Reminders sees Invoicing only through its connector.
+
+Each step passed the conformance tests that the next step might have broken.

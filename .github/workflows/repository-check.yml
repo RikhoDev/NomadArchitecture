@@ -6,9 +6,21 @@ on:
 
 jobs:
   check:
+    name: Documents, canon and PowerShell proofs
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - name: Check status headers, links, canon agreement and proofs
         shell: pwsh
         run: ./Scripts/Test-Repository.ps1
+
+  reference:
+    name: Reference system (.NET) and its conformance tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+      - name: Build and prove Reference/Billing
+        run: dotnet test Reference/Billing/Billing.sln --configuration Release
