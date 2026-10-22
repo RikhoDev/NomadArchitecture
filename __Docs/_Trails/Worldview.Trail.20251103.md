@@ -2,6 +2,7 @@
 status: non-canon
 kind: trail
 origin: ai-assisted
+trail_of: ../../Worldview.md
 ---
 
 # worldview.trail.2025-11b.md

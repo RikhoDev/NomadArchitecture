@@ -2,11 +2,12 @@
 status: non-canon
 kind: trail
 origin: ai-assisted
+trail_of: ../README.md
 ---
 
 # Trail of the canon, 2026-10-21
 
-How the canon listed in [README.md](README.md#canon) came to be: a session in
+How the canon listed in [README.md](../README.md#canon) came to be: a session in
 which Claude Code, running the nomad-method plugin, analysed this repository
 against NomadGameEngineV2 (NGE).
 
@@ -213,6 +214,34 @@ under their owner, with descriptive names. Here they still sit beside their
 documents, named `<Document>.Trail.<YYYYMMDD>.md`. Moving them would change a
 canon rule and how the Lineage Feature finds a Trail. It would also take the
 three Worldview Trails out of the root.
+
+## Loop 5: Trails move into `_Trails/`
+
+The human's words:
+
+10. On the extraction: "should be good to go." On the next stage: "step 4
+    first, then 3". Step 4 was the assistant's offer to move the Trails into a
+    `_Trails/` folder, as NomadGameEngineV2 does.
+
+What changed:
+
+- All thirteen Trails moved into `__Docs/_Trails/`. The root now holds only
+  `AGENTS.md`, `Hosts/`, `LICENSE`, `README.md`, `Scripts/`, `Worldview.md`
+  and `__Docs/`.
+- `README.old.md` was the README's own record, so it is a Trail:
+  `Root-README.Trail.20251031.md`, dated by its last commit. Its old label,
+  `superseded`, became `non-canon`, because a Trail is history, not a
+  replaced rule.
+- Three Trails would have shared the name `README`, so they are named for
+  their owner: `Canon.Trail.20261021.md` (this file),
+  `Chronicles-README.Trail.20251103.md` and `Root-README.Trail.20251031.md`.
+- A Trail now names its document in a `trail_of:` header. This is the
+  assistant's addition, defined in the status header section, which already
+  awaits reading. The Lineage Feature finds Trails by it, and
+  `Test-Repository.ps1` fails on a Trail outside `_Trails/` or a `trail_of`
+  that points nowhere. Two mutations confirmed this.
+- Every relative link, inside the moved Trails and toward them, was rewritten
+  from both ends.
 
 ## Still open
 

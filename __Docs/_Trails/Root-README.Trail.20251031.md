@@ -1,8 +1,8 @@
 ---
-status: superseded
+status: non-canon
 kind: trail
 origin: ai-assisted
-superseded_by: README.md
+trail_of: ../../README.md
 ---
 
 # NomadArchitecture

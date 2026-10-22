@@ -1,5 +1,6 @@
 # Lineage: show where a document came from and what became of it: what it
 # replaced, what replaced it, and the Trails that hold its conversation.
+# A Trail is found by its trail_of header, not by where it sits.
 #
 # Needs (given by the Host):
 #   ReadHeader      a function from a file path to its status header or $null;
@@ -37,13 +38,15 @@ function Get-Lineage {
         if ($header -and $header['superseded_by'] -and (Resolve-RepoPath $Root $doc $header['superseded_by']) -eq $Path) { $doc }
     }
 
-    $folder = Split-Path $Path -Parent
-    $stem = [IO.Path]::GetFileNameWithoutExtension($Path)
-    $trailOf = $null
-    if ($stem -match '^(.*)\.Trail\.\d{8}$') { $trailOf = (Join-Path $folder "$($Matches[1]).md").Replace('\', '/').TrimStart('/') }
-    $trails = $documents | Where-Object {
-        (Split-Path $_ -Parent) -eq $folder -and (Split-Path $_ -Leaf) -match ('^' + [regex]::Escape($stem) + '\.Trail\.\d{8}\.md$')
-    } | Sort-Object
+    # A Trail names its document in a trail_of header, so it can live in any
+    # _Trails folder. Trails are listed oldest first, by the date in their name.
+    $own = & $ReadHeader (Join-Path $Root $Path)
+    $trailOf = if ($own -and $own['trail_of']) { Resolve-RepoPath $Root $Path $own['trail_of'] } else { $null }
+    $trails = foreach ($doc in $documents) {
+        $header = & $ReadHeader (Join-Path $Root $doc)
+        if ($header -and $header['trail_of'] -and (Resolve-RepoPath $Root $doc $header['trail_of']) -eq $Path) { $doc }
+    }
+    $trails = $trails | Sort-Object { if ($_ -match '\.Trail\.(\d{8})\.md$') { $Matches[1] } else { '' } }, { $_ }
 
     [pscustomobject]@{
         Path       = $Path

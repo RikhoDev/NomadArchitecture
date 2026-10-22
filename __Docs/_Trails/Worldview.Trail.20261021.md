@@ -2,6 +2,7 @@
 status: non-canon
 kind: trail
 origin: ai-assisted
+trail_of: ../../Worldview.md
 ---
 
 # Worldview Trail, 2026-10-21: distilling canon from NomadGameEngineV2
@@ -15,7 +16,7 @@ origin: ai-assisted
 ## Decisions and review loops
 
 Recorded once, for the canon as a whole, in
-[__Docs/README.Trail.20261021.md](__Docs/README.Trail.20261021.md),
+[__Docs/README.Trail.20261021.md](Canon.Trail.20261021.md),
 with the human's words quoted verbatim.
 
 ## What the analysis observed

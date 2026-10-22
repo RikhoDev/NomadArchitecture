@@ -19,5 +19,5 @@ documents; the Host gives it both. It follows the rules for
 **Proof.** [_Tests/Lineage.Tests.ps1](_Tests/Lineage.Tests.ps1), with fake
 documents, including a `superseded_by` loop that must not hang.
 
-**Status.** Its proof passes. A Trail is found by name, beside its document, as the
-convention says.
+**Status.** Its proof passes. A Trail is found by its `trail_of` header, so it
+can live in any `_Trails/` folder.

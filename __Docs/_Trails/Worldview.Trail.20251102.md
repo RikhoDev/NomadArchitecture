@@ -2,6 +2,7 @@
 status: non-canon
 kind: trail
 origin: ai-assisted
+trail_of: ../../Worldview.md
 ---
 
 # A prompt engineering journey to a more purposeful Worldview

@@ -51,7 +51,7 @@ Chronicles are written as **chapters**, each in its own file:
 - [Chapter I — The First Shaman](2511-02-The-First-Shaman-Chronicle.md)  
 - [Chapter II — The Shaman and the Spirit’s Hallucinations](2511-03-The-Shaman-And-The-Spirits-Hallucinations-Chronicle.md)  
 
-Each chapter's conversation is kept in the Trail beside it.
+Each chapter's conversation is kept in its Trail, in [_Trails](../_Trails/README.md).
 
 ---
 

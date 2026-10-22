@@ -26,7 +26,7 @@ On 2026-10-21 the human delegated this canon: to infer what they already
 hold, and to decide the rest. The inferred rules are canon. The sections the
 assistant decided are named in each file's `awaiting_reading`
 [header](#status-header), and bind no one until the human has read them.
-Evidence for each rule: [README.Trail.20261021.md](README.Trail.20261021.md).
+Evidence for each rule: [README.Trail.20261021.md](_Trails/Canon.Trail.20261021.md).
 Current state: `pwsh Hosts/DocReader/reader.ps1 canon`.
 [AGENTS.md](../AGENTS.md) points contributors and AI assistants here.
 
@@ -37,7 +37,7 @@ Current state: `pwsh Hosts/DocReader/reader.ps1 canon`.
 | doctrine | the canon files above | yes | rules in force |
 | guide | AGENTS.md, Translation.md, `Concepts/Connectors.md`, folder READMEs | no; it applies doctrine | practical on-ramps |
 | mirage | [_Mirages/](_Mirages/README.md) | no | speculation, proposals, AI-generated ideas |
-| trail | `<Document>.Trail.<YYYYMMDD>.md`, beside its document | no | how a document came to be |
+| trail | [_Trails/](_Trails/README.md) | no | how a document came to be |
 | chronicle | [_Chronicles/](_Chronicles/README.md) | no | stories and cultural memory |
 
 A Mirage may contain sophisticated or working code; that does not make it
@@ -55,6 +55,7 @@ kind: doctrine | guide | mirage | trail | chronicle
 origin: human | ai | ai-assisted
 superseded_by: <relative path>   # only when status is superseded
 date: YYYY-MM-DD                  # on Chronicles and Mirages; YYYY-MM if the day is unknown
+trail_of: <relative path>         # on a Trail: the document it belongs to
 awaiting_reading: <anchor>, ...    # canon sections the human has not yet read
 ---
 ```
@@ -74,9 +75,11 @@ example the Shaman's notes; `ai` means the text is the assistant's.
 When a document is drafted with an AI assistant, the document holds the result
 and its Trail holds the conversation, kept verbatim: the prompts, the
 assistant's framing and its follow-up offers. The Shaman's notes stay in the
-document. A Trail sits beside its document and is dated by the conversation,
-or by the first commit when that date is unknown. A change to the canon as a
-whole is recorded in the Trail of this README.
+document. Trails live in the `_Trails/` folder of the nearest `__Docs/`, as
+in NomadGameEngineV2 (NGE:`Engine/__Docs/_Trails/README.md`), named
+`<Document>.Trail.<YYYYMMDD>.md` and dated by the conversation, or by the first
+commit when that date is unknown. A change to the canon as a whole is recorded
+in `_Trails/Canon.Trail.<YYYYMMDD>.md`.
 
 ## Folder grammar
 

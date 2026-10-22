@@ -14,8 +14,8 @@ the loop. It is not a blueprint. It is a rhythm of becoming, tested in
 practice and revised when practice contradicts it.
 
 First written in November 2025. Revised in October 2026 against nine months of
-practice in NomadGameEngineV2. The lineage is in the Worldview Trails beside
-this file.
+practice in NomadGameEngineV2. The lineage is in the Worldview Trails, in
+[__Docs/_Trails](__Docs/_Trails/README.md).
 
 ---
 

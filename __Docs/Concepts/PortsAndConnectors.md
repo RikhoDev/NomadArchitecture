@@ -10,7 +10,7 @@ superseded_by: ../Architecture.md#contracts-and-connectors
 > replaced it: contracts live with the owner of their meaning, connectors are
 > thin relationships at real seams, and the absence of wiring is the noop.
 > See [Architecture](../Architecture.md#contracts-and-connectors) and the
-> reasoning in [Worldview.Trail.20261021.md](../../Worldview.Trail.20261021.md).
+> reasoning in [Worldview.Trail.20261021.md](../_Trails/Worldview.Trail.20261021.md).
 
 # _Ports & _Connectors  
 ### Mechanical Boundaries & Integration Surfaces in NomadArchitecture

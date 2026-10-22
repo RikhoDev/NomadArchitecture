@@ -2,12 +2,13 @@
 status: non-canon
 kind: trail
 origin: ai-assisted
+trail_of: ../_Mirages/TimeCapsules/2601-01-NomadArchitecture-Folder-Structure-Mirage.md
 ---
 
 # Trail of the folder-structure time capsule
 
-Conversation framing moved verbatim from [20060119_NomadArchitectureFolderStructure.md](2601-01-NomadArchitecture-Folder-Structure-Mirage.md) on 2026-10-21, following
-[Trails hold the conversation](../../README.md#trails-hold-the-conversation).
+Conversation framing moved verbatim from [20060119_NomadArchitectureFolderStructure.md](../_Mirages/TimeCapsules/2601-01-NomadArchitecture-Folder-Structure-Mirage.md) on 2026-10-21, following
+[Trails hold the conversation](../README.md#trails-hold-the-conversation).
 The document keeps the result and the Shaman's notes.
 
 Dated by the first commit, `7ef042d` (2026-01-28).

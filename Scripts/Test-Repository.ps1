@@ -7,7 +7,8 @@
 #   4. every proof (*.Tests.ps1) passes;
 #   every awaiting_reading section named in a canon file exists; and
 #   Chronicles and Mirages are named YYMM-xx-Name-Chronicle.md or
-#   YYMM-xx-Name-Mirage.md and dated to agree.
+#   YYMM-xx-Name-Mirage.md and dated to agree; and every Trail lives in a
+#   _Trails folder and names its document in trail_of.
 # Usage: pwsh Scripts/Test-Repository.ps1    Exit code 0 means all checks pass.
 
 $ErrorActionPreference = 'Stop'
@@ -100,6 +101,17 @@ foreach ($rel in $headers.Keys) {
     elseif ($date -notmatch '^20(\d{2})-(\d{2})(-\d{2})?$' -or "$($Matches[1])-$($Matches[2])" -ne $yymm) { Report "$rel is dated '$date', which disagrees with its name" }
     $key = (($segments[0..($segments.Count - 2)]) -join '/') + "/$index"
     if ($seen.ContainsKey($key)) { Report "$rel reuses index $index of $($seen[$key])" } else { $seen[$key] = $rel }
+}
+
+# 2c. Trails live in a _Trails folder and name their document in trail_of
+foreach ($rel in $headers.Keys) {
+    $isTrail = $headers[$rel]['kind'] -eq 'trail'
+    $trailOf = $headers[$rel]['trail_of']
+    if ($trailOf -and -not $isTrail) { Report "$rel has trail_of but is not a trail" }
+    if (-not $isTrail) { continue }
+    if (-not (($rel -split '/') -contains '_Trails')) { Report "$rel is a trail outside a _Trails folder" }
+    if (-not $trailOf) { Report "$rel is a trail without trail_of" }
+    elseif (-not (Test-Path (Join-Path (Split-Path (Join-Path $root $rel) -Parent) $trailOf) -PathType Leaf)) { Report "$rel trail_of '$trailOf' does not exist" }
 }
 
 # 2b. Sections awaiting the human's reading exist, and only on canon files

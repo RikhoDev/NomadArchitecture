@@ -2,11 +2,12 @@
 status: non-canon
 kind: trail
 origin: ai-assisted
+trail_of: ../_Mirages/2511-01-Feature-Sovereignty-Bindings-Mirage.md
 ---
 
 # Trail of the Diplomats Mirage (FeatureSovereigntyBindings)
 
-Conversation framing moved verbatim from [FeatureSovereigntyBindings.md](2511-01-Feature-Sovereignty-Bindings-Mirage.md) on 2026-10-21, following
+Conversation framing moved verbatim from [FeatureSovereigntyBindings.md](../_Mirages/2511-01-Feature-Sovereignty-Bindings-Mirage.md) on 2026-10-21, following
 [Trails hold the conversation](../README.md#trails-hold-the-conversation).
 The document keeps the result and the Shaman's notes.
 

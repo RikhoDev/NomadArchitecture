@@ -2,11 +2,12 @@
 status: non-canon
 kind: trail
 origin: ai-assisted
+trail_of: ../_Chronicles/README.md
 ---
 
 # Trail of the Chronicles README
 
-Conversation framing moved verbatim from [README.md](README.md) on 2026-10-21, following
+Conversation framing moved verbatim from [README.md](../_Chronicles/README.md) on 2026-10-21, following
 [Trails hold the conversation](../README.md#trails-hold-the-conversation).
 The README body was wrapped in a ```` ```markdown ```` code fence; the fence lines were removed.
 
