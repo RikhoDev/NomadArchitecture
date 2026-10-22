@@ -2,7 +2,7 @@
 status: canon
 kind: doctrine
 origin: ai
-decided_by_assistant: pillars, feature-readme, required-by-the-platform
+decided_by_assistant: pillars, placement, feature-readme, required-by-the-platform
 ---
 
 # Architecture
@@ -17,10 +17,11 @@ repository check runs its proofs.
 - A **Host** (WHY) composes Features into something runnable and decides what
   it accepts from them, including how a refused promise is shown. Hosts are
   replaceable roofs, never the soul.
-- A **Feature** (WHAT) owns a promise and the meaning behind it. It can pack
-  up and leave: outside its `_Connectors` it needs only Core, so it can join
-  another Host, or another system, with its contracts, its proof and its
-  Trail. Mobility was the method's first promise.
+- A **Feature** (WHAT) owns a promise and the meaning behind it. It can move
+  to another system at the cost of its namespace and an interface or two,
+  because outside its `_Connectors` it needs only Core. Its contracts, its
+  proof and its Trail go with it. Mobility was the method's first promise.
+  A full copy-paste is not the aim.
 - A **Foundation** (HOW) owns neutral mechanism. It implements contracts;
   reusing an implementation does not make it their owner.
 - **Core** (COMMON) owns shared language and its invariants. Code does not
@@ -47,7 +48,11 @@ record the contradiction as evidence and correct the doctrine.
 Before adding or moving an artifact, apply three tests:
 
 - **Explorer:** opened cold, do the first-level names explain the world and
-  its responsibilities, or only its technologies?
+  its responsibilities, or only its technologies? Below them, a path should
+  say before it is opened what it owns and what kind of thing it is: promise,
+  contract, connector, mechanism, proof or memory. Code is named plainly,
+  directly and precisely, so that a path or a signature reads as a phrase.
+  The myth belongs to the documentation, never to code.
 - **Caravan:** from inside an owner, can you reach its logic, its diagnostics,
   its proof and its lineage without needlessly leaving the neighbourhood?
   Exact colocation is not required; navigation led by meaning is.
@@ -58,7 +63,8 @@ Before adding or moving an artifact, apply three tests:
 Folder count, uniform depth and cosmetic symmetry are not evidence of
 improvement. Change placement where a concrete boundary is being clarified;
 never bulk-relocate to make a diagram look uniform.
-(NGE:`AGENTS.md`; NGE:`Engine/__Docs/Patterns/Feature-Caravan-Sovereignty.md`)
+(NGE:`AGENTS.md`; NGE:`Engine/__Docs/Patterns/Feature-Caravan-Sovereignty.md`;
+NGE:`Engine/__Docs/_Mirages/2604-16-Mobile-Nomads-Name-Signal-And-Path-Legibility-Mirage.md`)
 
 Replaces nothing. "No dumping grounds" stated the aim without a test to apply.
 

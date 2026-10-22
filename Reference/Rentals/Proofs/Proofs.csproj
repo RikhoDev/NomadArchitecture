@@ -8,7 +8,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="../Features/**/_Tests/**/*.cs" />
-    <Compile Include="../../Billing/Features/Reminders/_Tests/ReminderPolicyTests.cs" Link="Travelled/ReminderPolicyTests.cs" />
+    <Compile Include="../../Billing/Features/Reminders/_Tests/ReminderPolicyTests.cs" Link="Reminders/ReminderPolicyTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.11.1" />

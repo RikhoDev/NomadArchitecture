@@ -10,7 +10,7 @@
     <Compile Include="../../Billing/Features/Reminders/*.cs" Link="Reminders/%(Filename)%(Extension)" />
   </ItemGroup>
   <ItemGroup>
-    <!-- Core travels with the Feature: Reminders speaks Money. -->
+    <!-- Reminders uses Money, so Billing's Core comes with it. -->
     <ProjectReference Include="../../Billing/Core/Core.csproj" />
   </ItemGroup>
 </Project>

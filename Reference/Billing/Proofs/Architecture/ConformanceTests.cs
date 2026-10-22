@@ -47,13 +47,12 @@ public sealed class ConformanceTests
     }
 
     [Fact]
-    public void Every_Feature_can_pack_up_and_leave()
+    public void A_Feature_outside_its_connectors_depends_only_on_Core()
     {
-        // Mobility, the method's first promise: a Feature, less its
-        // _Connectors, needs nothing in the system but Core, so it can join
-        // another Host or another system with its contracts and its proof.
-        // Only a connector may see another Feature: "A connector is thin. It
-        // wires a real seam." (Architecture: Pillars; Contracts and connectors)
+        // A Feature moves to another system by changing its namespace and its
+        // connectors. That holds only if, outside _Connectors, it depends on
+        // nothing in this system but Core. Only a connector may see another
+        // Feature. (Architecture: Pillars; Contracts and connectors)
         var features = SystemMap.Features();
         foreach (var feature in features)
         {
@@ -67,7 +66,7 @@ public sealed class ConformanceTests
                 .ShouldNot().HaveDependencyOnAny(others)
                 .GetResult();
             Assert.True(result.IsSuccessful,
-                $"{feature} cannot leave without {string.Join(", ", others)}: {string.Join(", ", result.FailingTypeNames ?? [])}.");
+                $"{feature} depends on {string.Join(", ", others)} outside its _Connectors: {string.Join(", ", result.FailingTypeNames ?? [])}.");
         }
     }
 
