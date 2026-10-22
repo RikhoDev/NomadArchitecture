@@ -14,6 +14,24 @@ jobs:
         shell: pwsh
         run: ./Scripts/Test-Repository.ps1
 
+  authority:
+    name: Canon authority of the new commits
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Every canon commit says on whose authority
+        shell: pwsh
+        env:
+          PULL_BASE: ${{ github.event.pull_request.base.sha }}
+          PUSH_BEFORE: ${{ github.event.before }}
+        run: |
+          if ($env:PULL_BASE) { $range = "$($env:PULL_BASE)..HEAD" }
+          elseif ($env:PUSH_BEFORE -and $env:PUSH_BEFORE -notmatch '^0+$') { $range = "$($env:PUSH_BEFORE)..HEAD" }
+          else { $range = 'HEAD~1..HEAD' }
+          ./Scripts/Test-CanonAuthority.ps1 -Range $range
+
   reference:
     name: Reference system (.NET) and its conformance tests
     runs-on: ubuntu-latest

@@ -2,7 +2,7 @@
 status: canon
 kind: doctrine
 origin: ai
-decided_by_assistant: status-header, dates-and-suffixes
+decided_by_assistant: status-header, dates-and-suffixes, trails-hold-the-conversation
 ---
 
 # __Docs
@@ -83,8 +83,10 @@ document. Trails live in the `_Trails/` folder of the nearest `__Docs/`, as
 NomadGameEngineV2 keeps them (NGE:`Engine/__Docs/_Trails/README.md`). Each is
 named `<Owner>.Trail.<YYYYMMDD>.md`, where the owner is its document's name, or
 a name that says whose README it is. It is dated by the conversation, or by the
-first commit when that date is unknown. A change to the canon as a whole is recorded
-in `_Trails/Canon.Trail.<YYYYMMDD>.md`.
+first commit when that date is unknown. Each change to the canon as a whole has a Trail
+of its own, `_Trails/Canon-<Topic>.Trail.<YYYYMMDD>.md`, so that parallel
+changes, by several people or several assistant sessions, never edit the same
+Trail.
 
 ## Folder grammar
 

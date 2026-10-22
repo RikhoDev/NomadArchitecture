@@ -1,0 +1,17 @@
+# Canon owners: the people whose approval a change to the canon needs
+# (__Docs/Evidence-And-Authority.md#authority). In a team, list a team here,
+# such as @org/architecture; the Shaman is the role these owners share.
+# This file is itself canon-owned: changing who decides is a reviewed change.
+
+/Worldview.md                         @RikhoDev
+/__Docs/README.md                     @RikhoDev
+/__Docs/Architecture.md               @RikhoDev
+/__Docs/Evidence-And-Authority.md     @RikhoDev
+/.nomad-method/canon                  @RikhoDev
+/.github/CODEOWNERS                   @RikhoDev
+
+# The checks that hold the canon are owned with it: weakening a check is a
+# change to what binds.
+/Scripts/Test-Repository.ps1          @RikhoDev
+/Scripts/Test-CanonAuthority.ps1      @RikhoDev
+/.github/workflows/                   @RikhoDev

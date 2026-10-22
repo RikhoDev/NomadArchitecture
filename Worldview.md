@@ -86,7 +86,8 @@ stories second, stability last.
 The Shaman is not an architect. The Shaman keeps the fire alive, records
 scars, interprets meaning and transmits continuity. The role is fleeting,
 rotating, and never owns the system. When something must become binding, the
-Shaman is the human who decides.
+Shaman is the human who decides; in a team, the Shaman is the canon owners
+([authority](__Docs/Evidence-And-Authority.md#when-owners-disagree)).
 
 ---
 
