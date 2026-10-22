@@ -72,9 +72,15 @@ check it, the lineage below cites what it found.
   the method came from that chat assistant, at a time when many called it the
   weakest. His point was that it isn't about the AI: the quality of what an AI
   produces depends on the quality of the thinking behind it.
-- **Guards for short memories.** The guards in the documents were born to keep
-  smaller-context models from forgetting the beginning of a file while reading
-  its end. This study's searches did not find them by that name.
+- **The architecture is the guard.** Guards were born to keep
+  smaller-context models from forgetting the beginning while reading the end.
+  The guards are not a feature of the documents; they are the architecture
+  itself:
+  - the pillars;
+  - the Trails, the Chronicles and the READMEs;
+  - the canon;
+  - most of all the Worldview, which holds the intent and protects the fire.
+    Of everything in the method, the author is proudest of it.
 - **The hands-off experiment.** To test the ideas at scale, he stopped
   SampleGame and pushed the chat assistant's memory to git as a time capsule.
   He then used the myth to make a coding assistant generate a whole folder
