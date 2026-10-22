@@ -10,7 +10,8 @@ date: 2026-10-22
 > **A case study, and the chronicle that comes before Chapter 0.** It was
 > drafted by an AI assistant, and the author reviewed and approved it for
 > publication on 2026-10-22. It is drawn from the git histories and documents
-> of five of the author's repositories, three of them private. It quotes no
+> of six of the author's repositories, four of them private, and on the
+> author's own account of the story. It quotes no
 > code and no private document text. Every figure comes from a command in
 > [How the figures were obtained](#how-the-figures-were-obtained).
 >
@@ -37,7 +38,10 @@ one problem: intent leaks. It leaks in four places.
   asked for one. The fix it gives is to keep the conversation in a file. That
   file became the method's Trails.
 - **From one project to another.** The method's first promise was mobility:
-  capabilities that "pack up and join a new convoy with zero friction".
+  capabilities that "pack up and join a new convoy with zero friction". In the
+  author's account, it came from earlier work projects built as slices. He
+  wanted to copy a slice from one project into another, to move Features. A
+  Feature that can move is mobile, and mobile suggested nomad.
 - **From people to time.** In the author's own account, ideas "tended to stay
   in my head and eventually fade into oblivion."
 
@@ -46,6 +50,47 @@ fluently, than anyone can read. The method's oldest finding about AI comes
 from August 2025: expert execution with junior architectural judgment. It is
 an assistant that reaches for enterprise ceremony where a screwdriver would
 do.
+
+### The story, in the author's account
+
+The author told this part of the story in October 2026. Where the record can
+check it, the lineage below cites what it found.
+
+- **The name and the myth.**
+  - The name came first, from mobile slices. It stayed in second place until
+    he remembered the nomad tribes of Cyberpunk, his favourite tabletop
+    role-playing game.
+  - He later dropped the Cyberpunk allegory for fear of copyright. Deserts,
+    tribes, families, the fire and the Shaman took its place.
+  - He chose that anthropological myth because every model knows human
+    history. Nomad tribes, as the cradle of societies, must have understood
+    something about structure and organisation.
+  - He still thinks the Cyberpunk reference, being ready for technology,
+    might work better.
+- **Two AIs, two roles.** One AI chat assistant was used for discovery,
+  discussion and myth, and an AI coding assistant for code. The first draft of
+  the method came from that chat assistant, at a time when many called it the
+  weakest. His point was that it isn't about the AI: the quality of what an AI
+  produces depends on the quality of the thinking behind it.
+- **Guards for short memories.** The guards in the documents were born to keep
+  smaller-context models from forgetting the beginning of a file while reading
+  its end. This study's searches did not find them by that name.
+- **The hands-off experiment.** To test the ideas at scale, he stopped
+  SampleGame and pushed the chat assistant's memory to git as a time capsule.
+  He then used the myth to make a coding assistant generate a whole folder
+  structure, first for NomadAI, then for the first engine. His rules: he would
+  not touch the code; once a prompt was committed, he accepted every
+  proposition; and he fixed mistakes only by prompting again. It was fun, and
+  it leaked:
+  - the context leaked;
+  - Foundations ended up referenced by Features;
+  - connectors were half understood;
+  - Core grew fast.
+- **The turn to V2.** Adding DirectX beside raylib, and wanting both backends,
+  made dependency management "hellish". He moved the method forward with a new
+  worldview and a full refactoring. NomadGameEngineV2 was born as a sprout host
+  inside the first engine, the first fractal NomadArchitecture, and was then
+  extracted.
 
 ## Lineage
 
@@ -59,9 +104,12 @@ do.
 | 2025-08-03 | SampleGame | The name NomadArchitecture first appears, after the nomad families of Cyberpunk 2020: mobile families with strong internal bonds, linked by a shared vocabulary. The pillars existed before the name, so the metaphor came after the structure. Two decision records are accepted that day. One promotes a concept to Core only when two or more domains need it, to avoid a "God Core". The other lets AI assist under constraints: architectural decisions need human approval. The assistant's instructions file becomes the method's first agent guidance. |
 | 2025-08-18 to 08-20 | SampleGame | Lessons on AI as a development team, a pitch "for executives", and an MIT licence. The game has no automated tests: analysis documents and demos are its checks. |
 | 2025-10-31 to 11-02 | the method's own repository | First public form, nine days after a last SampleGame story fix. The metaphor changes from nomad families to the camp, the fire and the Shaman. The worldview adds a covenant (AI may scaffold, humans decide) and the principle that the architecture "teaches newcomers by structure and story". It calls the skeleton platform-agnostic. |
-| 2026-01-25 to 02-13 | NomadGameEngine | The first engine: 116 commits. Ports and connectors are enforced, a gameplay capability is promoted to a generic Feature, and the evolution rules that both later grounds cite appear. Architecture tests run in CI beside a CODEOWNERS file. A chronicle states the Fractal Laws: a Feature, a team, a department and an enterprise follow the same laws. |
+| 2026-01-20 | NomadAI | An AI-agent service generated from the myth: Features for an agent runtime, billing and governance, each with Trails, ports and connectors. Two commits, left in that state. |
+| 2026-01-25 to 03-07 | NomadGameEngine | The first engine, which started as the sample game's engine: 275 commits across its branches (`main` stops at 02-13). Ports and connectors are enforced, a gameplay capability is promoted to a generic Feature, and the evolution rules that both later grounds cite appear. Architecture tests run in CI beside a CODEOWNERS file. A chronicle states the Fractal Laws: a Feature, a team, a department and an enterprise follow the same laws. The leak the author describes is visible: its Features project references Foundations, on `main` and still on 03-01. |
+| 2026-01-28 | the method's own repository | The time capsule: a 352-line folder-structure document from the chat assistant's memory, with ports, connectors and a Feature template. |
 | 2026-02 | a side branch of the method | A revised worldview puts a `_Contracts/` folder at every layer. |
-| 2026-03-09 to 10-22 | NomadGameEngineV2 | The evidence ground, below. Its first commit carries the February version. |
+| 2026-02-27 to 03-07 | NomadGameEngine, branch `vnext-refactored` | A dual-backend host wires raylib and DirectX, and a refactoring prepares "more robust backend plumbing". A DirectX sprout follows. On 03-07, `Hosts/_Sprouts/NomadGameEngineV2` is added, with a roadmap for its graduation "from sprout to production engine". |
+| 2026-03-09 to 10-22 | NomadGameEngineV2 | Extracted into its own repository, and the evidence ground below. Its first commit carries the February version. |
 | 2026-10-21 to 10-22 | the method's own repository | The grounds' findings are distilled into a four-file canon, with mechanisms for authority, provenance and conformance. Mobility, lost on the way, returns as a checked rule. |
 
 ## The evidence ground
@@ -102,6 +150,7 @@ system is the coordination medium for minds that share no memory.
 
 | Idea | Where it was tested | What the evidence did to it |
 |---|---|---|
+| Letting the AI drive | NomadGameEngine | Under the author's hands-off rules, Features came to reference Foundations. In the second engine, Features reference only Core, and its build and tests enforce that. *Interpreted:* much of the canon reads as scar tissue from letting an assistant drive. |
 | Ports and connectors | SampleGame, then NomadGameEngine | Ports came on day one and connectors on 07-27; the first engine enforced them. They became NomadGameEngineV2's contracts and connectors. The canon keeps connectors and retires `_Ports`. |
 | A `_Contracts/` folder at every layer | NomadGameEngineV2, March to August | Six months showed such a folder owns nothing. On 2026-08-25 the rule was reversed: a contract lives with the owner of its meaning. 103 of the 110 files ever added to these folders predate the reversal, and the folders that remain are tracked as migration debt. |
 | Promotion | all three grounds | SampleGame: promote to Core when two or more domains need it, and avoid a God Core. The first engine promoted a gameplay capability to a generic Feature. The second refined the rule: two real consumers are enough, a difference between them is evidence and not a veto, and a third is never invented. In one case, duplicated route planning moved from two hosts into a new Feature, backed by a 98-test regression. In another, only a shared law was promoted, and the code stayed local. |
@@ -212,3 +261,5 @@ with full history.
 | Contributor guidance first appears | `git log --diff-filter=A` on `AGENTS.md` |
 | AI eras | `git log --format='%ad %(trailers:key=Co-authored-by,valueonly)'`; `git log --author=<agent>` |
 | The revert | `git log -1 --format=%ci` on the change and on its revert |
+| The first engine across its branches, and the V2 sprout | `git log --all`; `git ls-tree -d` on the commit that adds `Hosts/_Sprouts/NomadGameEngineV2` |
+| Features referencing Foundations in the first engine | `ProjectReference` lines of `src/Features/Features.csproj`, on `main` and on 2026-03-01 |
