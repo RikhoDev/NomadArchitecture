@@ -44,6 +44,10 @@ The rules themselves fit in about 3,100 words: the [canon](__Docs/README.md#cano
 
   Its git history shows two promotions as they happened. Six conformance
   rules fail the build when the architecture is broken.
+- **[OnboardingTrial](Hosts/OnboardingTrial/README.md)**, a Host that tests
+  whether a fresh AI session given this repository builds in its shape,
+  against the same code without the documents. One script prepares, runs and
+  grades it.
 - **[DocReader](Hosts/DocReader/README.md)**, a Host that reads this repository
   back to you: `pwsh Hosts/DocReader/reader.ps1 explain <path>` says whose
   meaning a file carries, who owns it, and where it came from.
@@ -66,12 +70,23 @@ The rules themselves fit in about 3,100 words: the [canon](__Docs/README.md#cano
   - Every isolated review recorded in the
     [canon Trail](__Docs/_Trails/Canon.Trail.20261021.md) found at least one
     defect the author had missed.
+  - In a [cold-onboarding pilot](Hosts/OnboardingTrial/README.md), fresh AI
+    sessions made three real changes to Billing, one set with the whole
+    repository and one with the code alone. Both sets stayed inside the
+    pillars. A blind judge preferred the canon arm on all three tasks. On two
+    of them the difference was promotion: the code-only arm moved code into a
+    shared place for a single caller. This is one run per cell, and the
+    judge used the canon as its rubric.
 - **Observed in a second repository:** applying the canon to nomad-method found
   six misfits with a plugin platform. One became a canon rule; the others were
   fixed where they belonged or left with reasons.
-- **Not yet shown:** adoption by a team other than the author's, and measured
-  effects on onboarding time or defect rates. A case study from nine months of
-  use on a private C# engine is in preparation.
+- **Not yet shown:**
+  - adoption by a team other than the author's;
+  - measured effects on onboarding time or defect rates;
+  - a repeated trial with more than one run per cell.
+
+  A case study from seven months of use on a private C# engine is in
+  preparation.
 
 ## Adopt it in steps
 
