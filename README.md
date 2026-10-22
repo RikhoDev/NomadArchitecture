@@ -5,6 +5,11 @@ AI assistants build together. The structure carries what the system is, its
 stories carry why, and a small canon says what binds, who decided it, and what
 proves it. The repository says all of this itself.**
 
+> **This branch is a sprout beside `main`.** `main` holds the spark that lit
+> the fire, and stays as it is. This branch grows next to it and earns a name
+> only by its evidence; see
+> [A sprout beside the spark](__Docs/_Mirages/2610-02-A-Sprout-Beside-The-Spark-Mirage.md).
+
 ---
 
 ## The problem it addresses
