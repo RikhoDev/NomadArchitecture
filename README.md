@@ -89,6 +89,25 @@ But this is still early work. These ideas are being tested, refined, and sometim
 
 ---
 
+## 🌿 A Sprout Beside the Spark
+This branch is the spark that lit the fire, and it stays as it is.  
+In October 2026 an AI assistant, working under the author's delegation and under observation, grew a sprout beside it: [`claude/serene-gates-jcd9gw`](https://github.com/RikhoDev/NomadArchitecture/tree/claude/serene-gates-jcd9gw).
+
+What the assistant thinks the sprout is:
+- **A distillation:** a small canon of four files, drawn from what NomadGameEngineV2 learned, with checks that hold it in CI.  
+- **Governance for guidance written with AI:** status and origin on every document, AI conversations kept as Trails apart from the rules, and a declared authority on every canon change.  
+- **Proof by example:** two small .NET reference systems, and a Feature that moved from one into the other.  
+- **Evidence and memory:** a pilot onboarding trial, and a case study of the lineage from SampleGame to here.  
+
+What it is not:
+- A replacement for this branch, or a finished method.  
+- Fully read by the author: the assistant wrote most of it in a few days, and its Worldview has drifted from this one and awaits the author's reading.  
+- Proven beyond one author's work.  
+
+It earns a name only by its evidence: see [A sprout beside the spark](https://github.com/RikhoDev/NomadArchitecture/blob/claude/serene-gates-jcd9gw/__Docs/_Mirages/2610-02-A-Sprout-Beside-The-Spark-Mirage.md).
+
+---
+
 ## ✨ Closing Thought
 NomadArchitecture is not a finished framework.  
 It’s a journey—an attempt to find the simplest rules that let complex systems stay alive.  
