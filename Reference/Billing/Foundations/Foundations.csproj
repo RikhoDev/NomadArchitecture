@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- HOW: neutral mechanism. Foundations implement the contracts that
+       Features declare, so they reference Features, never the reverse. -->
+  <PropertyGroup>
+    <RootNamespace>Billing.Foundations</RootNamespace>
+    <AssemblyName>Billing.Foundations</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../Features/Features.csproj" />
+  </ItemGroup>
+</Project>

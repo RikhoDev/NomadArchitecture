@@ -1,0 +1,16 @@
+<Project>
+  <!-- Shared by every project of the Billing reference system. -->
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <!-- Proof lives beside its owner in a _Tests folder, but only the Proofs
+       project compiles it: production assemblies never contain tests. -->
+  <PropertyGroup Condition="'$(MSBuildProjectName)' != 'Proofs'">
+    <DefaultItemExcludes>$(DefaultItemExcludes);**/_Tests/**</DefaultItemExcludes>
+  </PropertyGroup>
+</Project>

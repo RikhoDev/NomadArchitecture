@@ -25,6 +25,12 @@ Assert-Promise 'a README is owned by the README above it' {
 Assert-Promise 'scaffolding is placed in the repository world' {
     (Get-Placement -Root $root -Path 'Scripts/Check.ps1' -ReadLead $lead).World -like 'repository world*'
 }
+Assert-Promise 'a reference system is its own world, with its own pillars' {
+    New-Item -ItemType Directory (Join-Path $root 'Reference/Shop/Features/Cart') -Force | Out-Null
+    'x' | Set-Content (Join-Path $root 'Reference/Shop/Features/Cart/Cart.cs')
+    $p = Get-Placement -Root $root -Path 'Reference/Shop/Features/Cart/Cart.cs' -ReadLead $lead
+    $p.World -like 'reference systems*' -and ($p.Nesting | ForEach-Object { "$($_.Role):$($_.Name)" }) -join ' ' -eq 'WHAT:Cart'
+}
 Assert-Promise 'a path that does not exist says so' { -not (Get-Placement -Root $root -Path 'Nowhere/x.md' -ReadLead $lead).Exists }
 
 Remove-Item -Recurse -Force $root

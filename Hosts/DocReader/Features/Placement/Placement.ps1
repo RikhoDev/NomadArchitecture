@@ -11,6 +11,7 @@ $script:Worlds = @{
     'Scripts'       = 'repository world: scaffolding that checks the system, not part of it'
     '.github'       = 'repository world: scaffolding that checks the system, not part of it'
     '.nomad-method' = 'repository world: configuration for the nomad-method plugin'
+    'Reference'     = 'reference systems: complete systems built by the canon, with their own pillars'
 }
 
 function Get-Placement {

@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <!-- WHY: an HTTP API for finance staff. The Host composes Features with
+       the Foundations that fulfil them, and owns everything HTTP. -->
+  <PropertyGroup>
+    <RootNamespace>Billing.Hosts.Api</RootNamespace>
+    <AssemblyName>Billing.Hosts.Api</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../../Features/Features.csproj" />
+    <ProjectReference Include="../../Foundations/Foundations.csproj" />
+  </ItemGroup>
+</Project>
