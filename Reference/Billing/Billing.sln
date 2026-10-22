@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Proofs", "Proofs\Proofs.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Worker", "Hosts\Worker\Worker.csproj", "{D9075432-1BA7-4D37-A586-DDEE833E5A44}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{A3F7E84F-22A1-4E55-A0FA-B36B48C1F306}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,6 +46,10 @@ Global
 		{D9075432-1BA7-4D37-A586-DDEE833E5A44}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D9075432-1BA7-4D37-A586-DDEE833E5A44}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D9075432-1BA7-4D37-A586-DDEE833E5A44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3F7E84F-22A1-4E55-A0FA-B36B48C1F306}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3F7E84F-22A1-4E55-A0FA-B36B48C1F306}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3F7E84F-22A1-4E55-A0FA-B36B48C1F306}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3F7E84F-22A1-4E55-A0FA-B36B48C1F306}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{88FB6327-9D50-488B-B703-91913A51F57A} = {16A47906-1F64-4CEF-9DD7-3E17CDBD62B5}

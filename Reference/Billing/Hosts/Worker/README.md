@@ -7,7 +7,7 @@ origin: ai
 # Worker
 
 **Promise.** Each morning, tell the collections team which invoices fall due
-in the coming week, without anyone asking.
+in the coming week, and which reminders to send, without anyone asking.
 
 ```text
 dotnet run --project Reference/Billing/Hosts/Worker -- --once true --Billing:StorePath invoices.json
@@ -19,7 +19,9 @@ digest. [DueSoonDigest.cs](DueSoonDigest.cs) selects and formats it.
 **Relationships.** It reads invoices through the
 [Invoicing Feature](../../Features/Invoicing/README.md)'s contract, fulfilled
 by the file store of the [Storage Foundation](../../Foundations/Storage/README.md),
-so it sees what the [Api Host](../Api/README.md) issued.
+so it sees what the [Api Host](../Api/README.md) issued. It composes the
+[Reminders Feature](../../Features/Reminders/README.md) with Reminders'
+connector to Invoicing.
 
 **Proof.** [_Tests/DueSoonDigestTests.cs](_Tests/DueSoonDigestTests.cs), with a
 fixed clock.

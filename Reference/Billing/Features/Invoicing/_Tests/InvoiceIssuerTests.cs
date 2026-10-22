@@ -1,3 +1,4 @@
+using Billing.Core;
 using Billing.Features.Invoicing;
 using Microsoft.Extensions.Time.Testing;
 

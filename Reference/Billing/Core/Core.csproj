@@ -1,0 +1,8 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- COMMON: language shared by more than one Feature. It references
+       nothing else in the system. -->
+  <PropertyGroup>
+    <RootNamespace>Billing.Core</RootNamespace>
+    <AssemblyName>Billing.Core</AssemblyName>
+  </PropertyGroup>
+</Project>

@@ -11,8 +11,8 @@ date set by its payment terms, and keep it. An invoice with no customer, for
 nothing, or on terms beyond a year, is refused.
 
 **Residents.** [InvoiceIssuer.cs](InvoiceIssuer.cs) keeps the promise.
-[Invoice.cs](Invoice.cs), [Money.cs](Money.cs) and
-[PaymentTerms.cs](PaymentTerms.cs) are its vocabulary.
+[Invoice.cs](Invoice.cs) and [PaymentTerms.cs](PaymentTerms.cs) are its
+vocabulary; it speaks [Money](../../Core/Money/README.md) from Core.
 [IInvoiceStore.cs](IInvoiceStore.cs) is the contract it needs fulfilled.
 
 **Relationships.** It needs an `IInvoiceStore`; the Storage Foundation provides
@@ -23,5 +23,5 @@ exists, or where invoices are kept.
 fake store and a fixed clock.
 
 **Status.** `PaymentTerms` was promoted here from the Api Host when the Worker
-Host became the second consumer of due dates. `Money` lives here because
-Invoicing is its only user.
+Host became the second consumer of due dates. `Money` lived here until the
+Reminders Feature spoke it too; it was then promoted to Core.

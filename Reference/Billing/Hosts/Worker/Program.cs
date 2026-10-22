@@ -1,4 +1,7 @@
+using Billing.Core;
 using Billing.Features.Invoicing;
+using Billing.Features.Reminders;
+using Billing.Features.Reminders._Connectors;
 using Billing.Foundations.Storage;
 using Billing.Hosts.Worker;
 
@@ -9,11 +12,13 @@ var storePath = builder.Configuration["Billing:StorePath"] ?? "billing-invoices.
 builder.Services.AddSingleton(TimeProvider.System);
 builder.Services.AddSingleton<IInvoiceStore>(new JsonFileInvoiceStore(storePath));
 builder.Services.AddSingleton<DueSoonDigest>();
+builder.Services.AddSingleton<IOutstandingInvoices, OutstandingFromInvoicing>();
+builder.Services.AddSingleton<ReminderPolicy>();
 builder.Services.AddHostedService<DigestService>();
 builder.Build().Run();
 
-/// <summary>Writes the digest at start, then once a day; with --once, exits after the first.</summary>
-internal sealed class DigestService(DueSoonDigest digest, ILogger<DigestService> log, IHostApplicationLifetime life, IConfiguration config)
+/// <summary>Writes the digest and the reminders to send at start, then once a day; with --once, exits after the first.</summary>
+internal sealed class DigestService(DueSoonDigest digest, ReminderPolicy reminders, ILogger<DigestService> log, IHostApplicationLifetime life, IConfiguration config)
     : BackgroundService
 {
     protected override async Task ExecuteAsync(CancellationToken stopping)
@@ -26,6 +31,14 @@ internal sealed class DigestService(DueSoonDigest digest, ILogger<DigestService>
             foreach (var line in lines)
             {
                 log.LogInformation("{Line}", line);
+            }
+
+            var due = reminders.Due();
+            log.LogInformation("Reminders to send: {Count}", due.Count);
+            foreach (var reminder in due)
+            {
+                log.LogInformation("{Level} reminder to {Customer}: {Amount}, {Days} days overdue",
+                    reminder.Level, reminder.Customer, reminder.AmountDue, reminder.DaysOverdue);
             }
 
             if (once)

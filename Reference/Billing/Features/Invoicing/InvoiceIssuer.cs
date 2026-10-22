@@ -1,3 +1,5 @@
+using Billing.Core;
+
 namespace Billing.Features.Invoicing;
 
 /// <summary>Issues invoices: the Invoicing promise.</summary>

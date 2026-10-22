@@ -1,8 +1,10 @@
 <Project Sdk="Microsoft.NET.Sdk">
-  <!-- WHAT: the system's promises. Features depend on nothing but Core,
-       once Core exists; Foundations and Hosts depend on them. -->
+  <!-- WHAT: the system's promises. Features depend on nothing but Core; Foundations and Hosts depend on them. -->
   <PropertyGroup>
     <RootNamespace>Billing.Features</RootNamespace>
     <AssemblyName>Billing.Features</AssemblyName>
   </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../Core/Core.csproj" />
+  </ItemGroup>
 </Project>

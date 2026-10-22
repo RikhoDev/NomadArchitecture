@@ -1,4 +1,5 @@
 using System.Collections.Concurrent;
+using Billing.Core;
 using Billing.Features.Invoicing;
 
 namespace Billing.Foundations.Storage;

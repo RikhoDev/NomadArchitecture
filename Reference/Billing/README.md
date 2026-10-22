@@ -21,10 +21,14 @@ dotnet run --project Reference/Billing/Hosts/Api
 |---|---|---|
 | Hosts (WHY) | [Api](Hosts/Api/README.md) | finance staff issue and look up invoices over HTTP |
 | | [Worker](Hosts/Worker/README.md) | a morning digest of invoices falling due |
-| Features (WHAT) | [Invoicing](Features/Invoicing/README.md) | issue an invoice and keep it |
+| Features (WHAT) | [Invoicing](Features/Invoicing/README.md) | issue an invoice, due by its terms, and keep it |
+| | [Reminders](Features/Reminders/README.md) | decide whom to remind, how firmly, with a late fee on final notice |
 | Foundations (HOW) | [Storage](Foundations/Storage/README.md) | keep invoices, in memory or in a file Hosts share |
 
-There is no `Core/` yet: no language is shared between two Features.
+| Core (COMMON) | [Money](Core/Money/README.md) | an amount in one currency, never mixed |
+
+Reminders sees Invoicing only through
+[its connector](Features/Reminders/_Connectors/OutstandingFromInvoicing.cs).
 
 ## How the rules are held
 
