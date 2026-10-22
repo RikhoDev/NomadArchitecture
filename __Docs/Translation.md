@@ -6,6 +6,29 @@ origin: ai
 
 # Translation: Metaphors → Practical Rules
 
+## In industry terms
+
+Closest equivalents, for readers who know the established vocabulary. They are
+neighbours, not synonyms: each row says where NomadArchitecture differs.
+
+| NomadArchitecture | Nearest industry term | Where it differs |
+|---|---|---|
+| Host | Composition root; application, service or entry point | It owns the purpose, the wiring and how refusals are shown, and nothing else. |
+| Feature | Vertical slice; bounded capability | It is defined by its promise and its README answers, not by a layer. |
+| Foundation | Infrastructure, adapters | It implements contracts the Features declare, never the reverse. |
+| Core | Shared kernel | It is earned by a second speaker, not designed in advance. |
+| Contract | Port (hexagonal architecture) | It lives with the owner of its meaning, not in a ports folder. |
+| Connector | Adapter between bounded contexts; anti-corruption layer | It is the only code that sees both sides, and it holds no policy. |
+| Canon | Architecture standards; accepted ADRs | It is a short listed set, with declared authority on every change. |
+| Canon owner, Shaman | Architecture board; CODEOWNERS | Authority is a file and a review, not a meeting. |
+| Trail | Decision log; ADR context | It keeps the conversation, including the AI's, verbatim and apart from the rule. |
+| Mirage | RFC; spike | It is explicitly non-binding, even when it contains working code. |
+| `decided_by_assistant` | (none) | It marks what an AI decided under delegation until a human reads it. |
+| Placement test | Cohesion; screaming architecture | It is one question, "whose meaning disappears if this does?", applied to every file. |
+| Promotion | Rule of three; "extract when needed" | Two independent consumers are enough. |
+
+## The metaphors
+
 This short guide maps NomadArchitecture metaphors (Shaman, Mirages, Diplomats, Trails) to the rules that govern them, so teams can adopt the philosophy without confusion. It adds no rules; each entry links to the rule it applies.
 
 ## Shaman → Steward of Continuity
