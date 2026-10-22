@@ -58,7 +58,9 @@ Rules were added when the evidence earned them, and withdrawn when it went
 against them. The method claims that the same laws apply at every scale: a
 Feature, a team and an organisation are each a sovereign unit with its own
 boundary, its own memory and its own shared vocabulary. That claim is not yet
-shown beyond code. A case study of the lineage is in preparation.
+shown beyond code. The
+[case study](__Docs/_Chronicles/2610-01-How-NomadArchitecture-Was-Grown-Chronicle.md)
+tells the lineage, with the evidence and its limits.
 
 ## See it working
 
@@ -111,6 +113,10 @@ shown beyond code. A case study of the lineage is in preparation.
     shared place for a single caller. This is one run per cell, and the
     judge used the canon as its rubric. Read another way, structure taught
     both arms the pillars, and only the documents carried why to hold back.
+- **Observed in the author's earlier repositories:** fifteen months of
+  history across a sample game and two engines, summarised in the
+  [case study](__Docs/_Chronicles/2610-01-How-NomadArchitecture-Was-Grown-Chronicle.md).
+  The largest is one developer's evidence ground, not a production system.
 - **Observed in a second repository:** applying the canon to nomad-method found
   six misfits with a plugin platform. One became a canon rule; the others were
   fixed where they belonged or left with reasons.

@@ -50,6 +50,7 @@ Chronicles are written as **chapters**, each in its own file:
 - [Chapter 0 — NomadArchitecture Genesis](2511-01-NomadArchitecture-Genesis-Chronicle.md) (in transit)  
 - [Chapter I — The First Shaman](2511-02-The-First-Shaman-Chronicle.md)  
 - [Chapter II — The Shaman and the Spirit’s Hallucinations](2511-03-The-Shaman-And-The-Spirits-Hallucinations-Chronicle.md)  
+- [Chapter III — How NomadArchitecture Was Grown](2610-01-How-NomadArchitecture-Was-Grown-Chronicle.md): the lineage from the first sample game, told as a case study
 
 Each chapter's conversation is kept in its Trail, in [_Trails](../_Trails/README.md).
 
