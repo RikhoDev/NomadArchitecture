@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- The proof world: this system's _Tests, and the proof Reminders brought
+       with it from Billing, compiled unchanged from where it lives. -->
+  <PropertyGroup>
+    <RootNamespace>Rentals.Proofs</RootNamespace>
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="../Features/**/_Tests/**/*.cs" />
+    <Compile Include="../../Billing/Features/Reminders/_Tests/ReminderPolicyTests.cs" Link="Travelled/ReminderPolicyTests.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.11.1" />
+    <PackageReference Include="xunit" Version="2.9.2" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.8.2" />
+    <PackageReference Include="Microsoft.Extensions.TimeProvider.Testing" Version="8.10.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Using Include="Xunit" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="../Features/Features.csproj" />
+  </ItemGroup>
+</Project>

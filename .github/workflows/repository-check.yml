@@ -51,3 +51,5 @@ jobs:
           dotnet-version: 8.0.x
       - name: Build and prove Reference/Billing
         run: dotnet test Reference/Billing/Billing.sln --configuration Release
+      - name: Build and prove Reference/Rentals, which Reminders joined from Billing
+        run: dotnet test Reference/Rentals/Rentals.sln --configuration Release

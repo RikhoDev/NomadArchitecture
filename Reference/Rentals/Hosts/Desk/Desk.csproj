@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- WHY: the counter of a tool-rental shop, which wants to know each
+       morning whom to chase for tools not yet back. -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Rentals.Hosts.Desk</RootNamespace>
+    <AssemblyName>Rentals.Hosts.Desk</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../../Features/Features.csproj" />
+  </ItemGroup>
+</Project>

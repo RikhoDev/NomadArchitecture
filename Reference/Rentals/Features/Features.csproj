@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- WHAT: this system's promises. Loans is its own. Reminders joined from
+       Billing: its body is compiled from where it lives, unchanged, less its
+       _Connectors and _Tests; its connector here is local to this system. -->
+  <PropertyGroup>
+    <RootNamespace>Rentals.Features</RootNamespace>
+    <AssemblyName>Rentals.Features</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="../../Billing/Features/Reminders/*.cs" Link="Reminders/%(Filename)%(Extension)" />
+  </ItemGroup>
+  <ItemGroup>
+    <!-- Core travels with the Feature: Reminders speaks Money. -->
+    <ProjectReference Include="../../Billing/Core/Core.csproj" />
+  </ItemGroup>
+</Project>
