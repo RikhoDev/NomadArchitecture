@@ -2,7 +2,7 @@
 status: canon
 kind: doctrine
 origin: ai
-awaiting_reading: status-header, dates-and-suffixes
+decided_by_assistant: status-header, dates-and-suffixes
 ---
 
 # __Docs
@@ -23,9 +23,11 @@ These files are binding, and nothing else is:
   grows.
 
 On 2026-10-21 the human delegated this canon: to infer what they already
-hold, and to decide the rest. The inferred rules are canon. The sections the
-assistant decided are named in each file's `awaiting_reading`
-[header](#status-header), and bind no one until the human has read them.
+hold, and to decide the rest. On 2026-10-22 they delegated the settlement of
+the rest as well. The inferred rules are canon. The sections the assistant
+decided are named in each file's `decided_by_assistant`
+[header](#status-header): they bind, and the human's reading can overturn any
+of them.
 Evidence for each rule: [Canon.Trail.20261021.md](_Trails/Canon.Trail.20261021.md).
 Current state: `pwsh Hosts/DocReader/reader.ps1 canon`.
 [AGENTS.md](../AGENTS.md) points contributors and AI assistants here.
@@ -56,7 +58,7 @@ origin: human | ai | ai-assisted
 superseded_by: <relative path>   # only when status is superseded
 date: YYYY-MM-DD                  # on Chronicles and Mirages; YYYY-MM if the day is unknown
 trail_of: <relative path>         # on a Trail: the document it belongs to
-awaiting_reading: <anchor>, ...    # canon sections the human has not yet read
+decided_by_assistant: <anchor>, ... # canon sections the assistant decided under delegation
 ---
 ```
 
@@ -64,8 +66,9 @@ awaiting_reading: <anchor>, ...    # canon sections the human has not yet read
 - `proposed`: a change to doctrine awaiting authorization.
 - `non-canon`: guides, Mirages, Trails and Chronicles.
 - `superseded`: kept for lineage; `superseded_by` names the replacement.
-- `awaiting_reading`: on a canon file, the sections the assistant decided
-  under delegation. They are removed one by one as the human reads them.
+- `decided_by_assistant`: on a canon file, the sections the assistant decided
+  under the human's delegation. They bind. The human's reading can overturn
+  them, and removes them from the list as it confirms them.
 
 `origin: ai-assisted` means a human wrote or shaped part of the text, for
 example the Shaman's notes; `ai` means the text is the assistant's.

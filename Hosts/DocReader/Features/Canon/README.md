@@ -7,10 +7,11 @@ origin: ai
 # Canon
 
 **Promise.** Say what binds in this repository, and which parts of it the
-assistant decided and are still waiting for the human's reading.
+assistant decided under the human's delegation.
 
 **Residents.** [Canon.ps1](Canon.ps1): `Get-Canon`, which reads the canon list
-in `.nomad-method/canon` and each file's status and `awaiting_reading` header.
+in `.nomad-method/canon` and each file's status and `decided_by_assistant`
+header.
 
 **Relationships.** It needs a header reader: a function from a path to its
 status header. The Host gives it the Markdown Foundation's. It does not decide

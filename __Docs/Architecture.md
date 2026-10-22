@@ -2,7 +2,7 @@
 status: canon
 kind: doctrine
 origin: ai
-awaiting_reading: feature-readme
+decided_by_assistant: feature-readme, required-by-the-platform
 ---
 
 # Architecture
@@ -50,6 +50,19 @@ Before adding or moving an artifact, apply three tests:
 - **Sovereignty:** if the owner vanished tomorrow, would this artifact vanish
   with it? If it would remain as shared machinery, it belongs to Foundations or
   to the composition that uses it.
+
+### Required by the platform
+
+When a host platform or toolchain requires a layout or a name, such as a
+plugin's `skills/` and `hooks/` folders or a test runner's `tests/`, that layout
+belongs to the platform, as a Host's composition belongs to the Host. Keep the
+required names; place meaning beneath or beside them, and apply the tests above
+from there. Do not rename what the platform reads to fit the folder grammar.
+(Evidence: RikhoDev/nomad-method, `__Docs/_Trails/README.Trail.20261022.md`,
+misfits 1 and 4.)
+
+Replaces nothing. Applied to a Claude Code plugin, the Explorer test and the
+folder grammar could not be met without breaking the plugin.
 
 Folder count, uniform depth and cosmetic symmetry are not evidence of
 improvement. Change placement where a concrete boundary is being clarified;

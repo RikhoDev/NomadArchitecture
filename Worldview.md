@@ -2,7 +2,7 @@
 status: canon
 kind: doctrine
 origin: ai-assisted
-awaiting_reading: emergence-rhythm
+decided_by_assistant: emergence-rhythm
 ---
 
 # Worldview of NomadArchitecture

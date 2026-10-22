@@ -265,6 +265,41 @@ found two bugs in them:
 - A README whose first line is an HTML image gave that tag as its lead. Leads
   now skip lines that are only HTML, with a proof.
 
+## Loop 6: settled under a second delegation
+
+The human's words, 2026-10-22, answering three questions: whether to accept
+nomad-method 0.2.0, what to do with the misfits found by applying this canon to
+nomad-method, and what to do with the sections awaiting their reading:
+
+11. "1. accepted, publish to main. 2 and 3, do your best, that's why the plugin
+    exists, you should be able to see the value in the options you have and
+    select the most appropriate to the problem."
+
+**The misfits.** RikhoDev/nomad-method's Trail
+(`__Docs/_Trails/README.Trail.20261022.md`) records the decision on each.
+Only one reached this canon. Misfits 1 and 4 were layouts that a platform or a
+toolchain requires, and they became the subsection
+`Architecture.md#required-by-the-platform`. The header misfit was fixed in the
+plugin instead (0.2.1), so the rule that every document carries a header
+stays universal.
+
+**The awaiting sections.** The assistant checked each one against the evidence
+now available, and kept all four:
+
+| Section | Evidence |
+|---|---|
+| `Worldview.md#emergence-rhythm` | The human's newer text (NGE README `812341a`, 2026-10-20) supersedes their 2025 order. |
+| `Architecture.md#feature-readme` | NGE has no `Map.md` or `Traces.md`; DocReader is built on the rule; the plugin trial found nothing against it. |
+| `__Docs/README.md#status-header` | The plugin trial merged it into platform front matter; 0.2.1 removed its one misfit. |
+| `__Docs/README.md#dates-and-suffixes` | NGE's file practice; the repository check enforces it. |
+
+The mechanism changed with the delegation. `awaiting_reading` said such
+sections "bind no one until the human has read them". The human has now
+delegated their settlement, so the header is `decided_by_assistant`: the
+sections bind, and the human's reading can overturn any of them. The header
+keeps who decided them visible, as the plugin's discipline asks ("decide it,
+but do not record it as theirs").
+
 ## Still open
 
 - The DocReader's own next steps are kept in its README's Status.

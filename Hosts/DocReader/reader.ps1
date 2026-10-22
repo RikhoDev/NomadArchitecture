@@ -75,12 +75,12 @@ function Show-Canon {
     foreach ($file in $canon) {
         $status = if (-not $file.Exists) { 'MISSING' } else { $file.Status }
         Write-Output ("  {0,-38} {1}" -f $file.Path, $status)
-        foreach ($section in $file.AwaitingReading) {
-            Write-Output "      #$section   decided by the assistant; awaiting the human's reading"
+        foreach ($section in $file.DecidedByAssistant) {
+            Write-Output "      #$section   decided by the assistant under delegation"
         }
     }
     Write-Output ''
-    Write-Wrapped ('Sections awaiting reading guide the work but bind no one until the human has read them. ' +
+    Write-Wrapped ('Sections the assistant decided bind under the human''s delegation; the human''s reading can overturn any of them. ' +
         'Why: __Docs/README.md#canon.') ''
 }
 

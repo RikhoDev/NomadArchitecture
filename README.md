@@ -41,7 +41,7 @@ A Feature is more than just code—it carries its own story and its own proof. T
 ```
 Hosts/DocReader/
  ├── reader.ps1                     # why: walk a newcomer through the repository
- ├── Features/Canon/                # what: what binds, and what awaits reading
+ ├── Features/Canon/                # what: what binds, and who decided it
  ├── Features/Lineage/              # what: where a document came from
  ├── Features/Placement/            # what: whose meaning a path carries
  └── Foundations/Markdown/          # how: reading headers, links and sections

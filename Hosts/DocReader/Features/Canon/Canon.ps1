@@ -1,5 +1,5 @@
-# Canon: say what binds in this repository, and what is still waiting for the
-# human's reading.
+# Canon: say what binds in this repository, and which parts of it the
+# assistant decided under the human's delegation.
 #
 # Needs (given by the Host): ReadHeader, a function from a file path to its
 # status header (a hashtable) or $null.
@@ -16,15 +16,15 @@ function Get-Canon {
         if (-not $path -or $path.StartsWith('#')) { continue }
         $full = Join-Path $Root $path
         $header = if (Test-Path -LiteralPath $full) { & $ReadHeader $full } else { $null }
-        $awaiting = @()
-        if ($header -and $header['awaiting_reading']) {
-            $awaiting = @($header['awaiting_reading'] -split ',' | ForEach-Object { $_.Trim() } | Where-Object { $_ })
+        $decided = @()
+        if ($header -and $header['decided_by_assistant']) {
+            $decided = @($header['decided_by_assistant'] -split ',' | ForEach-Object { $_.Trim() } | Where-Object { $_ })
         }
         [pscustomobject]@{
             Path            = $path
             Exists          = [bool]$header -or (Test-Path -LiteralPath $full)
             Status          = if ($header) { $header['status'] } else { $null }
-            AwaitingReading = $awaiting
+            DecidedByAssistant = $decided
         }
     }
 }

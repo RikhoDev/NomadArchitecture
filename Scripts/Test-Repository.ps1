@@ -5,7 +5,7 @@
 #      own status headers, the list in __Docs/README.md, and
 #      .nomad-method/canon;
 #   4. every proof (*.Tests.ps1) passes;
-#   every awaiting_reading section named in a canon file exists; and
+#   every decided_by_assistant section named in a canon file exists; and
 #   Chronicles and Mirages are named YYMM-xx-Name-Chronicle.md or
 #   YYMM-xx-Name-Mirage.md and dated to agree; and every Trail lives in a
 #   _Trails folder and names its document in trail_of.
@@ -115,14 +115,14 @@ foreach ($rel in $headers.Keys) {
     elseif (-not (Test-Path (Join-Path (Split-Path (Join-Path $root $rel) -Parent) $trailOf) -PathType Leaf)) { Report "$rel trail_of '$trailOf' does not exist" }
 }
 
-# 2b. Sections awaiting the human's reading exist, and only on canon files
+# 2b. Sections the assistant decided exist, and are named only on canon files
 foreach ($rel in $headers.Keys) {
-    $awaiting = $headers[$rel]['awaiting_reading']
+    $awaiting = $headers[$rel]['decided_by_assistant']
     if (-not $awaiting) { continue }
-    if ($headers[$rel]['status'] -ne 'canon') { Report "$rel lists awaiting_reading but is not canon" }
+    if ($headers[$rel]['status'] -ne 'canon') { Report "$rel lists decided_by_assistant but is not canon" }
     $slugs = Get-Slugs (Join-Path $root $rel)
     foreach ($anchor in $awaiting -split ',' | ForEach-Object { $_.Trim() } | Where-Object { $_ }) {
-        if (-not $slugs.ContainsKey($anchor)) { Report "$rel awaits reading of '#$anchor', which is not a section of it" }
+        if (-not $slugs.ContainsKey($anchor)) { Report "$rel names '#$anchor' as decided by the assistant, but it is not a section of it" }
     }
 }
 
