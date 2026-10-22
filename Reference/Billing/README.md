@@ -52,8 +52,14 @@ The system was built one consumer at a time, and each promotion is a commit:
 ```text
 git log --oneline -- Reference/Billing
 git log --follow --stat -- Reference/Billing/Features/Invoicing/PaymentTerms.cs
-git log --follow --stat -- Reference/Billing/Core/Money/Money.cs
+git log --follow -M30% --stat -- Reference/Billing/Core/Money/Money.cs
 ```
+
+`Money` needs `-M30%`. Its promotion also added `Plus` and `Share` in the same
+commit, so git's default rename threshold no longer recognises the move. A
+promotion that is a pure move, in a commit of its own, stays traceable with
+plain `--follow`; that is what `PaymentTerms` shows. This history keeps the
+mistake rather than hiding it.
 
 1. **One Host, one Feature, one Foundation.** Due dates are local to the Api
    Host, `Money` is local to Invoicing, and there is no `Core/`.
