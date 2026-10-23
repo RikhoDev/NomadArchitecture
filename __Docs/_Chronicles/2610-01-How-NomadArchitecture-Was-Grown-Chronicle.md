@@ -148,7 +148,8 @@ show what it should look like, which is why there is no definitive proof yet.
 | 2026-01-28 | the method's own repository | The time capsule: a 352-line folder-structure document from the chat assistant's memory, with ports, connectors and a Feature template. |
 | 2026-02-13 to 02-16 | NomadGameEngine, branch `vnext-refactored` | The branch forks from `main`. On 02-14, `_Ports` are renamed `_Contracts` across the code. On 02-16 a new worldview, "v1.1", is carried into the engine, a day after it appeared on a coding-agent branch of the method's repository (02-15). It opens with Intent First, "the spark that gives a system its soul". It sets out the Sprout-Host rite: every Sprout-Host is promoted or buried, and every fossil leaves a Trail. And it puts contracts and connectors at every scale. |
 | 2026-02-23 | NomadGameEngine, branch `vnext-refactored` | A DirectX sprout host grows in numbered "growth loops", 0 to 13, in one day. Each loop is a commit, and they end in a promoted mesh-draw contract and a chronicle. |
-| 2026-02-27 to 03-07 | NomadGameEngine, branch `vnext-refactored` | A dual-backend host wires raylib and DirectX, and a refactoring prepares sturdier plumbing for several backends. On 03-07, `Hosts/_Sprouts/NomadGameEngineV2` is added, with a roadmap for its graduation from sprout into the production engine. The sprout had proven a dual-backend GPU pipeline, and a strict Core ← Features ← Foundations ← Hosts direction enforced by reflection tests. The roadmap is AI-drafted and human-requested. By its count, about 10 of the first engine's ~30 capability areas were production quality, and the rest untested scaffolds. Its first principle for graduation was to port only tested code, never scaffolds. |
+| 2026-02-27 to 03-07 | NomadGameEngine, branch `vnext-refactored` | A dual-backend host wires raylib and DirectX, and a refactoring prepares sturdier plumbing for several backends. On 03-07, `Hosts/_Sprouts/NomadGameEngineV2` is added, with a roadmap for its graduation from sprout into the production engine. The sprout had proven a dual-backend GPU pipeline, and a strict Core ← Features ← Foundations ← Hosts direction enforced by reflection tests. The roadmap is AI-drafted and human-requested. By its count, about 10 of the first engine's ~30 capability areas were production quality, and the rest untested scaffolds. Its first principle for graduation was to port only tested code, never scaffolds. The sprout held its own Core, Features, Foundations and Hosts, but its Hosts folder was already flat: five files and no local world of its own. Its birth chronicle, committed inside it the same day, begins from shadows that worked in one backend and not the other. |
+| 2026-03 (dated 03-05) | the V2 sprout | A first audit holds the birth chronicle against the worldview and the sprout's design Mirage. It finds that the chronicle celebrated a sprout that compiled, without naming what was unproven, which invariants it did not honour, or what would earn promotion or burial. The birth Trail is then revised to separate what was proven from what was not. The audit is dated by its own header; it reached git with V2's first standalone commit. |
 | 2026-03-09 to 10-22 | NomadGameEngineV2 | Extracted into its own repository, and the evidence ground below. Its first commit carries a corrected worldview, the heart the engine was then built on. It keeps the February teaching that everything moves, drifts and forgets, and that intent, lineage, ceremony and memory are how a system survives. It fixes the form with what the sprout had proven: an explicit dependency direction, a Feature's edge defined by what it needs and promises, a convention canon, and the rule that reusing an implementation does not make it neutral. |
 | 2026-10-21 to 10-22 | the method's own repository | The grounds' findings are distilled into a four-file canon, with mechanisms for authority, provenance and conformance. Mobility, lost on the way, returns as a checked rule. |
 
@@ -190,13 +191,13 @@ system is the coordination medium for minds that share no memory.
 
 | Idea | Where it was tested | What the evidence did to it |
 |---|---|---|
-| Letting the AI drive | NomadGameEngine | Under the author's hands-off rules, Features came to reference Foundations. The graduation roadmap's own count is about 10 production-quality capability areas out of ~30; the rest were untested scaffolds. In the second engine, Features reference only Core, and its build and tests enforce that. *Interpreted:* much of the canon reads as scar tissue from letting an assistant drive. |
+| Letting the AI drive | NomadGameEngine | Under the author's hands-off rules, Features came to reference Foundations. On 02-01, a vehicle controller filed under `_Connectors` held the car's physics itself, and an AI-written audit committed the same day scored the arrangement 85 out of 100 and called the connectors thin. An assistant could repeat the vocabulary while approving the opposite allocation of responsibility. The graduation roadmap's own count is about 10 production-quality capability areas out of ~30; the rest were untested scaffolds. In the second engine, Features reference only Core, and its build and tests enforce that. *Interpreted:* much of the canon reads as scar tissue from letting an assistant drive. |
 | Ports and connectors | SampleGame, then NomadGameEngine | Ports came on day one and connectors on 07-27; the first engine enforced them. They became NomadGameEngineV2's contracts and connectors. The canon keeps connectors and retires `_Ports`. |
 | A `_Contracts/` folder at every layer | the first engine, then NomadGameEngineV2 | It was born in the first engine on 2026-02-14, when `_Ports` were renamed `_Contracts`, and the February worldview made it a rule at every layer. The corrected worldview kept it, but already said that a contract stays with its one consumer until others need it. In the second engine, six months showed such a folder owns nothing. On 2026-08-25 the rule was reversed: a contract lives with the owner of its meaning. 103 of the 110 files ever added to these folders predate the reversal, and the folders that remain are tracked as migration debt. |
 | Promotion | all three grounds | SampleGame: promote to Core when two or more domains need it, and avoid a God Core. The first engine promoted a gameplay capability to a generic Feature. The second refined the rule: two real consumers are enough, a difference between them is evidence and not a veto, and a third is never invented. In one case, duplicated route planning moved from two hosts into a new Feature, backed by a 98-test regression. In another, only a shared law was promoted, and the code stayed local. |
 | Humans decide | all three grounds | A SampleGame decision record (2025-08-03), then the covenant (2025-11-02), then the second engine's guidance (2026-09-11). When an AI assistant later held the architect role, approvals recorded as "Architecture" could no longer be traced to the human. The principle survived as a sentence and never became a mechanism. The canon now makes it one: named canon owners, and a declared authority on every canon commit, checked in CI. |
 | The Worldview | all grounds | It is the heart of the architecture. The first engine's worldview carried the intent but got the form wrong: its Features were allowed to lean on Foundations. That engine's lessons grew the V2 sprout, and the sprout's lessons gave birth to the corrected worldview. That worldview became the basis of the V2 engine, and the culture kept moving from there: the `_Contracts/` reversal, the worldview made the first contributor reading, and finally the method's canon. In the author's words, it is what "holds the intent and protects the fire". |
-| Sprouts | the February worldview's rite | Every Sprout-Host is promoted or buried, and every fossil leaves a Trail. NomadGameEngineV2 itself grew as a sprout host inside the first engine and graduated into its own repository. The method's own October branch now lives as a sprout beside its `main`. |
+| Sprouts | the February worldview's rite | Every Sprout-Host is promoted or buried, and every fossil leaves a Trail. NomadGameEngineV2 itself grew as a sprout host inside the first engine and graduated into its own repository. The method's own October branch now lives as a sprout beside its `main`. The fractal did not pass down easily: the V2 sprout's own Hosts were flat at birth. By the author's account, V2 went on making almost flat Hosts, and setting the fractal from the start gave mixed results. Its later chronicles name the difference between a thin entry and a local world beneath it. |
 | Status of documents | SampleGame's stories | Stories moved from work in progress to approved to books, with superseded versions archived. That became the canon's status header, and Mirages, Chronicles and Trails kept apart from the canon. |
 | Memory across sessions | SampleGame's note on what an assistant cannot remember | Trails, and later a plugin that loads the working discipline into every session. |
 | Narrative | SampleGame's pattern stories | The method's Chronicles and Worldview carry its culture as story, not as rules. The metaphors changed twice while the structure held, so they behave like Hosts: replaceable skins over a soul that stays. |
@@ -280,12 +281,21 @@ system is the coordination medium for minds that share no memory.
 - **Steered research.** An AI assistant working for the author gathered and
   interpreted these facts, partly under the author's hints. A second
   assistant checked the figures against the git histories, and a third,
-  briefed only as a sceptical CTO, reviewed the method cold.
+  briefed only as a sceptical CTO, reviewed the method cold. The author's own
+  architecture assistant wrote an independent history from the same founder
+  account. Its checkable findings were verified against the repositories and
+  added here: the birth Trail and first audit, the connector that held the
+  car's physics, and the flat Hosts.
 
 ## How the figures were obtained
 
 From each repository's default branch, or the branch named, at 2026-10-22,
-with full history.
+with full history. Three kinds of date are kept apart:
+- the date a document gives itself;
+- the date its commit landed;
+- the date a repository began.
+
+None of them is the date an idea was born.
 
 | Figure | Command |
 |---|---|
@@ -303,6 +313,8 @@ with full history.
 | AI eras | `git log --format='%ad %(trailers:key=Co-authored-by,valueonly)'`; `git log --author=<agent>` |
 | The revert | `git log -1 --format=%ci` on the change and on its revert |
 | The worldviews compared | headings of the first engine's `Worldview.md` at 21ead4e against the second engine's `Engine/__Docs/Worldview.md` at its first commit (a5da6a575) |
+| The connector and its audit | `src/Features/Gameplay/VehiclePhysics/_Connectors/CarController.cs` and `__Docs/Patterns/Port-Connector-Audit.md` (Verdict), both added in c29d38b |
+| The sprout's flat Hosts, and its first audit | `git ls-tree --name-only e64739e src/Hosts/_Sprouts/NomadGameEngineV2/Hosts/`; V2's `_Chronicles/2603-01-NomadGameEngineV2-First-Audit-Chronicle.md` |
 | The `vnext-refactored` branch | `git log --reverse <merge-base>..origin/vnext-refactored`, and `git show` on its Worldview commit (21ead4e) and its roadmap commit (3ac35b4) |
 | The first engine across its branches, and the V2 sprout | `git log --all`; `git ls-tree -d` on the commit that adds `Hosts/_Sprouts/NomadGameEngineV2` |
 | Features referencing Foundations in the first engine | `ProjectReference` lines of `src/Features/Features.csproj`, on `main` and on 2026-03-01 |
